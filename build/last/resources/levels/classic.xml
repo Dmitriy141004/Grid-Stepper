@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<level-pack name="classic">
+    <level name="1" completed="false">
+        <grid>
+            <column>
+                <cell type="filled" />
+                <cell type="empty" />
+                <cell type="empty" />
+                <cell type="empty" />
+                <cell type="start" />
+            </column>
+            <column>
+                <cell type="empty" />
+                <cell type="empty" />
+                <cell type="empty" />
+                <cell type="empty" />
+                <cell type="filled" />
+            </column>
+            <column>
+                <cell type="empty" />
+                <cell type="filled" />
+                <cell type="empty" />
+                <cell type="empty" />
+                <cell type="empty" />
+            </column>
+            <column>
+                <cell type="empty" />
+                <cell type="empty" />
+                <cell type="empty" />
+                <cell type="filled" />
+                <cell type="empty" />
+            </column>
+            <column>
+                <cell type="empty" />
+                <cell type="empty" />
+                <cell type="filled" />
+                <cell type="finish" />
+                <cell type="empty" />
+            </column>
+        </grid>
+    </level>
+</level-pack>
