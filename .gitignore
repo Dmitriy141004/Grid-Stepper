@@ -5,4 +5,5 @@
 README.*
 /build/local
 /.git
+/build/stable
 *~

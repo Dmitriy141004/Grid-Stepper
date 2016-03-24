@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<settings>
-    <setting key="lang" value="en" />
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="settings-schema.xsd">
+    <storage>
+        <setting key="lang" value="en" />
+    </storage>
 </settings>

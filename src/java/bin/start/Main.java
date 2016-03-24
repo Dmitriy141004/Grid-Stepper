@@ -3,7 +3,8 @@ package bin.start;
 import bin.control.FXController;
 import bin.control.MainMenuController;
 import bin.util.*;
-import bin.util.Stack;
+import com.sun.org.apache.xml.internal.serialize.OutputFormat;
+import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,10 +18,10 @@ import javafx.stage.Stage;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import bin.settings.XMLSettingsLoader;
-import bin.util.xml.XMLDumper;
 
-import javax.xml.parsers.DocumentBuilder;
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.validation.SchemaFactory;
 import java.io.*;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -82,7 +83,7 @@ public class Main extends Application {
     private static final Pattern LOCALE_RB_SEARCH_PATTERN = Pattern.compile("Locale_(\\w{2})\\.properties");
     /** Path to directory with resources. I don't put slash at the end, because it is everywhere between this constant
      * and path to certain resource. */
-    public static final String RESOURCES_ROOT = "../../resources";
+    public static final String RESOURCES_ROOT = "../../resources/";
 
     /**
      * Getter for {@link #availableLocales} variable.
@@ -94,6 +95,10 @@ public class Main extends Application {
         return (ArrayList<String>) availableLocales.clone();
     }
 
+    public static String getResourcePath(String pathSuffix) {
+        return PathsUtil.realPath(Main.RESOURCES_ROOT + pathSuffix);
+    }
+
     public static void main(String[] args) throws Exception {
         // Shutdown hook for saving app data
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
@@ -101,22 +106,42 @@ public class Main extends Application {
                 // Some XML util classes are used at once
                 DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
                 documentBuilderFactory.setNamespaceAware(true);
-                DocumentBuilder builder = documentBuilderFactory.newDocumentBuilder();
+                documentBuilderFactory.setSchema(SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
+                        .newSchema(new File(Main.class.getResource("../../resources/settings/settings-schema.xsd").toURI())));
+
 
                 // Creating document for saving
-                Document settingsDocument = builder.newDocument();
+                Document settingsDocument = documentBuilderFactory.newDocumentBuilder().newDocument();
 
-                Element settingsElement = settingsDocument.createElement("settings");
-                settingsDocument.appendChild(settingsElement);
+                // Creating root node for document and storage
+                Element rootSettingsElement = settingsDocument.createElement("settings");
+                settingsDocument.appendChild(rootSettingsElement);
+                // Adding settings schema
+
+                Element storageElement = settingsDocument.createElement("storage");
+                rootSettingsElement.appendChild(storageElement);
 
                 for (String settingName : XMLSettingsLoader.getSettingsStorage().keySet()) {
                     Element newElement = settingsDocument.createElement("setting");
                     newElement.setAttribute("key", settingName);
                     newElement.setAttribute("value", XMLSettingsLoader.getSetting(settingName));
-                    settingsElement.appendChild(newElement);
+                    storageElement.appendChild(newElement);
                 }
 
-                SimpleFileIO.write(XMLDumper.dump(settingsDocument),
+                // Serializing XML (it uses Apache's XMLSerializer, because it does work more clearly than Transformer class)
+                // Some format settings
+                OutputFormat format = new OutputFormat(settingsDocument);
+                format.setEncoding("UTF-8");
+                format.setIndenting(true);
+                // Doing needed thing
+                StringWriter dumpedDocument = new StringWriter();
+                XMLSerializer dumper = new XMLSerializer(dumpedDocument, format);
+                dumper.serialize(settingsDocument);
+
+                System.out.println(dumpedDocument);
+
+                // Saving data
+                SimpleFileIO.write(dumpedDocument.toString(),
                         Main.class.getResource(Main.RESOURCES_ROOT + "/settings/settings.xml").getPath());
             } catch (Exception e) {
                 e.printStackTrace();
@@ -169,7 +194,8 @@ public class Main extends Application {
         exitDialog.setHeaderText(getLocaleStr("dialogs.head.exit-from-game"));
 
         // Adding CSS-Stylesheet to customize dialog, for example, fonts
-        exitDialog.getDialogPane().getStylesheets().add(getClass().getResource(Main.RESOURCES_ROOT + "/styles/bigger-dialog-fonts.css")
+        exitDialog.getDialogPane().getStylesheets().add(getClass().getResource(Main.RESOURCES_ROOT +
+                "/styles/bigger-dialog-fonts.css")
                 .toExternalForm());
         exitDialog.getDialogPane().getStyleClass().add("dialog-body");
 

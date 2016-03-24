@@ -73,16 +73,16 @@ public class XMLSettingsLoader {
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             documentBuilderFactory.setNamespaceAware(true);
 
-            DocumentBuilder builder = documentBuilderFactory.newDocumentBuilder();
+            DocumentBuilder parser = documentBuilderFactory.newDocumentBuilder();
 
             Document settingsDoc =
-                    builder.parse(XMLSettingsLoader.class.getResource(Main.RESOURCES_ROOT + "/settings/settings.xml").getPath());
+                    parser.parse(XMLSettingsLoader.class.getResource(Main.RESOURCES_ROOT + "/settings/settings.xml").getPath());
 
             XPathFactory xPathFactory = XPathFactory.newInstance();
             XPath xPath = xPathFactory.newXPath();
 
             // Root config element
-            Element configRootNode = (Element) xPath.evaluate("/settings", settingsDoc, XPathConstants.NODE);
+            Element configRootNode = (Element) xPath.evaluate("/settings/storage", settingsDoc, XPathConstants.NODE);
 
             for (int i = 0; i < configRootNode.getChildNodes().getLength(); i++) {
                 Node settingNode = configRootNode.getChildNodes().item(i);

@@ -72,4 +72,10 @@
         <javac srcdir="${path.src}" destdir="${path.build.java.root}" debug="true" />
         <javac srcdir="${path.src}" destdir="${path.build.local}" debug="true" />
     </target>
+
+    <target name="make stable build">
+        <mkdir dir="${path.build.root}/stable" />
+        <copydir src="${path.resources}" dest="${path.build.root}/stable/resources" />
+        <javac srcdir="${path.src}" destdir="${path.build.root}/stable" debug="true" />
+    </target>
 </project>

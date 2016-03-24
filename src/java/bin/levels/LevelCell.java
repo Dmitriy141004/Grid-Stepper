@@ -1,5 +1,9 @@
 package bin.levels;
 
+/**
+ * Class for storing data about each level
+ *
+ */
 public class LevelCell {
     public enum CellType {
         WALL, EMPTY, START, FINISH

@@ -16,7 +16,7 @@ import bin.levels.XMLLevelLoader;
 import bin.start.Main;
 import bin.util.LIFOQueue;
 import bin.util.Stack;
-import bin.util.geometry.Line2D;
+import bin.util.Line2D;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -27,7 +27,7 @@ import java.util.ArrayList;
  *
  * <pre><code>
  * &lt;levels pack-name="some name here"&gt;
- *     &lt;level identifier="name of level"&gt;
+ *     &lt;level id="name of level"&gt;
  *         &lt;grid&gt;
  *             &lt;column&gt;
  *                 &lt;cell type="start" /&gt;
@@ -164,21 +164,21 @@ public class XMLLevelLoader {
      * This method of private instance.
      *
      * @param path path to file. <i><b>Note:</b> it's {@link URL}, not {@link java.net.URI}!</i>
-     * @param levelName name of level. See structure of file: all levels have name
+     * @param levelId id of level. See structure of file: all levels have id
      * @return 2D grid of level cells. It's <code>ArrayList&lt;ArrayList&lt;String&gt;&gt;</code> because it's easier to operate
      * with {@link ArrayList} than with {@code Array}.
      * @throws IOException
      * @throws SAXException
      * @throws XPathExpressionException
      */
-    private ArrayList<ArrayList<LevelCell>> innerLoadLevel(String path, String levelName) throws IOException, SAXException,
+    private ArrayList<ArrayList<LevelCell>> innerLoadLevel(String path, String levelId) throws IOException, SAXException,
             XPathExpressionException {
         ArrayList<ArrayList<LevelCell>> level = new ArrayList<>(0);
 
         Document document = builder.parse(path);
 
 
-        Element columns = (Element) xPath.evaluate(String.format("/level-pack/level[@name=\"%s\"]/grid", levelName),
+        Element columns = (Element) xPath.evaluate(String.format("/level-pack/level[@id=\"%s\"]/game-field", levelId),
                 document, XPathConstants.NODE);
 
         // Iterating columns
