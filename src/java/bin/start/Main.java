@@ -23,6 +23,7 @@ import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.validation.SchemaFactory;
 import java.io.*;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.*;
@@ -83,7 +84,7 @@ public class Main extends Application {
     private static final Pattern LOCALE_RB_SEARCH_PATTERN = Pattern.compile("Locale_(\\w{2})\\.properties");
     /** Path to directory with resources. I don't put slash at the end, because it is everywhere between this constant
      * and path to certain resource. */
-    public static final String RESOURCES_ROOT = "../../resources/";
+    private static final String RESOURCES_ROOT = "../../resources/";
 
     /**
      * Getter for {@link #availableLocales} variable.
@@ -95,8 +96,16 @@ public class Main extends Application {
         return (ArrayList<String>) availableLocales.clone();
     }
 
-    public static String getResourcePath(String pathSuffix) {
+    public static String getResource(String pathSuffix) {
         return PathsUtil.realPath(Main.RESOURCES_ROOT + pathSuffix);
+    }
+
+    public static URL getResourceURL(String pathSuffix) {
+        try {
+            return new URL("file", null, PathsUtil.realPath(Main.RESOURCES_ROOT + pathSuffix));
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void main(String[] args) throws Exception {
@@ -107,7 +116,7 @@ public class Main extends Application {
                 DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
                 documentBuilderFactory.setNamespaceAware(true);
                 documentBuilderFactory.setSchema(SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
-                        .newSchema(new File(Main.class.getResource("../../resources/settings/settings-schema.xsd").toURI())));
+                        .newSchema(new File(Main.getResource("settings/settings-schema.xsd"))));
 
 
                 // Creating document for saving
@@ -141,8 +150,7 @@ public class Main extends Application {
                 System.out.println(dumpedDocument);
 
                 // Saving data
-                SimpleFileIO.write(dumpedDocument.toString(),
-                        Main.class.getResource(Main.RESOURCES_ROOT + "/settings/settings.xml").getPath());
+                SimpleFileIO.write(dumpedDocument.toString(), Main.getResource("settings/settings.xml"));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -163,15 +171,17 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         // Setup media and bundles
         // Class loader for bundles, uses URL location
-        ClassLoader bundleClassLoader = new URLClassLoader(
-                new URL[] {getClass().getResource(Main.RESOURCES_ROOT + "/bundles/")});
+        System.out.println(getResource("bundles/"));
+        ClassLoader bundleClassLoader = new URLClassLoader(new URL[] {
+                new File(getResource("bundles/")).toURI().toURL()
+        });
 
         fxmlLoader.setResources(ResourceBundle.getBundle("Locale",
                 new Locale(XMLSettingsLoader.getSetting("lang")), bundleClassLoader, new UTF8Control()));
 
         // This code gets available locales
         availableLocales = new ArrayList<>(0);
-        File localeRBDir = new File(getClass().getResource(Main.RESOURCES_ROOT + "/bundles/").toURI());
+        File localeRBDir = new File(getResource("bundles/"));
         for (String fileName : localeRBDir.list()) {
             Matcher fileMatcher = LOCALE_RB_SEARCH_PATTERN.matcher(fileName);
             if (fileMatcher.find()) {
@@ -194,9 +204,7 @@ public class Main extends Application {
         exitDialog.setHeaderText(getLocaleStr("dialogs.head.exit-from-game"));
 
         // Adding CSS-Stylesheet to customize dialog, for example, fonts
-        exitDialog.getDialogPane().getStylesheets().add(getClass().getResource(Main.RESOURCES_ROOT +
-                "/styles/bigger-dialog-fonts.css")
-                .toExternalForm());
+        exitDialog.getDialogPane().getStylesheets().add(Main.getResourceURL("styles/bigger-dialog-fonts.css").toExternalForm());
         exitDialog.getDialogPane().getStyleClass().add("dialog-body");
 
         // And, customizing dialog with setters
@@ -280,17 +288,17 @@ public class Main extends Application {
      */
     private static void loadScenes() throws Exception {
         // Directory file-object
-        File file = new File(Main.class.getResource(Main.RESOURCES_ROOT + "/fxml/").toURI());
+        File file = new File(Main.getResource("fxml/"));
 
         // Iterating all files in directory
         for (String fileName : file.list()) {
-            File currentFile = new File(Main.class.getResource(Main.RESOURCES_ROOT + "/fxml/" + fileName).toURI());
+            File currentFile = new File(Main.getResource("fxml/" + fileName));
 
             // If current file-object is real file, and ends with ".fxml"...
             if (currentFile.isFile() && fileName.endsWith(".fxml")) {
                 // Adding its data
                 loadedScenes.put(fileName,
-                        SimpleFileIO.load(Main.class.getResource(Main.RESOURCES_ROOT + "/fxml/" + fileName).toURI().getPath()));
+                        SimpleFileIO.load(Main.getResource("fxml/" + fileName)));
             }
         }
     }

@@ -76,7 +76,7 @@ public class XMLSettingsLoader {
             DocumentBuilder parser = documentBuilderFactory.newDocumentBuilder();
 
             Document settingsDoc =
-                    parser.parse(XMLSettingsLoader.class.getResource(Main.RESOURCES_ROOT + "/settings/settings.xml").getPath());
+                    parser.parse(Main.getResource("settings/settings.xml"));
 
             XPathFactory xPathFactory = XPathFactory.newInstance();
             XPath xPath = xPathFactory.newXPath();

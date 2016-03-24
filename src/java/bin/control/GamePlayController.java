@@ -132,7 +132,8 @@ public class GamePlayController extends FXController {
     /** Exit action of exit dialog. */
     private static final ButtonType EXIT_OPTION = new ButtonType(Main.getLocaleStr("exit"), ButtonBar.ButtonData.OK_DONE);
     /** Cancel action of exit dialog. */
-    private static final ButtonType CANCEL_OPTION = new ButtonType(Main.getLocaleStr("cancel"), ButtonBar.ButtonData.CANCEL_CLOSE);
+    private static final ButtonType CANCEL_OPTION = new ButtonType(Main.getLocaleStr("cancel"),
+            ButtonBar.ButtonData.CANCEL_CLOSE);
 
     /** Instance of {@link PointerMoveAnimation}. */
     private PointerMoveAnimation pointerMoveAnimation;
@@ -583,7 +584,7 @@ public class GamePlayController extends FXController {
 
         // Loading level
         try {
-            level = XMLLevelLoader.loadLevel(getClass().getResource(Main.RESOURCES_ROOT + "/levels/classic.xml"), "1");
+            level = XMLLevelLoader.loadLevel(Main.getResource("levels/classic.xml"), "1");
         } catch (Exception e) {
             e.printStackTrace();
             return;
@@ -599,8 +600,7 @@ public class GamePlayController extends FXController {
         exitDialog.setHeaderText(getLocaleStr("dialogs.head.exit-from-current-level"));
 
         // Adding CSS-Stylesheet to customize dialog, for example, fonts
-        exitDialog.getDialogPane().getStylesheets().add(getClass().getResource(Main.RESOURCES_ROOT + "/styles/bigger-dialog-fonts.css")
-                .toExternalForm());
+        exitDialog.getDialogPane().getStylesheets().add(Main.getResourceURL("styles/bigger-dialog-fonts.css").toExternalForm());
         exitDialog.getDialogPane().getStyleClass().add("dialog-body");
 
         // And, customizing dialog with setters

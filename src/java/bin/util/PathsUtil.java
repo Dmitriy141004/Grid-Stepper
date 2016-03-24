@@ -124,7 +124,7 @@ public class PathsUtil {
         // Getting caller class location and its parts (caller class is on second stack trace element, on first is
         // this function)
         Class<?> callerClass = getCallerClass(PathsUtil.class);
-        String callerClassLocation = callerClass.getProtectionDomain().getCodeSource().getLocation() +
+        String callerClassLocation = callerClass.getProtectionDomain().getCodeSource().getLocation().getPath() +
                 callerClass.getPackage().getName().replaceAll("\\.", "/") + "/";
         ArrayList<String> callerClasspathParts = (ArrayList<String>) asCollection(splitPath(callerClassLocation));
 

@@ -115,7 +115,7 @@ public class XMLLevelLoader {
      * @see #innerLoadLevel(String, String)
      *
      */
-    private static ArrayList<ArrayList<LevelCell>> loadLevel(String path, String levelName) throws IOException, SAXException,
+    public static ArrayList<ArrayList<LevelCell>> loadLevel(String path, String levelName) throws IOException, SAXException,
             XPathExpressionException {
         return xmlLevelLoader.innerLoadLevel(path, levelName);
     }
