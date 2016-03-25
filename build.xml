@@ -1,75 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <project name="Grid-Stepper" default="compile" xmlns:unless="ant:unless">
-    <property name="path.build.root" value="build" />
-    <property name="path.build.java.root" value="${path.build.root}/last" />
-    <property name="path.src" value="./src/java" />
-    <property name="path.resources" value="./resources" />
-    <property name="path.editions.root" value="${path.build.root}/editions" />
-    <property name="path.build.local" value="${path.build.root}/local" />
-    <property name="path.build.jar.root" value="${path.build.root}/jar" />
-    <property name="path.javadoc" value="./javadoc" />
+    <property name="path.build.root" value="build"/>
+    <property name="path.build.last.root" value="${path.build.root}/last"/>
+    <property name="path.src" value="./src/java"/>
+    <property name="path.resources" value="./resources"/>
+    <property name="path.editions.root" value="${path.build.root}/editions"/>
+    <property name="path.build.local.root" value="${path.build.root}/local"/>
+    <property name="path.build.jar.root" value="${path.build.root}/jar"/>
+    <property name="path.javadoc" value="./javadoc"/>
+    <property name="path.scripts.models" value="./run-scripts"/>
 
-    <target name="clean build">
-        <delete dir="${path.build.java.root}" />
-        <delete dir="${path.editions.root}" />
-        <delete dir="${path.build.jar.root}" />
+    <target name="clear build">
+        <delete dir="${path.build.last.root}"/>
+        <delete dir="${path.editions.root}"/>
+        <delete dir="${path.build.jar.root}"/>
     </target>
 
-    <target name="full build clean">
-        <delete dir="${path.build.root}" />
+    <target name="full build clear">
+        <delete dir="${path.build.root}"/>
     </target>
 
     <condition property="resourcesInLocalBuild">
-        <available file="${path.build.local}/.project_root" type="file" />
+        <available file="${path.build.local.root}/.project_root" type="file"/>
     </condition>
 
-    <target name="prepare structure" depends="clean build">
-        <mkdir dir="${path.build.root}" />
-        <mkdir dir="${path.build.java.root}" />
-        <mkdir dir="${path.editions.root}" />
-        <mkdir dir="${path.build.local}" />
-        <mkdir dir="${path.build.jar.root}" />
+    <target name="prepare structure" depends="clear build">
+        <mkdir dir="${path.build.root}"/>
+        <mkdir dir="${path.build.last.root}"/>
+        <mkdir dir="${path.editions.root}"/>
+        <mkdir dir="${path.build.local.root}"/>
+        <mkdir dir="${path.build.jar.root}"/>
 
         <!-- Note: Intellij IDEA don't recognize attribute "unless:set", but ant successfully builds project. -->
-        <copydir unless:set="resourcesInLocalBuild" src="${path.resources}" dest="${path.build.local}/resources" />
-        <copyfile src="${path.src}/.project_root" dest="${path.build.local}" />
+        <copydir unless:set="resourcesInLocalBuild" src="${path.resources}" dest="${path.build.local.root}/resources"/>
+        <copyfile src="${path.src}/.project_root" dest="${path.build.local.root}"/>
 
-        <copydir src="${path.resources}" dest="${path.build.java.root}/resources" />
+        <copydir src="${path.resources}" dest="${path.build.last.root}/resources"/>
 
-        <copydir src="${path.resources}" dest="${path.build.jar.root}/resources" />
-        <mkdir dir="${path.build.jar.root}/bin" />
+        <copydir src="${path.resources}" dest="${path.build.jar.root}/resources"/>
+        <mkdir dir="${path.build.jar.root}"/>
     </target>
 
     <target name="make jars">
-        <property name="path.build.jar.temp" value="${path.build.jar.root}/temp" />
+        <property name="path.build.jar.temp" value="${path.build.jar.root}/temp"/>
 
-        <copydir src="${path.build.java.root}/bin" dest="${path.build.jar.temp}/bin" />
+        <copydir src="${path.build.last.root}/bin" dest="${path.build.jar.temp}/bin"/>
 
-        <jar destfile="${path.build.jar.root}/bin/Grid-Stepper.jar" compress="false" basedir="${path.build.jar.temp}"
-             manifest="${path.src}/META-INF/MANIFEST.MF" encoding="UTF-8" />
+        <jar destfile="${path.build.jar.root}/Grid-Stepper.jar" compress="false" basedir="${path.build.jar.temp}"
+             manifest="${path.src}/META-INF/MANIFEST.MF" encoding="UTF-8"/>
 
-        <delete dir="${path.build.jar.temp}" />
+        <delete dir="${path.build.jar.temp}"/>
     </target>
 
     <target name="make editions">
         <zip destfile="${path.editions.root}/Grid-Stepper-sources.zip">
-            <zipfileset dir="${path.src}" prefix="src/java" />
-            <zipfileset dir="${path.resources}" prefix="resources" />
-            <zipfileset dir="ant" prefix="ant" />
-            <zipfileset file="build.xml" />
-            <zipfileset dir="${path.javadoc}" prefix="javadoc" />
+            <zipfileset dir="${path.src}" prefix="src/java"/>
+            <zipfileset dir="${path.resources}" prefix="resources"/>
+            <zipfileset dir="ant" prefix="ant"/>
+            <zipfileset file="build.xml"/>
+            <zipfileset dir="${path.javadoc}" prefix="javadoc"/>
         </zip>
 
         <zip destfile="${path.editions.root}/Grid-Stepper-last-build.zip">
-            <zipfileset dir="${path.build.java.root}" />
+            <zipfileset dir="${path.build.last.root}"/>
         </zip>
     </target>
 
-    <target name="build and compile" depends="prepare structure, compile, make editions, make jars" />
+    <target name="build and compile" depends="prepare structure, compile, make run scripts, make editions, make jars"/>
 
     <target name="compile">
-        <javac srcdir="${path.src}" destdir="${path.build.java.root}" debug="true" />
-        <javac srcdir="${path.src}" destdir="${path.build.local}" debug="true" />
+        <javac srcdir="${path.src}" destdir="${path.build.last.root}" debug="true"/>
+        <javac srcdir="${path.src}" destdir="${path.build.local.root}" debug="true"/>
+    </target>
+
+    <target name="make run scripts">
+        <copyfile src="${path.scripts.models}/bash-run-model.sh" dest="${path.build.last.root}/run.sh"/>
+        <copyfile src="${path.scripts.models}/bash-run-model.sh" dest="${path.build.local.root}/run.sh"/>
+
+        <copyfile src="${path.scripts.models}/batch-run-model.bat" dest="${path.build.last.root}/run.bat"/>
+        <copyfile src="${path.scripts.models}/batch-run-model.bat" dest="${path.build.local.root}/run.bat"/>
+    </target>
+
+    <target name="clear javadoc">
+        <delete dir="${path.javadoc}" />
+    </target>
+
+    <target name="make javadoc" depends="clear javadoc">
+        <javadoc sourcepath="${path.src}" destdir="${path.javadoc}" access="private" additionalparam="-Xdoclint:none
+                -splitindex" />
     </target>
 </project>

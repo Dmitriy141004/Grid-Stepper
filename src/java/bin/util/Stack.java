@@ -16,7 +16,7 @@ public class Stack<E> implements LIFOQueue<E> {
      * <pre><code>
      * E[] stackData = new E[];
      * </code></pre>
-     * Where {@code E} is generics type.
+     * Where {@code E} is generic type.
      *
      */
     private ArrayList<E> stackData = new ArrayList<>(0);

@@ -107,9 +107,9 @@ public class XMLLevelLoader {
      * @param levelName name of level. See structure of file: all levels have name
      * @return 2D grid of level cells It's <code>ArrayList&lt;ArrayList&lt;String&gt;&gt;</code> because it's easier to operate
      * with {@link ArrayList} than with {@code Array}.
-     * @throws IOException
-     * @throws SAXException
-     * @throws XPathExpressionException
+     * @throws IOException if access to file fails
+     * @throws SAXException if there's something wrong with {@code XML}
+     * @throws XPathExpressionException if XPath query is wrong
      *
      * @see #loadLevel(URL, String)
      * @see #innerLoadLevel(String, String)
@@ -127,9 +127,9 @@ public class XMLLevelLoader {
      * @param levelName name of level. See structure of file: all levels have name
      * @return 2D grid of level cells It's <code>ArrayList&lt;ArrayList&lt;String&gt;&gt;</code> because it's easier to operate
      * with {@link ArrayList} than with {@code Array}.
-     * @throws IOException
-     * @throws SAXException
-     * @throws XPathExpressionException
+     * @throws IOException if access to file fails
+     * @throws SAXException if there's something wrong with {@code XML}
+     * @throws XPathExpressionException if XPath query is wrong
      *
      * @see #loadLevel(String, String)
      * @see #innerLoadLevel(String, String)
@@ -167,9 +167,9 @@ public class XMLLevelLoader {
      * @param levelId id of level. See structure of file: all levels have id
      * @return 2D grid of level cells. It's <code>ArrayList&lt;ArrayList&lt;String&gt;&gt;</code> because it's easier to operate
      * with {@link ArrayList} than with {@code Array}.
-     * @throws IOException
-     * @throws SAXException
-     * @throws XPathExpressionException
+     * @throws IOException if access to file fails
+     * @throws SAXException if there's something wrong with {@code XML}
+     * @throws XPathExpressionException if XPath query is wrong
      */
     private ArrayList<ArrayList<LevelCell>> innerLoadLevel(String path, String levelId) throws IOException, SAXException,
             XPathExpressionException {

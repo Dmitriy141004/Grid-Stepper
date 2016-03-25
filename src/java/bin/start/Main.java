@@ -109,6 +109,8 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws Exception {
+        System.out.println(PathsUtil.realPath("."));
+
         // Shutdown hook for saving app data
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
@@ -147,8 +149,6 @@ public class Main extends Application {
                 XMLSerializer dumper = new XMLSerializer(dumpedDocument, format);
                 dumper.serialize(settingsDocument);
 
-                System.out.println(dumpedDocument);
-
                 // Saving data
                 SimpleFileIO.write(dumpedDocument.toString(), Main.getResource("settings/settings.xml"));
             } catch (Exception e) {
@@ -161,6 +161,7 @@ public class Main extends Application {
     /**
      * Returns string value from resource bundle "Locale".
      *
+     * @param key locale/RB string key to get
      * @return string value.
      */
     public static String getLocaleStr(String key) {
@@ -171,7 +172,6 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         // Setup media and bundles
         // Class loader for bundles, uses URL location
-        System.out.println(getResource("bundles/"));
         ClassLoader bundleClassLoader = new URLClassLoader(new URL[] {
                 new File(getResource("bundles/")).toURI().toURL()
         });

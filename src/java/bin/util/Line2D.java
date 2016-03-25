@@ -47,7 +47,14 @@ public class Line2D {
         return y2;
     }
 
-    /** Simple constructor for class. */
+    /**
+     * Simple constructor for class. Just sets fields {@link #x1}, {@link #x2}, {@link #y1} and {@link #y2}.
+     *
+     * @param x1 new value of {@link #x1}
+     * @param y1 new value of {@link #y1}
+     * @param x2 new value of {@link #x2}
+     * @param y2 new value of {@link #y2}
+     */
     public Line2D(int x1, int y1, int x2, int y2) {
         this.x1 = x1;
         this.y1 = y1;

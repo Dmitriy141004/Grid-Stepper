@@ -1,7 +1,5 @@
-control
-levels
-levels.load
-settings.load
-start
-util
-util.geometry
+bin.control
+bin.levels
+bin.settings
+bin.start
+bin.util

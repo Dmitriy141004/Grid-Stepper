@@ -1,26 +1,25 @@
 package bin.util;
 
-import sun.reflect.Reflection;
-
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import java.util.*;
 
 /**
  * Utility-Class specified on paths. You can see available tasks here:
  *
- * <table>
- *     <tr>
- *         <th>Link to function</th>
- *         <th>Task description</th>
+ * <table style="border-collapse: collapse;">
+ *     <tr style="background-color: #4D7A97; color: white; font-family: 'DejaVu Sans';">
+ *         <th style="padding: 20px; border-left: 1px solid #BBB; border-top: 1px solid #BBB; border-bottom: 1px solid #BBB;">
+ *             Link to function</th>
+ *         <th style="padding: 20px; border-right: 1px solid #BBB; border-top: 1px solid #BBB; border-bottom: 1px solid #BBB;">
+ *             Task description</th>
  *     </tr>
- *     <tr>
- *         <td>{@link #realPath(String)}</td>
- *         <td>Make real path from relative. Why I don't want to use {@link Class#getResource(String)}? If directory/file
- *         isn't nested in {@code classpath} - it returns {@code null}, because {@link ClassLoader} can't "get resource".
- *         My method doesn't use {@link ClassLoader} to make real path (only for getting directory of caller class) -
- *         so it works pretty well even if directory/file isn't nested in {@code classpath}.</td>
+ *     <tr style="background-color: rgb(230,230,230);">
+ *         <td style="padding: 20px; border: 1px solid #BBB;">{@link #realPath(String)}</td>
+ *         <td style="padding: 20px; border: 1px solid #BBB;">Make real path from relative. Why I don't want to use
+ *         {@link Class#getResource(String)}? If directory/file isn't nested in {@code classpath} - it returns {@code null},
+ *         because {@link ClassLoader} can't "get resource". My method doesn't use {@link ClassLoader} to make real path
+ *         (only for getting directory of caller class) - so it works pretty well even if directory/file isn't
+ *         nested in {@code classpath}.</td>
  *     </tr>
  * </table>
  *
@@ -122,7 +121,8 @@ public class PathsUtil {
         ArrayList<String> relativePathParts = (ArrayList<String>) asCollection(splitPath(relative));
 
         // Getting caller class location and its parts (caller class is on second stack trace element, on first is
-        // this function)
+        // this function). If class is in JAR - caller class location will be like "build/jar/Application.jarapp/util/",
+        // but it is proper location!
         Class<?> callerClass = getCallerClass(PathsUtil.class);
         String callerClassLocation = callerClass.getProtectionDomain().getCodeSource().getLocation().getPath() +
                 callerClass.getPackage().getName().replaceAll("\\.", "/") + "/";

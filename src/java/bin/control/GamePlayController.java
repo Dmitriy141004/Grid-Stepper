@@ -261,7 +261,7 @@ public class GamePlayController extends FXController {
         }
 
         /** End position of pointer move on X axis. By default it equals {@link #pointerX}, but in
-         * {@link #PointerMoveAnimation(String) constructor} it's changed by move value. */
+         * {@link #PointerMoveAnimation(String)}  constructor} it's changed by move value. */
         int goalX = pointerX;
         /** End position of pointer move on Y axis. By default it equals {@link #pointerY}, but in
          * {@link #PointerMoveAnimation(String) constructor} it's changed by move value. */
