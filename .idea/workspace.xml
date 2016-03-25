@@ -2,229 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed0051cc-6d42-4920-94de-af679a53e7f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/last/run.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/last/run.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/FXController.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/FXMLLink.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/GamePlayController.FieldDrawAnimation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/GamePlayController.PointerMoveAnimation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/GamePlayController.PointerSpawnState.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/GamePlayController.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/MainMenuController.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/SettingsMenuController.Language.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/SettingsMenuController.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/control/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/levels/InvalidPathSyntaxException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/levels/LevelCell.CellType.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/levels/LevelCell.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/levels/XMLLevelLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/levels/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/levels/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/levels/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/settings/XMLSettingsLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/settings/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/settings/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/settings/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/start/Main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/start/UTF8Control.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/start/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/start/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/start/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/util/LIFOQueue.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/util/Line2D.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/util/PathsUtil.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/util/SimpleFileIO.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/util/Stack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/util/Wrapper.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/util/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/util/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/bin/util/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run-scripts/bash-run-model.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run-scripts/batch-run-model.bat" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/bin/Grid-Stepper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/FXController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/FXMLLink.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/Function.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/GamePlayController.FieldDrawAnimation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/GamePlayController.PointerMoveAnimation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/GamePlayController.PointerSpawnState.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/GamePlayController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/MainMenuController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/SettingsMenuController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/class-use/FXController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/class-use/FXMLLink.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/class-use/Function.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/class-use/GamePlayController.FieldDrawAnimation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/class-use/GamePlayController.PointerMoveAnimation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/class-use/GamePlayController.PointerSpawnState.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/class-use/GamePlayController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/class-use/MainMenuController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/class-use/SettingsMenuController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/control/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/FXController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/FXMLLink.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/Function.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/GamePlayController.FieldDrawAnimation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/GamePlayController.PointerMoveAnimation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/GamePlayController.PointerSpawnState.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/GamePlayController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/MainMenuController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/class-use/FXController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/class-use/FXMLLink.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/class-use/Function.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/class-use/GamePlayController.FieldDrawAnimation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/class-use/GamePlayController.PointerMoveAnimation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/class-use/GamePlayController.PointerSpawnState.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/class-use/GamePlayController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/class-use/MainMenuController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/control/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/load/InvalidPathSyntaxException.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/load/XMLLevelLoader.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/load/class-use/InvalidPathSyntaxException.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/load/class-use/XMLLevelLoader.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/load/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/load/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/load/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/load/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/store/LevelCell.CellType.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/store/LevelCell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/store/class-use/LevelCell.CellType.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/store/class-use/LevelCell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/store/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/store/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/store/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/levels/store/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/start/Main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/start/class-use/Main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/start/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/start/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/start/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/start/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/LIFOQueue.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/SimpleFileIO.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/Stack.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/class-use/LIFOQueue.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/class-use/SimpleFileIO.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/class-use/Stack.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/geometry/Line2D.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/geometry/class-use/Line2D.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/geometry/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/geometry/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/geometry/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/geometry/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/game/util/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/LevelCell.CellType.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/LevelCell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/class-use/LevelCell.CellType.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/class-use/LevelCell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/load/InvalidPathSyntaxException.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/load/XMLLevelLoader.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/load/class-use/InvalidPathSyntaxException.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/load/class-use/XMLLevelLoader.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/load/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/load/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/load/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/load/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/settings/load/XMLSettingsLoader.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/settings/load/class-use/XMLSettingsLoader.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/settings/load/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/settings/load/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/settings/load/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/settings/load/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/start/Main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/start/UTF8Control.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/start/class-use/Main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/start/class-use/UTF8Control.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/start/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/start/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/start/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/start/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/store/LevelCell.CellType.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/store/LevelCell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/store/class-use/LevelCell.CellType.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/store/class-use/LevelCell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/store/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/store/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/store/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/store/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/LIFOQueue.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/SimpleFileIO.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/Stack.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/class-use/LIFOQueue.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/class-use/SimpleFileIO.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/class-use/Stack.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/geometry/Line2D.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/geometry/class-use/Line2D.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/geometry/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/geometry/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/geometry/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/geometry/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-last-build.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-last-build.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-sources.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-sources.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/bin/start/Main.class" afterPath="$PROJECT_DIR$/build/last/bin/start/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/bin/util/Line2D.class" afterPath="$PROJECT_DIR$/build/last/bin/util/Line2D.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/bin/util/PathsUtil.class" afterPath="$PROJECT_DIR$/build/last/bin/util/PathsUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/Grid-Stepper.jar" afterPath="$PROJECT_DIR$/build/jar/Grid-Stepper.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/build/jar/resources/settings/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/javadoc/allclasses-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/constant-values.html" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterPath="$PROJECT_DIR$/javadoc/deprecated-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/help-doc.html" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-10.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-11.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-14.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-15.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-15.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-16.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-16.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-17.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-17.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-18.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-18.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-19.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-19.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-20.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-20.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-21.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-21.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index.html" afterPath="$PROJECT_DIR$/javadoc/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-frame.html" afterPath="$PROJECT_DIR$/javadoc/overview-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" afterPath="$PROJECT_DIR$/javadoc/overview-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/package-list" afterPath="$PROJECT_DIR$/javadoc/package-list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/serialized-form.html" afterPath="$PROJECT_DIR$/javadoc/serialized-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/bin/control/GamePlayController.java" afterPath="$PROJECT_DIR$/src/java/bin/control/GamePlayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/bin/levels/XMLLevelLoader.java" afterPath="$PROJECT_DIR$/src/java/bin/levels/XMLLevelLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/bin/start/Main.java" afterPath="$PROJECT_DIR$/src/java/bin/start/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/bin/util/Line2D.java" afterPath="$PROJECT_DIR$/src/java/bin/util/Line2D.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/bin/util/PathsUtil.java" afterPath="$PROJECT_DIR$/src/java/bin/util/PathsUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/bin/util/Stack.java" afterPath="$PROJECT_DIR$/src/java/bin/util/Stack.java" />
     </list>
     <ignored path="Grid-Stepper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -279,7 +60,7 @@
       <file leaf-file-name="PathsUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/bin/util/PathsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="528">
               <caret line="126" column="112" selection-start-line="126" selection-start-column="112" selection-end-line="126" selection-end-column="112" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1169,7 +950,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20840243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20840243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1589,7 +1370,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/bin/util/PathsUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="528">
           <caret line="126" column="112" selection-start-line="126" selection-start-column="112" selection-end-line="126" selection-end-column="112" />
           <folding>
             <element signature="imports" expanded="true" />
