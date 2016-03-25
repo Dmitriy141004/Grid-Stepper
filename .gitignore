@@ -4,6 +4,4 @@
 /.idea/libraries
 README.*
 /build/local
-/.git
-/build/stable
 *~
