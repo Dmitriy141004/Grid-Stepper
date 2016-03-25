@@ -5,4 +5,5 @@
 README.*
 /build/local
 *~
-.build_version
+/build-info/.build_version
+/.git (copy)
