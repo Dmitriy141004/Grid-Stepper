@@ -32,21 +32,34 @@ public class ExtendedMath {
      *         <td style="padding: 20px; border: 1px solid #BBB;">50.0</td>
      *     </tr>
      *     <tr style="background-color: rgb(230,230,230);">
-     *         <td style="padding: 20px; border: 1px solid #BBB;">22.5</td>
+     *         <td style="padding: 20px; border: 1px solid #BBB;">1.25</td>
      *         <td style="padding: 20px; border: 1px solid #BBB;">1.25</td>
      *         <td style="padding: 20px; border: 1px solid #BBB;">1.85</td>
      *         <td style="padding: 20px; border: 1px solid #BBB;">1.0</td>
      *         <td style="padding: 20px; border: 1px solid #BBB;">2.0</td>
-     *         <td style="padding: 20px; border: 1px solid #BBB;">50.0</td>
+     *         <td style="padding: 20px; border: 1px solid #BBB;">1.0</td>
+     *     </tr>
+     *     <tr style="background-color: rgb(230,230,230);">
+     *         <td style="padding: 20px; border: 1px solid #BBB;">4.0</td>
+     *         <td style="padding: 20px; border: 1px solid #BBB;">2.87</td>
+     *         <td style="padding: 20px; border: 1px solid #BBB;">9.43</td>
+     *         <td style="padding: 20px; border: 1px solid #BBB;">0.0</td>
+     *         <td style="padding: 20px; border: 1px solid #BBB;">20.0</td>
+     *         <td style="padding: 20px; border: 1px solid #BBB;">3.445121951219512</td>
      *     </tr>
      * </table>
      *
-     * @param value
-     * @param minRange1
-     * @param maxRange1
-     * @param minRange2
-     * @param maxRange2
-     * @return
+     * <p>Mapping formula:
+     * <pre><code>
+     * (value - minRange1) / (maxRange1 - minRange1) * (maxRange2 - minRange2) + minRange2
+     * </code></pre></p>
+     *
+     * @param value value to map
+     * @param minRange1 the lowest value of first range
+     * @param maxRange1 the highest value of first range
+     * @param minRange2 the lowest value of second range
+     * @param maxRange2 the highest value of second range
+     * @return mapped value
      */
     public static double map(double value, double minRange1, double maxRange1, double minRange2, double maxRange2) {
         return (value - minRange1) / (maxRange1 - minRange1) * (maxRange2 - minRange2) + minRange2;
