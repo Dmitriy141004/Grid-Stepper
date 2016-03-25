@@ -67,7 +67,9 @@
         </zip>
     </target>
 
-    <target name="build and compile" depends="prepare structure, compile, make run scripts, make editions, make jars"/>
+    <target name="build and compile" depends="prepare structure, compile, make run scripts, make editions, make jars">
+        <exec executable="./build-info/increment-build.sh"/>
+    </target>
 
     <target name="compile">
         <javac srcdir="${path.src}" destdir="${path.build.last.root}" debug="true"/>
