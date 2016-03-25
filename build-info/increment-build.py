@@ -20,7 +20,7 @@ thisFilePath = os.path.realpath(__file__)
 thisFilePath = file_sys.dirname(thisFilePath)
 
 # Loading data from stopper-file
-stopperFile = open(".stop_counter")
+stopperFile = open(file_sys.join(thisFilePath, ".stop_counter"))
 if stopperFile.read(1) == "1":
     stopperFile.close()
     exit(0)
