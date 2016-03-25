@@ -15,17 +15,16 @@ import posixpath as file_sys
 from sys import argv as script_args
 import re
 
-if len(script_args) < 2:
-    print """Missing mode argument!
-Acceptable modes:
-\tcommit|COMMIT
-\tbuild|BUILD
-\tglobal|GLOBAL"""
-    exit(1)
-
 # Getting directory, where is this file
 thisFilePath = os.path.realpath(__file__)
 thisFilePath = file_sys.dirname(thisFilePath)
+
+# Loading data from stopper-file
+stopperFile = open(".stop_counter")
+if stopperFile.read(1) == "1":
+    stopperFile.close()
+    exit(0)
+stopperFile.close()
 
 # Opening file to read
 buildFile = open(file_sys.join(thisFilePath, ".build_version"), 'r')
@@ -34,6 +33,14 @@ buildTextInfo = buildFile.read()
 if buildTextInfo == "":
     buildTextInfo = "0.0.0"
 buildFile.close()
+
+if len(script_args) < 2:
+    print """Missing mode argument!
+Acceptable modes:
+\tcommit|COMMIT
+\tbuild|BUILD
+\tglobal|GLOBAL"""
+    exit(1)
 
 # Opening file for writing
 buildFile = open(file_sys.join(thisFilePath, ".build_version"), 'w')
