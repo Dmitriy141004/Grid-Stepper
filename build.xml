@@ -27,9 +27,9 @@
 
     <target name="prepare structure" depends="clear build">
         <mkdir dir="${path.build.root}"/>
-        <mkdir dir="${path.build.last.root}"/>
+        <mkdir dir="${path.build.last.root}/java"/>
         <mkdir dir="${path.editions.root}"/>
-        <mkdir dir="${path.build.local.root}"/>
+        <mkdir dir="${path.build.local.root}/java"/>
         <mkdir dir="${path.build.jar.root}"/>
 
         <!-- Note: Intellij IDEA don't recognize attribute "unless:set", but ant successfully builds project. -->
@@ -45,10 +45,12 @@
     <target name="make jars">
         <property name="path.build.jar.temp" value="${path.build.jar.root}/temp"/>
 
-        <copydir src="${path.build.last.root}/bin" dest="${path.build.jar.temp}/bin"/>
+        <copydir src="${path.build.last.root}/java" dest="${path.build.jar.temp}/"/>
 
-        <jar destfile="${path.build.jar.root}/Grid-Stepper.jar" compress="false" basedir="${path.build.jar.temp}"
+        <jar destfile="${path.build.jar.root}/java/Grid-Stepper.jar" compress="false" basedir="${path.build.jar.temp}"
              manifest="${path.src}/META-INF/MANIFEST.MF" encoding="UTF-8"/>
+        <copyfile src="${path.scripts.models}/bash-jar-run-model.sh" dest="${path.build.jar.root}/run.sh"/>
+        <copyfile src="${path.scripts.models}/batch-jar-run-model.bat" dest="${path.build.jar.root}/run.bat"/>
 
         <delete dir="${path.build.jar.temp}"/>
     </target>
@@ -74,8 +76,8 @@
     </target>
 
     <target name="compile">
-        <javac srcdir="${path.src}" destdir="${path.build.last.root}" debug="true"/>
-        <javac srcdir="${path.src}" destdir="${path.build.local.root}" debug="true"/>
+        <javac srcdir="${path.src}" destdir="${path.build.last.root}/java" debug="true"/>
+        <javac srcdir="${path.src}" destdir="${path.build.local.root}/java" debug="true"/>
     </target>
 
     <target name="make run scripts">

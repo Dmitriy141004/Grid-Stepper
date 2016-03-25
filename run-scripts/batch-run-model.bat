@@ -1,2 +1,2 @@
-cd %CD%
-java bin.start.Main
+cd %CD%/java
+java start.Main

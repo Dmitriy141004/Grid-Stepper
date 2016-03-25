@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="557.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bin.control.MainMenuController">
+<BorderPane prefHeight="557.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainMenuController">
    <center>
       <Label maxHeight="-Infinity" minHeight="-Infinity" text="Grid Stepper" wrapText="true" BorderPane.alignment="CENTER">
          <font>
