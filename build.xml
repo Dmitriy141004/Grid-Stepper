@@ -68,7 +68,9 @@
     </target>
 
     <target name="build and compile" depends="prepare structure, compile, make run scripts, make editions, make jars">
-        <exec executable="./build-info/increment-build.sh"/>
+        <exec executable="./build-info/increment-build.py">
+            <arg value="build"/>
+        </exec>
     </target>
 
     <target name="compile">

@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed0051cc-6d42-4920-94de-af679a53e7f3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build-info/build-info.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build-info/increment-build.sh" afterPath="$PROJECT_DIR$/build-info/increment-build.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-last-build.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-last-build.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-sources.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-sources.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/Grid-Stepper.jar" afterPath="$PROJECT_DIR$/build/jar/Grid-Stepper.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/bin/start/Main.class" afterPath="$PROJECT_DIR$/build/last/bin/start/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/bin/util/ExtendedMath.class" afterPath="$PROJECT_DIR$/build/last/bin/util/ExtendedMath.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Grid-Stepper.iml" afterPath="$PROJECT_DIR$/Grid-Stepper.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-info/.build_version" afterPath="$PROJECT_DIR$/build-info/.build_version" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/bin/start/Main.java" afterPath="$PROJECT_DIR$/src/java/bin/start/Main.java" />
     </list>
     <ignored path="Grid-Stepper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,18 +39,40 @@
       <file leaf-file-name="classic.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/levels/classic.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
+            <state relative-caret-position="0">
               <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="853">
-              <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+            <state relative-caret-position="383">
+              <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="increment-build.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build-info/increment-build.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+              <folding>
+                <element signature="e#70#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post-commit" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.git/hooks/post-commit">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -49,36 +83,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GamePlayController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/bin/control/GamePlayController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="654" column="43" selection-start-line="654" selection-start-column="43" selection-end-line="654" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExtendedMath.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/bin/util/ExtendedMath.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="53" column="90" selection-start-line="53" selection-start-column="90" selection-end-line="53" selection-end-column="90" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/bin/start/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="111" column="73" selection-start-line="111" selection-start-column="73" selection-end-line="111" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -113,11 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/java/settings/load/XMLSettingsLoader.java" />
-        <option value="$PROJECT_DIR$/src/java/settings/XMLSettingsLoader.java" />
-        <option value="$PROJECT_DIR$/build/local/levels/classic.xml" />
-        <option value="$PROJECT_DIR$/src/java/start/Main.java" />
-        <option value="$PROJECT_DIR$/src/java/bin/control/MainMenuController.java" />
         <option value="$PROJECT_DIR$/src/java/bin/util/xml/XMLDumper.java" />
         <option value="$PROJECT_DIR$/src/java/bin/control/SettingsMenuController.java" />
         <option value="$PROJECT_DIR$/src/java/bin/util/geometry/Line2D.java" />
@@ -155,15 +154,20 @@
         <option value="$PROJECT_DIR$/Build-Count-Info/src/build.xml" />
         <option value="$PROJECT_DIR$/Build-Count-Info/build.xml" />
         <option value="$PROJECT_DIR$/build-info/.build_num" />
-        <option value="$PROJECT_DIR$/build-info/increment-build.sh" />
         <option value="$PROJECT_DIR$/src/java/bin/levels/LevelCell.java" />
         <option value="$PROJECT_DIR$/resources/levels/classic.xml" />
         <option value="$PROJECT_DIR$/build-info/.commit_num" />
         <option value="$PROJECT_DIR$/src/java/bin/control/GamePlayController.java" />
-        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/java/bin/util/PathsUtil.java" />
-        <option value="$PROJECT_DIR$/src/java/bin/start/Main.java" />
         <option value="$PROJECT_DIR$/src/java/bin/util/ExtendedMath.java" />
+        <option value="$PROJECT_DIR$/.git/hooks/pre-commit" />
+        <option value="$PROJECT_DIR$/src/java/bin/start/Main.java" />
+        <option value="$PROJECT_DIR$/build-info/increment-build.sh" />
+        <option value="$PROJECT_DIR$/run-scripts/bash-run-model.sh" />
+        <option value="$PROJECT_DIR$/.git/hooks/post-commit" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/build-info/.build_version" />
+        <option value="$PROJECT_DIR$/build-info/increment-build.py" />
       </list>
     </option>
   </component>
@@ -208,7 +212,13 @@
             <id>Groovy</id>
           </State>
           <State>
+            <id>HTML</id>
+          </State>
+          <State>
             <id>ImportsJava</id>
+          </State>
+          <State>
+            <id>J2ME issuesJava</id>
           </State>
           <State>
             <id>JUnit issuesJava</id>
@@ -235,13 +245,22 @@
             <id>Numeric issuesJava</id>
           </State>
           <State>
+            <id>OtherGroovy</id>
+          </State>
+          <State>
             <id>Performance issuesJava</id>
+          </State>
+          <State>
+            <id>Portability issuesJava</id>
           </State>
           <State>
             <id>Potentially confusing code constructsGroovy</id>
           </State>
           <State>
             <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Python</id>
           </State>
           <State>
             <id>Resource management issuesJava</id>
@@ -254,6 +273,9 @@
           </State>
           <State>
             <id>UI Form Problems</id>
+          </State>
+          <State>
+            <id>XML</id>
           </State>
         </expanded-state>
         <selected-state>
@@ -289,6 +311,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -502,14 +526,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Grid-Stepper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Grid-Stepper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Grid-Stepper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Grid-Stepper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hooks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
@@ -518,7 +572,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build-info" />
     <property name="SearchEverywhereHistoryKey" value="URl&#9;PSI&#9;JAVA://java.net.URL" />
     <property name="last.edited.regexp" value="Grid-Stepper build 2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="195" />
@@ -537,6 +591,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1125" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="jdk.selected.PYTHON_MODULE" value="Python 2.7.6 (/usr/bin/python2.7)" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -551,7 +606,24 @@
       <recent name="$PROJECT_DIR$/resources/settings" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Run and make project">
+  <component name="RunManager" selected="Python.increment-build">
+    <configuration default="false" name="increment-build" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/build-info" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="build-info" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build-info/increment-build.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -968,10 +1040,16 @@
         <option name="AntTarget" enabled="true" antfile="file://$PROJECT_DIR$/build.xml" target="build and compile" />
       </method>
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Run and make project" />
       <item index="1" class="java.lang.String" itemvalue="JAR Application.Built project in JAR" />
+      <item index="2" class="java.lang.String" itemvalue="Python.increment-build" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.increment-build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1016,13 +1094,14 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.50193477" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="129" y="224" width="1655" height="884" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="128" y="149" width="1655" height="884" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.49806523" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20453289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20674406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1033,7 +1112,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1080,7 +1158,7 @@
           <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="53" />
+      <option name="time" value="54" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1106,56 +1184,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/regex/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="1247" column="46" selection-start-line="1247" selection-start-column="46" selection-end-line="1247" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/bin/util/Regexps.java" />
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="1551" column="0" selection-start-line="1551" selection-start-column="0" selection-end-line="1551" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="260" column="27" selection-start-line="260" selection-start-column="27" selection-end-line="260" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/jre/lib/rt.jar!/sun/reflect/Reflection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/security/SecureClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/javax/xml/validation/SchemaFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="653" column="0" selection-start-line="653" selection-start-column="0" selection-end-line="653" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="646" column="26" selection-start-line="646" selection-start-column="26" selection-end-line="646" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -1278,12 +1306,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1718">
           <caret line="422" column="27" selection-start-line="422" selection-start-column="27" selection-end-line="422" selection-end-column="27" />
-          <folding>
-            <element signature="e#33905#33906#0" expanded="false" />
-            <element signature="e#33944#33945#0" expanded="false" />
-            <element signature="e#34440#34441#0" expanded="false" />
-            <element signature="e#34491#34492#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1300,24 +1322,10 @@
     <entry file="file://$PROJECT_DIR$/Build-Info/src/BuildCounter.java" />
     <entry file="file://$PROJECT_DIR$/Build-Info/build.xml" />
     <entry file="file://$PROJECT_DIR$/Build-Info/build.xml" />
-    <entry file="file://$PROJECT_DIR$/build-info/increment-build.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run-scripts/batch-run-model.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run-scripts/bash-run-model.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1326,13 +1334,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="1101" column="30" selection-start-line="1101" selection-start-column="30" selection-end-line="1101" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/levels/classic.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
+        <state relative-caret-position="0">
           <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
           <folding />
         </state>
@@ -1341,8 +1348,129 @@
     <entry file="file://$PROJECT_DIR$/build-info/.commit_num" />
     <entry file="file://$PROJECT_DIR$/src/java/bin/control/GamePlayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
+        <state relative-caret-position="13794">
           <caret line="654" column="43" selection-start-line="654" selection-start-column="43" selection-end-line="654" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#13726#13727#0" expanded="false" />
+            <element signature="e#13777#13778#0" expanded="false" />
+            <element signature="e#15846#15847#0" expanded="false" />
+            <element signature="e#15883#15884#0" expanded="false" />
+            <element signature="e#16085#16086#0" expanded="false" />
+            <element signature="e#16129#16130#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="1764" column="25" selection-start-line="1764" selection-start-column="25" selection-end-line="1764" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/bin/util/PathsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/hooks/pre-commit.sample">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/bin/start/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1694">
+          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2067#2068#0" expanded="false" />
+            <element signature="e#2100#2101#0" expanded="false" />
+            <element signature="e#3386#3387#0" expanded="false" />
+            <element signature="e#3453#3454#0" expanded="false" />
+            <element signature="e#3512#3513#0" expanded="false" />
+            <element signature="e#3587#3588#0" expanded="false" />
+            <element signature="e#6508#6509#0" expanded="false" />
+            <element signature="e#6571#6572#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run-scripts/bash-run-model.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/bin/util/ExtendedMath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="444" column="8" selection-start-line="444" selection-start-column="8" selection-end-line="444" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.IdeaIC2016.1/system/python_stubs/-1247972723/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="414" column="4" selection-start-line="414" selection-start-column="4" selection-end-line="414" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build-info/build-info.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/hooks/pre-push.sample">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/sre_constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="121" column="38" selection-start-line="121" selection-start-column="38" selection-end-line="121" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/hooks/post-commit">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1355,52 +1483,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Math.java">
+    <entry file="file://$PROJECT_DIR$/build-info/.build_version">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="1764" column="25" selection-start-line="1764" selection-start-column="25" selection-end-line="1764" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="0" column="7" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build-info/increment-build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+          <folding>
+            <element signature="e#70#79#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build-info/.build_num">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/bin/util/PathsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/bin/start/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="111" column="73" selection-start-line="111" selection-start-column="73" selection-end-line="111" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/bin/util/ExtendedMath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="53" column="90" selection-start-line="53" selection-start-column="90" selection-end-line="53" selection-end-column="90" />
+        <state relative-caret-position="383">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1422,7 +1526,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Python</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1458,12 +1562,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Build-Count-Info</last-edited>
+          <last-edited>build-info</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
