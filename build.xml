@@ -88,7 +88,7 @@
         <delete dir="${path.javadoc}" />
     </target>
 
-    <target name="make javadoc" depends="clear javadoc">
+    <target name="generate javadoc" depends="clear javadoc">
         <javadoc sourcepath="${path.src}" destdir="${path.javadoc}" access="private" additionalparam="-Xdoclint:none
                 -splitindex" />
     </target>

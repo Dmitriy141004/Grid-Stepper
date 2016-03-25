@@ -109,8 +109,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(PathsUtil.realPath("."));
-
         // Shutdown hook for saving app data
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {

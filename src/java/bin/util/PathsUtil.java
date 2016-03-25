@@ -4,9 +4,10 @@ import java.io.File;
 import java.util.*;
 
 /**
- * Utility-Class specified on paths. You can see available tasks here:
+ * Utility-Class for doing some things paths.
  *
- * <table style="border-collapse: collapse;">
+ * <center><h2 style="font-family: 'DejaVu Sans'">Available tasks</h2></center>
+ * <table style="border-collapse: collapse; color: black">
  *     <tr style="background-color: #4D7A97; color: white; font-family: 'DejaVu Sans';">
  *         <th style="padding: 20px; border-left: 1px solid #BBB; border-top: 1px solid #BBB; border-bottom: 1px solid #BBB;">
  *             Link to function</th>
