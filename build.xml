@@ -70,8 +70,9 @@
     </target>
 
     <target name="build and compile" depends="prepare structure, compile, make run scripts, make editions, make jars">
-        <exec executable="./build-info/increment-build.py">
+        <exec executable="./build-info/version-util.py">
             <arg value="build"/>
+            <arg value="update"/>
         </exec>
     </target>
 

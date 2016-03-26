@@ -1,5 +1,5 @@
-bin.control
-bin.levels
-bin.settings
-bin.start
-bin.util
+control
+levels
+settings
+start
+util

@@ -2,7 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed0051cc-6d42-4920-94de-af679a53e7f3" name="Default" comment="Technical commit">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/java/util/Line2D.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/FXController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/FXMLLink.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/GamePlayController.FieldDrawAnimation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/GamePlayController.PointerMoveAnimation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/GamePlayController.PointerSpawnState.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/GamePlayController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/MainMenuController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/SettingsMenuController.Language.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/SettingsMenuController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/control/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/levels/InvalidPathSyntaxException.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/levels/LevelCell.CellType.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/levels/LevelCell.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/levels/XMLLevelLoader.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/levels/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/levels/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/levels/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/settings/XMLSettingsLoader.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/settings/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/settings/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/settings/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/start/Main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/start/UTF8Control.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/start/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/start/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/start/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/ExtendedMath.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/LIFOQueue.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/Line2D.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/PathsUtil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/SimpleFileIO.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/Stack.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/Wrapper.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/bin/util/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/util/Line2D.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build-info/increment-build.py" afterPath="$PROJECT_DIR$/build-info/version-util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-last-build.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-last-build.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-sources.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-sources.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/java/Grid-Stepper.jar" afterPath="$PROJECT_DIR$/build/jar/java/Grid-Stepper.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/java/control/GamePlayController$1.class" afterPath="$PROJECT_DIR$/build/last/java/control/GamePlayController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/java/control/GamePlayController$FieldDrawAnimation.class" afterPath="$PROJECT_DIR$/build/last/java/control/GamePlayController$FieldDrawAnimation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/java/control/GamePlayController$PointerMoveAnimation.class" afterPath="$PROJECT_DIR$/build/last/java/control/GamePlayController$PointerMoveAnimation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/java/control/GamePlayController$PointerSpawnState.class" afterPath="$PROJECT_DIR$/build/last/java/control/GamePlayController$PointerSpawnState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/java/control/GamePlayController.class" afterPath="$PROJECT_DIR$/build/last/java/control/GamePlayController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Grid-Stepper.iml" afterPath="$PROJECT_DIR$/Grid-Stepper.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-info/.build_version" afterPath="$PROJECT_DIR$/build-info/.build_version" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-info/.stop_counter" afterPath="$PROJECT_DIR$/build-info/.stop_counter" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/javadoc/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/constant-values.html" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterPath="$PROJECT_DIR$/javadoc/deprecated-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/help-doc.html" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-11.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-12.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-13.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-14.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-15.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-15.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-16.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-16.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-17.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-17.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-18.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-18.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-19.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-19.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-20.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-20.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-21.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-21.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-7.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-8.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-9.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index.html" afterPath="$PROJECT_DIR$/javadoc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-frame.html" afterPath="$PROJECT_DIR$/javadoc/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" afterPath="$PROJECT_DIR$/javadoc/overview-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/package-list" afterPath="$PROJECT_DIR$/javadoc/package-list" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/serialized-form.html" afterPath="$PROJECT_DIR$/javadoc/serialized-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/control/GamePlayController.java" afterPath="$PROJECT_DIR$/src/java/control/GamePlayController.java" />
     </list>
     <ignored path="Grid-Stepper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,28 +124,8 @@
       <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="52" column="107" selection-start-line="52" selection-start-column="107" selection-end-line="52" selection-end-column="107" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LevelCell.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/levels/LevelCell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="238">
+              <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -67,9 +134,72 @@
       <file leaf-file-name="post-commit" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.git/hooks/post-commit">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            <state relative-caret-position="44">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="37" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pre-commit" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.git/hooks/pre-commit">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version-util.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build-info/version-util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1412">
+              <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+              <folding>
+                <element signature="e#838#847#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelCell.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/levels/LevelCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+              <folding>
+                <element signature="e#817#818#0" expanded="false" />
+                <element signature="e#857#858#0" expanded="false" />
+                <element signature="e#904#905#0" expanded="false" />
+                <element signature="e#942#943#0" expanded="false" />
+                <element signature="e#976#977#0" expanded="false" />
+                <element signature="e#1006#1007#0" expanded="false" />
+                <element signature="e#1043#1044#0" expanded="false" />
+                <element signature="e#1074#1075#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/start/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1386">
+              <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GamePlayController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/control/GamePlayController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15004">
+              <caret line="688" column="22" selection-start-line="688" selection-start-column="22" selection-end-line="688" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,8 +233,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/settings/config.xml" />
-        <option value="$PROJECT_DIR$/resources/config/settings-schema.xml" />
         <option value="$PROJECT_DIR$/src/java/bin/config/XMLSettingsLoader.java" />
         <option value="$PROJECT_DIR$/resources/settings/settings.xml" />
         <option value="$PROJECT_DIR$/resources/settings/settings-schema.xml" />
@@ -140,20 +268,22 @@
         <option value="$PROJECT_DIR$/src/java/bin/control/GamePlayController.java" />
         <option value="$PROJECT_DIR$/src/java/bin/util/PathsUtil.java" />
         <option value="$PROJECT_DIR$/src/java/bin/util/ExtendedMath.java" />
-        <option value="$PROJECT_DIR$/.git/hooks/pre-commit" />
         <option value="$PROJECT_DIR$/src/java/bin/start/Main.java" />
         <option value="$PROJECT_DIR$/build-info/increment-build.sh" />
         <option value="$PROJECT_DIR$/run-scripts/bash-run-model.sh" />
         <option value="$PROJECT_DIR$/run-scripts/batch-run-model.bat" />
         <option value="$PROJECT_DIR$/run-scripts/batch-jar-run-model.bat" />
         <option value="$PROJECT_DIR$/run-scripts/bash-jar-run-model.sh" />
-        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/build-info/.build_version" />
         <option value="$PROJECT_DIR$/build-info/.break_lever" />
-        <option value="$PROJECT_DIR$/.git/hooks/post-commit" />
         <option value="$PROJECT_DIR$/build-info/increment-build.py" />
-        <option value="$PROJECT_DIR$/build-info/.stop_counter" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/build-info/.stop_counter" />
+        <option value="$PROJECT_DIR$/src/java/control/GamePlayController.java" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/.git/hooks/post-commit" />
+        <option value="$PROJECT_DIR$/.git/hooks/pre-commit" />
+        <option value="$PROJECT_DIR$/build-info/version-util.py" />
       </list>
     </option>
   </component>
@@ -297,7 +427,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -459,9 +588,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Grid-Stepper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Grid-Stepper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,7 +652,7 @@
       <recent name="$PROJECT_DIR$/resources/settings" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.increment-build">
+  <component name="RunManager" selected="Application.Run and make project">
     <configuration default="false" name="increment-build" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -521,7 +665,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="build-info" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build-info/increment-build.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build-info/version-util.py" />
       <option name="PARAMETERS" value="build" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -918,7 +1062,7 @@
       <option name="MAIN_CLASS_NAME" value="start.Main" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/build/local/bin" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/build/local/java" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -995,32 +1139,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.50193477" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43899897" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.49806523" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65589154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21779989" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2233278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937434" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="128" y="149" width="1655" height="884" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.49806523" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937434" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1057,7 +1201,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/java/control/GamePlayController.java</url>
-          <line>584</line>
+          <line>590</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
@@ -1094,14 +1238,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="234" column="21" selection-start-line="234" selection-start-column="21" selection-end-line="234" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build-log/.build_counter.py" />
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/net/URL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1718">
@@ -1139,22 +1275,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build-info/.commit_num" />
-    <entry file="file://$PROJECT_DIR$/src/java/control/GamePlayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13794">
-          <caret line="654" column="43" selection-start-line="654" selection-start-column="43" selection-end-line="654" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#13694#13695#0" expanded="false" />
-            <element signature="e#13745#13746#0" expanded="false" />
-            <element signature="e#15814#15815#0" expanded="false" />
-            <element signature="e#15851#15852#0" expanded="false" />
-            <element signature="e#16053#16054#0" expanded="false" />
-            <element signature="e#16097#16098#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
@@ -1169,20 +1289,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.git/hooks/pre-commit.sample">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/start/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1694">
-          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1285,7 +1391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1296,26 +1401,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/.project_root">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/ORIG_HEAD">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/description">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/COMMIT_EDITMSG">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/HEAD">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build-info/.stop_counter">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/levels/LevelCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        <state relative-caret-position="418">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding>
+            <element signature="e#817#818#0" expanded="false" />
+            <element signature="e#857#858#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#942#943#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
+            <element signature="e#1006#1007#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="false" />
+            <element signature="e#1074#1075#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/start/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/Line2D.java" />
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/javafx/geom/Line2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/control/GamePlayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15004">
+          <caret line="688" column="22" selection-start-line="688" selection-start-column="22" selection-end-line="688" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.git/hooks/post-commit">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        <state relative-caret-position="44">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/.project_root">
+    <entry file="file://$PROJECT_DIR$/.git/hooks/pre-commit">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="774">
+          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1327,77 +1534,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build-info/increment-build.py">
+    <entry file="file://$PROJECT_DIR$/build-info/version-util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="1412">
+          <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
           <folding>
-            <element signature="e#404#413#0" expanded="true" />
+            <element signature="e#838#847#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="52" column="107" selection-start-line="52" selection-start-column="107" selection-end-line="52" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build-info/.stop_counter">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.git/HEAD">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.git/ORIG_HEAD">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.git/description">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.git/config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.git/COMMIT_EDITMSG">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,7 +1597,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>build-info</last-edited>
+          <last-edited>Grid-Stepper</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

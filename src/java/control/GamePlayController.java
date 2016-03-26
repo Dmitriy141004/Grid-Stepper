@@ -1,5 +1,6 @@
 package control;
 
+import com.sun.javafx.geom.Line2D;
 import util.ExtendedMath;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
@@ -17,7 +18,6 @@ import levels.XMLLevelLoader;
 import start.Main;
 import util.LIFOQueue;
 import util.Stack;
-import util.Line2D;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,9 +42,11 @@ public class GamePlayController extends FXController {
      * level is already loaded. It's used when redrawing field: if it's first redraw set {@link #pointerX} and {@link #pointerY}
      * to start values. */
     private boolean levelIsLoaded = false;
-    /** This pointer points, on what <b>X co-ord</b> is it now. <i><b>Note:</b> it's a co-ord on canvas, not on level.</i> */
+    /** This pointer points, on what <b>X coordinate</b> is it now. <i><b>Note:</b> it's a co-ord on canvas, not on level.
+     * </i> */
     private int pointerX;
-    /** This pointer points, on what <b>Y co-ord</b> is it now. <i><b>Note:</b> it's a co-ord on canvas, not on level.</i> */
+    /** This pointer points, on what <b>Y coordinate</b> is it now. <i><b>Note:</b> it's a co-ord on canvas, not on level.
+     * </i> */
     private int pointerY;
 
     /** 2D grid of level.
@@ -167,6 +169,10 @@ public class GamePlayController extends FXController {
     private ArrayList<Line2D> stepLines = new ArrayList<>(0);
     /** This flag is set when {@link #actionButtonPressed(ActionEvent)} receives event from undo button. */
     private boolean undoFlag = false;
+
+    private int startCellX;
+
+    private int startCellY;
 
     /**
      * This class implements abstract class {@link AnimationTimer}. Why I used this class? Firstly, I needed to create
@@ -309,8 +315,8 @@ public class GamePlayController extends FXController {
             }
 
             // This draws another step lines
-            stepLines.forEach(line -> graphics.strokeLine(line.getX1() + CELL_SIZE / 2, line.getY1() + CELL_SIZE / 2,
-                    line.getX2() + CELL_SIZE / 2, line.getY2() + CELL_SIZE / 2));
+            stepLines.forEach(line -> graphics.strokeLine(line.x1 + CELL_SIZE / 2, line.y1 + CELL_SIZE / 2,
+                    line.x2 + CELL_SIZE / 2, line.y2 + CELL_SIZE / 2));
 
             graphics.setLineWidth(1);
 
@@ -689,19 +695,21 @@ public class GamePlayController extends FXController {
 
             case START:
                 if (!levelIsLoaded) {
-                    pointerX = x * CELL_SIZE;
-                    pointerY = y * CELL_SIZE;
+                    pointerX = startCellX = x * CELL_SIZE;
+                    pointerY = startCellY = y * CELL_SIZE;
                 }
 
                 graphics.setFill(Color.GREEN);
-                                                                                              // double SHIFT = 25.0
-                double x1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
-                double y1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
-                double x2 = ExtendedMath.map(80.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT + 5.0
-                double y2 = ExtendedMath.map(50.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 / 2.0
-                double x3 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
-                double y3 = ExtendedMath.map(75.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT
-                drawTriangle(pointerX + x1, pointerY + y1, pointerX + x2, pointerY + y2, pointerX + x3, pointerY + y3);
+                                                                                                    // double SHIFT = 25.0
+                final double x1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
+                final double y1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
+                final double x2 = ExtendedMath.map(80.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT + 5.0
+                final double y2 = ExtendedMath.map(50.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 / 2.0
+                final double x3 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
+                final double y3 = ExtendedMath.map(75.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT
+                drawTriangle(startCellX + x1, startCellY + y1,
+                             startCellX + x2, startCellY + y2,
+                             startCellX + x3, startCellY + y3);
                 break;
 
             case FINISH:

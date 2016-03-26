@@ -6,3 +6,4 @@
 README.*
 /build/local
 *~
+/.git
