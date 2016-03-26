@@ -2,7 +2,7 @@
 
 import java.io.*;
 
-public class SimpleFileIO {
+public class FileIO {
     public static String load(String path) throws IOException {
         String fileData = "";
 

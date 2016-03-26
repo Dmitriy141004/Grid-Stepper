@@ -20,21 +20,43 @@ public class LevelCell {
         FINISH
     }
 
+    /** Field with type of cell. */
     private CellType cellType;
+    /** Flag for visited cells. */
     private boolean visited = false;
 
+    /**
+     * Constructor for class.
+     *
+     * @param cellType type of this cell
+     */
     public LevelCell(CellType cellType) {
         this.cellType = cellType;
     }
 
+    /**
+     * Setter for field {@link #visited}.
+     *
+     * @param visited new value of field
+     */
     public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
+    /**
+     * Getter for field {@link #visited}.
+     *
+     * @return value of field {@link #visited}
+     */
     public boolean isVisited() {
         return visited;
     }
 
+    /**
+     * Getter for field {@link #cellType}.
+     *
+     * @return value of field {@link #cellType}.
+     */
     public CellType getCellType() {
         return cellType;
     }

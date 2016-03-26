@@ -10,6 +10,7 @@
     <property name="path.build.jar.root" value="${path.build.root}/jar"/>
     <property name="path.javadoc" value="./javadoc"/>
     <property name="path.scripts.models" value="./run-scripts"/>
+    <property name="path.build.info.root" value="./build-info"/>
 
     <target name="clear build">
         <delete dir="${path.build.last.root}"/>
@@ -35,11 +36,13 @@
         <!-- Note: Intellij IDEA don't recognize attribute "unless:set", but ant successfully builds project. -->
         <copydir unless:set="resourcesInLocalBuild" src="${path.resources}" dest="${path.build.local.root}/resources"/>
         <copyfile src="${path.src}/.project_root" dest="${path.build.local.root}"/>
+        <copyfile src="${path.build.info.root}/.build_version" dest="${path.build.local.root}/resources/.build_version"/>
 
         <copydir src="${path.resources}" dest="${path.build.last.root}/resources"/>
+        <copyfile src="${path.build.info.root}/.build_version" dest="${path.build.last.root}/resources/.build_version"/>
 
         <copydir src="${path.resources}" dest="${path.build.jar.root}/resources"/>
-        <mkdir dir="${path.build.jar.root}"/>
+        <copyfile src="${path.build.info.root}/.build_version" dest="${path.build.jar.root}/resources/.build_version"/>
     </target>
 
     <target name="make jars">
@@ -70,7 +73,7 @@
     </target>
 
     <target name="build and compile" depends="prepare structure, compile, make run scripts, make editions, make jars">
-        <exec executable="./build-info/version-util.py">
+        <exec executable="${path.build.info.root}/version-util.py">
             <arg value="build"/>
             <arg value="update"/>
         </exec>

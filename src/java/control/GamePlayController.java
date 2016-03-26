@@ -670,11 +670,13 @@ public class GamePlayController extends FXController {
      * Redraws <b>one</b> cell on field.
      *
      * <p>Starting cell is peculiar (see {@link levels.LevelCell.CellType#START} to read how it looks). To draw triangle
-     * on the start in use this scheme:<br>
-     * 1. Using some value in range 0.0 - 100.0 for current point (start - {@code x1}),<br>
-     * 2. Mapping this value to range 0.0 - {@value CELL_SIZE}.0,<br>
-     * 3. Giving received value to method that draws triangle,<br>
-     * 4. Repeating this 5 times with {@code y1}, {@code x2}, {@code y2}, {@code x3} and {@code y3}.</p>
+     * on the start in use this scheme:
+     * <ol>
+     *     <li>Using some value in range 0.0 - 100.0 for current point (start - {@code x1})</li>
+     *     <li>Mapping this value to range 0.0 - {@value CELL_SIZE}.0</li>
+     *     <li>Giving received value to method that draws triangle</li>
+     *     <li>Repeating this 5 times with {@code y1}, {@code x2}, {@code y2}, {@code x3} and {@code y3}</li>
+     * </ol></p>
      *
      * @param x x position of cell. <i><b>Note:</b> it's position in {@link #level collection}, not in canvas.</i>
      * @param y y position of cell. <i><b>Note:</b> it's position in {@link #level collection}, not in canvas.</i>
@@ -746,14 +748,7 @@ public class GamePlayController extends FXController {
      *
      */
     public void actionButtonPressed(ActionEvent event) {
-        Object source = event.getSource();
-
-        // if source isn't button - we don't need to do anything else
-        if (!(source instanceof Button)) {
-            return;
-        }
-
-        Button clickedButton = (Button) source;
+        Button clickedButton = (Button) event.getSource();
 
         switch (clickedButton.getId()) {
             case "endButton":

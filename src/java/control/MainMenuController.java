@@ -2,6 +2,7 @@ package control;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import start.Main;
 
 import java.util.Optional;
@@ -14,9 +15,12 @@ import java.util.Optional;
  *
  */
 public class MainMenuController extends FXController {
+    @FXMLLink
+    private Label versionLabel;
 
     @Override
     public void init() {
+        versionLabel.setText(Main.getProductVersion());
 //        parseChildren(exitDialog.getDialogPane(), 0);
     }
 
@@ -57,14 +61,7 @@ public class MainMenuController extends FXController {
      * @param event event from button.
      */
     public void actionButtonPressed(ActionEvent event) {
-        Object source = event.getSource();
-
-        // if source isn't button - we don't need to do anything else
-        if (!(source instanceof Button)) {
-            return;
-        }
-
-        Button clickedButton = (Button) source;
+        Button clickedButton = (Button) event.getSource();
 
         switch (clickedButton.getId()) {
             case "playButton":

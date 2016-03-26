@@ -43,9 +43,9 @@ public class Main extends Application {
     /** Default height of window. */
     private static final int DEFAULT_WINDOW_HEIGHT = 557;
     /** Minimal width of window. */
-    private static final int MIN_WINDOW_WIDTH = 760;
+    private static final int MIN_WINDOW_WIDTH = 767;
     /** Minimal height of window. */
-    private static final int MIN_WINDOW_HEIGHT = 557;
+    private static final int MIN_WINDOW_HEIGHT = 556;
 
     /** Primary stage of application. */
     public static Stage primaryStage;
@@ -85,6 +85,27 @@ public class Main extends Application {
     /** Path to directory with resources. I don't put slash at the end, because it is everywhere between this constant
      * and path to certain resource. */
     private static final String RESOURCES_ROOT = "../../resources/";
+    /** Field for build version. It looks like this:
+     *
+     * <pre><code>1.23.40</code></pre>
+     *
+     * Description for numbers:
+     * <ol>
+     *     <li><b>GLOBAL VERSION.</b> It's number of realize with many differences.</li>
+     *     <li><b>COMMIT VERSION.</b> It's number of "git commit"s.</li>
+     *     <li><b>BUILD VERSION.</b> After each launch of Ant build script this number increments by one. </li>
+     * </ol>
+     */
+    private static String PRODUCT_VERSION;
+
+    /**
+     * Getter for field {@link #PRODUCT_VERSION}.
+     *
+     * @return value of {@link #PRODUCT_VERSION}.
+     */
+    public static String getProductVersion() {
+        return PRODUCT_VERSION;
+    }
 
     /**
      * Getter for {@link #availableLocales} variable.
@@ -96,10 +117,24 @@ public class Main extends Application {
         return (ArrayList<String>) availableLocales.clone();
     }
 
+    /**
+     * Returns relative path to resource. At start adds constant {@link #RESOURCES_ROOT}
+     * (<code>{@value #RESOURCES_ROOT}</code>), and at the end - resource name.
+     *
+     * @param pathSuffix name of resource. It will be added at the end.
+     * @return real path to resource.
+     */
     public static String getResource(String pathSuffix) {
         return PathsUtil.realPath(Main.RESOURCES_ROOT + pathSuffix);
     }
 
+    /**
+     * Works like {@link #getResource(String)}, but returns {@link URL} with path to resource.
+     *
+     * <p style="font-size: 13pt; font-weight: bold;">From {@link #getResource(String)}:</p>
+     * @param pathSuffix name of resource. It will be added at the end.
+     * @return real path to resource.
+     */
     public static URL getResourceURL(String pathSuffix) {
         try {
             return new URL("file", null, PathsUtil.realPath(Main.RESOURCES_ROOT + pathSuffix));
@@ -108,7 +143,15 @@ public class Main extends Application {
         }
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
+        // Loading product version
+        try {
+            PRODUCT_VERSION = "v. " + FileIO.load(getResource(".build_version"));
+        } catch (IOException e) {
+            e.printStackTrace();
+            PRODUCT_VERSION = "Unknown version";
+        }
+
         // Shutdown hook for saving app data
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
@@ -126,6 +169,8 @@ public class Main extends Application {
                 Element rootSettingsElement = settingsDocument.createElement("settings");
                 settingsDocument.appendChild(rootSettingsElement);
                 // Adding settings schema
+                rootSettingsElement.setAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
+                rootSettingsElement.setAttribute("xsi:noNamespaceSchemaLocation", "settings-schema.xsd");
 
                 Element storageElement = settingsDocument.createElement("storage");
                 rootSettingsElement.appendChild(storageElement);
@@ -148,7 +193,7 @@ public class Main extends Application {
                 dumper.serialize(settingsDocument);
 
                 // Saving data
-                SimpleFileIO.write(dumpedDocument.toString(), Main.getResource("settings/settings.xml"));
+                FileIO.write(dumpedDocument.toString(), Main.getResource("settings/settings.xml"));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -296,7 +341,7 @@ public class Main extends Application {
             if (currentFile.isFile() && fileName.endsWith(".fxml")) {
                 // Adding its data
                 loadedScenes.put(fileName,
-                        SimpleFileIO.load(Main.getResource("fxml/" + fileName)));
+                        FileIO.load(Main.getResource("fxml/" + fileName)));
             }
         }
     }

@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="557.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainMenuController">
-   <center>
-      <Label maxHeight="-Infinity" minHeight="-Infinity" text="Grid Stepper" wrapText="true" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="Ubuntu Bold" size="86.0" />
-         </font>
-         <BorderPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
-         </BorderPane.margin>
-      </Label>
-   </center>
+<BorderPane prefHeight="556.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainMenuController">
    <bottom>
-      <AnchorPane prefHeight="306.0" prefWidth="600.0">
+      <AnchorPane prefHeight="242.0" prefWidth="760.0">
          <children>
             <GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="199.0" prefWidth="600.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" BorderPane.alignment="CENTER">
               <columnConstraints>
@@ -73,4 +64,29 @@
          </BorderPane.margin>
       </AnchorPane>
    </bottom>
+   <top>
+      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="136.0" prefWidth="523.0" text="Grid Stepper" wrapText="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Ubuntu Bold" size="86.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane layoutX="265.0" layoutY="-46.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <Label fx:id="versionLabel" text="v. 1.0.0" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Ubuntu" size="31.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </center>
 </BorderPane>

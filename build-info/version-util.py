@@ -34,6 +34,10 @@ if "--help" in script_args:
     print """
 Usage:
     version-util.py [SELECTOR] [MODE]
+Wrote in EBNF:
+    command call = command name, selector, mode ;
+    selector     = commit | build     | global  ;
+    mode         = update | increment | zero    ;
 
 SELECTOR-s are:
     commit
@@ -41,9 +45,9 @@ SELECTOR-s are:
     global
 
 MODE-s are:
-    update          increment this selector (number) and zero next numbers at the right
-    increment       increment only this selector
-    zero            zero this selector
+    update       increment this selector (number) and zero next numbers at the right
+    increment    increment only this selector
+    zero         zero this selector
 """
     exit(0)
 
@@ -94,6 +98,7 @@ if parsedBuildInfo is None:
 globalVersion = int(parsedBuildInfo.group(1))
 commitNumber = int(parsedBuildInfo.group(2))
 buildNumber = int(parsedBuildInfo.group(3))
+
 
 if script_args[1] == "build":
     if script_args[2] == "update" or script_args[2] == "increment":

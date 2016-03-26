@@ -69,14 +69,7 @@ public class SettingsMenuController extends FXController {
      * @param event event from button.
      */
     public void actionButtonPressed(ActionEvent event) {
-        Object source = event.getSource();
-
-        // if source isn't button - we don't need to do anything else
-        if (!(source instanceof Button)) {
-            return;
-        }
-
-        Button clickedButton = (Button) source;
+        Button clickedButton = (Button) event.getSource();
 
         switch (clickedButton.getId()) {
             case "backButton":
