@@ -94,7 +94,7 @@
                 -splitindex" />
     </target>
 
-    <target name="build and compile" depends="prepare structure, compile, make run scripts, make editions, make jars">
+    <target name="build and compile">
         <exec executable="${path.build.info.root}/version-util.py">
             <arg value="build"/>
             <arg value="update"/>

@@ -395,7 +395,7 @@ public class GamePlayController extends FXController {
                                     // 3. 1 second      = 1000 milliseconds
                                     ((double) System.nanoTime() - startTime) / 1_000_000_000.0)
                                     // Rounding received passing time in seconds to third digit after point
-                                    .round(new MathContext(4))) + " " + getLocaleStr("shorts.seconds"));
+                                    .round(new MathContext(4))) + " " + getLocaleStr("abbreviations.sec"));
 
                             // Showing stage/window
                             levelCompletedDialog.showAndWait();

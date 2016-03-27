@@ -322,7 +322,7 @@ public class Main extends Application {
      * // ...
      * fxmlLoader.setController(null);
      * fxmlLoader.setRoot(null);
-     * Parent root = fxmlLoader.load(new ByteArrayInputStream(loadedScenes.get(sceneName).getBytes()));
+     * Parent root = fxmlLoader.load(new ByteArrayInputStream(loadedScenes.get(sceneIdentifier).getBytes()));
      *
      * // ...
      * primaryStage.setScene(new Scene(root, Main.DEFAULT_WINDOW_WIDTH, Main.DEFAULT_WINDOW_HEIGHT));
