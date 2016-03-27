@@ -1,10 +1,11 @@
 package control;
 
 import com.sun.javafx.geom.Line2D;
-import util.ExtendedMath;
-import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
@@ -12,13 +13,19 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import levels.LevelCell;
 import levels.XMLLevelLoader;
 import start.Main;
+import util.ExtendedAnimationTimer;
+import util.ExtendedMath;
 import util.LIFOQueue;
 import util.Stack;
 
+import java.io.ByteArrayInputStream;
+import java.math.BigDecimal;
+import java.math.MathContext;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
@@ -38,10 +45,6 @@ public class GamePlayController extends FXController {
      * @see #redrawField() */
     private static final int CELL_SIZE = 45;
 
-    /** Name of this field says about itself - it's {@code false} when level isn't loaded, and {@code true} when
-     * level is already loaded. It's used when redrawing field: if it's first redraw set {@link #pointerX} and {@link #pointerY}
-     * to start values. */
-    private boolean levelIsLoaded = false;
     /** This pointer points, on what <b>X coordinate</b> is it now. <i><b>Note:</b> it's a co-ord on canvas, not on level.
      * </i> */
     private int pointerX;
@@ -60,7 +63,7 @@ public class GamePlayController extends FXController {
     private int levelWidth;
     /** Height of level. <i><b>Note:</b> it's size of grid, not of level.</i> */
     private int levelHeight;
-    /** This' variables name says about himself like {@link #levelIsLoaded}. It's used to make game pointer move just
+    /** This' variables name says about himself. It's used to make game pointer move just
      * in one direction on one keypress. */
     private boolean movingPointer = false;
 
@@ -134,8 +137,6 @@ public class GamePlayController extends FXController {
     private static final ButtonType CANCEL_OPTION = new ButtonType(Main.getLocaleStr("cancel"),
             ButtonBar.ButtonData.CANCEL_CLOSE);
 
-    /** Instance of {@link PointerMoveAnimation}. */
-    private PointerMoveAnimation pointerMoveAnimation;
     /** Handler for key input. Extracted to object because I need to remove it from list of handlers when
      * {@link #actionButtonPressed(ActionEvent)} receives action from "end game" button. */
     private final EventHandler<KeyEvent> GP_MOVE_EVENT_HANDLER = (KeyEvent observable) -> {
@@ -162,26 +163,27 @@ public class GamePlayController extends FXController {
 
         undoStack.push(keyText);
         redoStack.clear();
-        pointerMoveAnimation = new PointerMoveAnimation(observable.getText());
-        pointerMoveAnimation.start();
+        startMovingPointer(observable.getText());
     };
     /** Lines that GP leaves after moving. */
     private ArrayList<Line2D> stepLines = new ArrayList<>(0);
     /** This flag is set when {@link #actionButtonPressed(ActionEvent)} receives event from undo button. */
     private boolean undoFlag = false;
-
+    /** {@code X} position of starting cell. */
     private int startCellX;
-
+    /** {@code Y} position of starting cell. */
     private int startCellY;
 
+    private double startTime = System.nanoTime();
+
     /**
-     * This class implements abstract class {@link AnimationTimer}. Why I used this class? Firstly, I needed to create
+     * This class implements abstract class {@link ExtendedAnimationTimer}. Why I used this class? Firstly, I needed to create
      * animation of game pointer's move. I tried to use {@link javafx.animation.TranslateTransition}, but I found it
      * bad when you need to switch pointers. And drawing on canvas was the best solution, but I needed to redraw scene
      * every frame
      *
      */
-    private class PointerMoveAnimation extends AnimationTimer {
+    private class PointerMoveAnimation extends ExtendedAnimationTimer {
 
         /**
          * Constructor is quite complicated. Firstly it sets {@link #movingPointer} to {@code true} - this says that we're
@@ -242,20 +244,6 @@ public class GamePlayController extends FXController {
                     (level.get(goalX / CELL_SIZE).get(goalY / CELL_SIZE).isVisited()) && !undoFlag) {
                 stop();
             }
-
-            // Are all cells visited?
-            boolean allCellsVisited = true;
-
-            for (ArrayList<LevelCell> levelPart : level) {
-                for (LevelCell levelCell : levelPart) {
-                    if (Arrays.asList(LevelCell.CellType.EMPTY, LevelCell.CellType.START).contains(levelCell.getCellType()) &&
-                            !Arrays.asList(LevelCell.CellType.FINISH, LevelCell.CellType.WALL)
-                                    .contains(levelCell.getCellType()) && !levelCell.isVisited()) allCellsVisited = false;
-                }
-            }
-
-            if (level.get(goalX / CELL_SIZE).get(goalY / CELL_SIZE).getCellType() == LevelCell.CellType.FINISH
-                    && allCellsVisited) System.out.println("Level completed!");
         }
 
         /** End position of pointer move on X axis. By default it equals {@link #pointerX}, but in
@@ -283,7 +271,7 @@ public class GamePlayController extends FXController {
         int startY = pointerY;
 
         /**
-         * This method is an implementation of {@link AnimationTimer#handle(long)}. Here's
+         * This method is an implementation of {@link ExtendedAnimationTimer#handle(long)}. Here's
          * all move animation logic:
          *
          * <ol>
@@ -320,6 +308,19 @@ public class GamePlayController extends FXController {
 
             graphics.setLineWidth(1);
 
+            // This thing draws green triangle on start cell
+            graphics.setFill(Color.GREEN);
+                                                                                                // double SHIFT = 25.0
+            final double x1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
+            final double y1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
+            final double x2 = ExtendedMath.map(80.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT + 5.0
+            final double y2 = ExtendedMath.map(50.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 / 2.0
+            final double x3 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
+            final double y3 = ExtendedMath.map(75.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT
+            drawTriangle(startCellX + x1, startCellY + y1,
+                         startCellX + x2, startCellY + y2,
+                         startCellX + x3, startCellY + y3);
+
             // This thing draws GP
             graphics.setFill(GAME_POINTER_COLOR);
             graphics.fillOval(pointerX + CELL_SIZE / 2 - GAME_POINTER_SIZE / 2, pointerY + CELL_SIZE / 2 - GAME_POINTER_SIZE / 2,
@@ -327,18 +328,89 @@ public class GamePlayController extends FXController {
             graphics.strokeOval(pointerX + CELL_SIZE / 2 - GAME_POINTER_SIZE / 2, pointerY + CELL_SIZE / 2 - GAME_POINTER_SIZE / 2,
                     GAME_POINTER_SIZE, GAME_POINTER_SIZE);
 
+            // If we reached goal coordinates...
             if (pointerX == goalX && pointerY == goalY) {
+                // If undo flag is null, we add new line to stepLines
                 if (!undoFlag) stepLines.add(new Line2D(startX, startY, pointerX, pointerY));
                 level.get(pointerX / CELL_SIZE).get(pointerY / CELL_SIZE).setVisited(true);
 
-                stop();
                 System.out.printf("%15d\t|\t%15d\t|\t%15d\t|\t%15d\t|\t%s\t\n", pointerX, pointerY, levelWidth,
                         levelHeight, undoStack);
+
+                // Are all cells visited?
+                boolean allCellsVisited = true;
+                // To see this, we must iterate all rows in each column
+                for (ArrayList<LevelCell> levelPart : level) {
+                    // And each cell in each row
+                    for (LevelCell levelCell : levelPart) {
+                        // If cell is neither empty nor starting cell nor finish and it isn't visited -
+                        // level isn't completed
+                        if (Arrays.asList(LevelCell.CellType.EMPTY,
+                                LevelCell.CellType.START,
+                                LevelCell.CellType.FINISH).contains(levelCell.getCellType())
+                                && !levelCell.isVisited()) {
+                            allCellsVisited = false;
+                            break;
+                        }
+                    }
+                }
+
+                // If all cells are visited and current cell is finish...
+                if (level.get(goalX / CELL_SIZE).get(goalY / CELL_SIZE).getCellType() == LevelCell.CellType.FINISH
+                        && allCellsVisited) {
+                    // Level is completed!
+
+                    // This thing will be activated after timer will be stopped
+                    // I use this because if ExtendedAnimationTimer isn't stopped, you can't show new stage
+                    // And my own implementation allows to do this
+                    setEndAction(() -> {
+                        try {
+                            // Small delay
+                            delay(500);
+                            // Loading content
+                            FXMLLoader dialogLoader = new FXMLLoader();
+                            dialogLoader.setResources(resourceBundle);
+                            Parent dialogRoot = dialogLoader.load(
+                                    new ByteArrayInputStream(Main.getSceneContent("level-completed-dialog.fxml").getBytes()));
+
+                            // Creating and customising window/stage
+                            Stage levelCompletedDialog = new Stage();
+                            levelCompletedDialog.setTitle(getLocaleStr("header.base") + " - Level Completed!");
+                            levelCompletedDialog.setMinHeight(150);
+                            levelCompletedDialog.setMinWidth(300);
+                            levelCompletedDialog.setResizable(false);
+                            levelCompletedDialog.setScene(new Scene(dialogRoot));
+                            levelCompletedDialog.initModality(Modality.WINDOW_MODAL);
+                            levelCompletedDialog.initOwner(Main.primaryStage);
+
+                            // Initializing controller
+                            LevelCompletedController controller = dialogLoader.getController();
+                            FXController.initController(controller, dialogRoot, resourceBundle);
+                            // Setting count of moves and time used to complete level
+                            controller.moveCountLabel.setText(String.valueOf(stepLines.size()));
+                            controller.passingTimeLabel.setText((new BigDecimal(
+                                    // Converting passing time from nano seconds to seconds
+                                    // 1. 1 microsecond = 1000 nanoseconds
+                                    // 2. 1 millisecond = 1000 microseconds
+                                    // 3. 1 second      = 1000 milliseconds
+                                    ((double) System.nanoTime() - startTime) / 1_000_000_000.0)
+                                    // Rounding received passing time in seconds to third digit after point
+                                    .round(new MathContext(4))) + " " + getLocaleStr("shorts.seconds"));
+
+                            // Showing stage/window
+                            levelCompletedDialog.showAndWait();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    });
+                }
+
+                stop();
             }
         }
 
         /**
-         * Overrides method {@link AnimationTimer#stop()} because there're some calls of this method before starting
+         * Overrides method {@link ExtendedAnimationTimer#stop()} because there're some calls of this method before starting
          * animation. So, uses {@link #stopped variable-stopper}.
          *
          */
@@ -348,7 +420,7 @@ public class GamePlayController extends FXController {
         }
 
         /**
-         * Overrides method {@link AnimationTimer#stop()}. Why I have chosen to override? That's because of
+         * Overrides method {@link ExtendedAnimationTimer#stop()}. Why I have chosen to override? That's because of
          * {@link #movingPointer}. This method is called many times, and I don't wanted to type such code:
          *
          * <pre><code>
@@ -360,8 +432,8 @@ public class GamePlayController extends FXController {
          */
         @Override
         public void stop() {
-            stopped = true;
             super.stop();
+            stopped = true;
             movingPointer = false;
             undoFlag = false;
         }
@@ -379,6 +451,12 @@ public class GamePlayController extends FXController {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private void startMovingPointer(String keyText) {
+        // Starting GP move animation
+        PointerMoveAnimation pointerMoveAnimation = new PointerMoveAnimation(keyText);
+        pointerMoveAnimation.start();
     }
 
     /**
@@ -449,7 +527,7 @@ public class GamePlayController extends FXController {
      * </ol>
      *
      */
-    private class FieldDrawAnimation extends AnimationTimer {
+    private class FieldDrawAnimation extends ExtendedAnimationTimer {
         /**
          * Delay between cell drawings.
          *
@@ -492,7 +570,7 @@ public class GamePlayController extends FXController {
         }
 
         /**
-         * Implementation of {@link AnimationTimer#start()}. Here're all animation logic.
+         * Implementation of {@link ExtendedAnimationTimer#start()}. Here're all animation logic.
          *
          * @param now time in nanoseconds (same as {@link System#nanoTime()}, but with some additions)
          *
@@ -500,6 +578,21 @@ public class GamePlayController extends FXController {
         @Override
         public void handle(long now) {
             redrawFieldCell(x, y);
+
+            if (x * CELL_SIZE == startCellX && y * CELL_SIZE == startCellY) {
+                // This thing draws green triangle on start cell
+                graphics.setFill(Color.GREEN);
+                // final double SHIFT = 25.0
+                final double x1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
+                final double y1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
+                final double x2 = ExtendedMath.map(80.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT + 5.0
+                final double y2 = ExtendedMath.map(50.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 / 2.0
+                final double x3 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
+                final double y3 = ExtendedMath.map(75.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT
+                drawTriangle(startCellX + x1, startCellY + y1,
+                        startCellX + x2, startCellY + y2,
+                        startCellX + x3, startCellY + y3);
+            }
 
             // If all cells are drown, start GPSA
             if (x >= levelWidth - 1 && y >= levelHeight - 1 && animationState == null) {
@@ -609,6 +702,16 @@ public class GamePlayController extends FXController {
         exitDialog.getDialogPane().setPrefHeight(Region.USE_COMPUTED_SIZE);
         exitDialog.getDialogPane().setMaxHeight(Region.USE_PREF_SIZE);
 
+        // Getting info about start cell
+        for (int x = 0; x < levelWidth; x++) {
+            for (int y = 0; y < levelHeight; y++) {
+                if (level.get(x).get(y).getCellType() == LevelCell.CellType.START) {
+                    pointerX = startCellX = CELL_SIZE * x;
+                    pointerY = startCellY = CELL_SIZE * y;
+                }
+            }
+        }
+
         FieldDrawAnimation drawAnimation = new FieldDrawAnimation();
         drawAnimation.start();
     }
@@ -694,12 +797,9 @@ public class GamePlayController extends FXController {
                 graphics.setFill(Color.BLACK);
                 graphics.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
                 break;
-
+            /*
             case START:
-                if (!levelIsLoaded) {
-                    pointerX = startCellX = x * CELL_SIZE;
-                    pointerY = startCellY = y * CELL_SIZE;
-                }
+                // Green triangle on start cell must be in higher level than lines, which GP leaves
 
                 graphics.setFill(Color.GREEN);
                                                                                                     // double SHIFT = 25.0
@@ -712,7 +812,9 @@ public class GamePlayController extends FXController {
                 drawTriangle(startCellX + x1, startCellY + y1,
                              startCellX + x2, startCellY + y2,
                              startCellX + x3, startCellY + y3);
+
                 break;
+                */
 
             case FINISH:
                 drawFinish(x, y);
@@ -737,12 +839,10 @@ public class GamePlayController extends FXController {
                 redrawFieldCell(x, y);
             }
         }
-
-        levelIsLoaded = true;
     }
 
     /**
-     * Event handler for all buttons. Moved in one method because of {@link ActionEvent} as param - it was not used.
+     * Event handler for all buttons.
      *
      * @param event action event from button
      *
@@ -798,8 +898,7 @@ public class GamePlayController extends FXController {
 
         undoStack.push(move);
 
-        pointerMoveAnimation = new PointerMoveAnimation(move);
-        pointerMoveAnimation.start();
+        startMovingPointer(move);
     }
 
     /**
@@ -845,7 +944,11 @@ public class GamePlayController extends FXController {
         }
 
         undoFlag = true;
-        pointerMoveAnimation = new PointerMoveAnimation(move);
-        pointerMoveAnimation.start();
+        startMovingPointer(move);
+    }
+
+    @Override
+    public FXController newInstance() {
+        return new GamePlayController();
     }
 }

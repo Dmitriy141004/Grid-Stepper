@@ -72,13 +72,6 @@
         </zip>
     </target>
 
-    <target name="build and compile" depends="prepare structure, compile, make run scripts, make editions, make jars">
-        <exec executable="${path.build.info.root}/version-util.py">
-            <arg value="build"/>
-            <arg value="update"/>
-        </exec>
-    </target>
-
     <target name="compile">
         <javac srcdir="${path.src}" destdir="${path.build.last.root}/java" debug="true"/>
         <javac srcdir="${path.src}" destdir="${path.build.local.root}/java" debug="true"/>
@@ -99,5 +92,18 @@
     <target name="generate javadoc" depends="clear javadoc">
         <javadoc sourcepath="${path.src}" destdir="${path.javadoc}" access="private" additionalparam="-Xdoclint:none
                 -splitindex" />
+    </target>
+
+    <target name="build and compile" depends="prepare structure, compile, make run scripts, make editions, make jars">
+        <exec executable="${path.build.info.root}/version-util.py">
+            <arg value="build"/>
+            <arg value="update"/>
+        </exec>
+
+        <antcall target="prepare structure"/>
+        <antcall target="compile"/>
+        <antcall target="make run scripts"/>
+        <antcall target="make editions"/>
+        <antcall target="make jars"/>
     </target>
 </project>

@@ -1,10 +1,9 @@
 package start;
 
-import control.FXController;
-import control.MainMenuController;
-import util.*;
 import com.sun.org.apache.xml.internal.serialize.OutputFormat;
 import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
+import control.FXController;
+import control.MainMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,11 +17,16 @@ import javafx.stage.Stage;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import settings.XMLSettingsLoader;
+import util.FileIO;
+import util.PathsUtil;
 
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.validation.SchemaFactory;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -55,15 +59,6 @@ public class Main extends Application {
      * {@code key} - name of file
      * {@code value} - {@code .fxml} file. */
     private static HashMap<String, String> loadedScenes = new HashMap<>(0);
-
-    /**
-     * Getter for field {@link #exitDialog}.
-     *
-     * @return value of {@link #exitDialog}.
-     */
-    public static Alert getExitDialog() {
-        return exitDialog;
-    }
 
     /** Exit dialog object. I store this object in this class, instead of {@link MainMenuController},
      * because it is shown when shutdown hook activates. */
@@ -141,6 +136,15 @@ public class Main extends Application {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * Getter for field {@link #exitDialog}.
+     *
+     * @return value of {@link #exitDialog}.
+     */
+    public static Alert getExitDialog() {
+        return exitDialog;
     }
 
     public static void main(String[] args) {
@@ -278,27 +282,27 @@ public class Main extends Application {
     /**
      * Changes primary stage to given scene.
      *
-     * @param sceneName name of scene's {@code .fxml} file
+     * @param sceneIdentifier name of scene's {@code .fxml} file
      * @param windowTitle window's title
      * @throws RuntimeException when loading fails.
      *
      */
-    public static void changeScene(String sceneName, String windowTitle) {
+    public static void changeScene(String sceneIdentifier, String windowTitle) {
         try {
+            // Preparing to load scene
             fxmlLoader.setController(null);
             fxmlLoader.setRoot(null);
-            Parent root = fxmlLoader.load(new ByteArrayInputStream(loadedScenes.get(sceneName).getBytes()));
-
-            FXController controller = fxmlLoader.getController();
-            controller.setParent(root);
-            controller.registerElements();
-            controller.init();
-
+            // Loading scene
+            Parent root = fxmlLoader.load(new ByteArrayInputStream(loadedScenes.get(sceneIdentifier).getBytes()));
+            // Customising primaryStage
             primaryStage.setTitle(windowTitle);
             primaryStage.setMinWidth(Main.MIN_WINDOW_WIDTH);
             primaryStage.setMinHeight(Main.MIN_WINDOW_HEIGHT);
             primaryStage.setScene(new Scene(root, Main.DEFAULT_WINDOW_WIDTH, Main.DEFAULT_WINDOW_HEIGHT));
-            primaryStage.show();
+            // Initializing controller
+            FXController.initController(fxmlLoader.getController(), root, fxmlLoader.getResources());
+            // Showing window if it isn't present
+            if (!primaryStage.isShowing()) primaryStage.show();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -339,10 +343,20 @@ public class Main extends Application {
 
             // If current file-object is real file, and ends with ".fxml"...
             if (currentFile.isFile() && fileName.endsWith(".fxml")) {
-                // Adding its data
+                // It is "scene storage" and we must add its data
                 loadedScenes.put(fileName,
                         FileIO.load(Main.getResource("fxml/" + fileName)));
             }
         }
+    }
+
+    /**
+     * Returns scene's string content (in fact - content of {@code .fxml} file).
+     *
+     * @param sceneIdentifier name of {@link .fxml} file in which scene is (includes {@link .fxml}).
+     * @return string content of selected scene.
+     */
+    public static String getSceneContent(String sceneIdentifier) {
+        return loadedScenes.get(sceneIdentifier);
     }
 }

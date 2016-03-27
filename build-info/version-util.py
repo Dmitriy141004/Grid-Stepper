@@ -6,7 +6,7 @@
 # 1.23.40
 #
 # Description for numbers:
-# 1. GLOBAL VERSION. It's number of realize with many differences.
+# 1. GLOBAL VERSION. It's number of realizes with many differences.
 # 2. COMMIT VERSION. It's number of "git commit"s.
 # 3. BUILD VERSION. After each launch of Ant build script this number increments by one.
 #

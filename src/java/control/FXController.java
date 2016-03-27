@@ -1,12 +1,10 @@
 package control;
 
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import start.Main;
 
 import java.lang.reflect.Field;
-import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
@@ -16,31 +14,20 @@ import java.util.ResourceBundle;
  * @since v. 1.0
  *
  */
-public abstract class FXController implements Initializable {
+public abstract class FXController {
     /** Interface object of controller's {@code .fxml}. Is used to {@link Parent#lookup(String) "look for"} elements
      * by {@code fx:id}. */
     private Parent parent;
     /** Current resource bundle. */
-    private ResourceBundle resourceBundle;
+    ResourceBundle resourceBundle;
 
     /**
-     * Implements {@link Initializable#initialize(URL, ResourceBundle)}.
+     * Setter for field {@link #resourceBundle}.
      *
-     * <p style="font-size: 13pt; font-weight: bold;">From abstract method:</p>
-     * Called to initialize a controller after its root element has been
-     * completely processed.
-     *
-     * @param location
-     * The location used to resolve relative paths for the root object, or
-     * <tt>null</tt> if the location is not known.
-     *
-     * @param resources
-     * The resources used to localize the root object, or <tt>null</tt> if
-     * the root object was not localized.
+     * @param resources new value of {@link #resourceBundle}
      */
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        this.resourceBundle = resources;
+    public void setResources(ResourceBundle resources) {
+        resourceBundle = resources;
     }
 
     protected String getLocaleStr(String key) {
@@ -98,6 +85,17 @@ public abstract class FXController implements Initializable {
         }
     }
 
-    public FXController() {
+    /**
+     * Method returns new instance of controller, like factory.
+     *
+     * @return new instance of controller.
+     */
+    public abstract FXController newInstance();
+
+    public static void initController(FXController target, Parent parent, ResourceBundle resourceBundle) {
+        target.setParent(parent);
+        target.setResources(resourceBundle);
+        target.registerElements();
+        target.init();
     }
 }

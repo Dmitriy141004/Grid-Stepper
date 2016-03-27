@@ -1,10 +1,10 @@
 package settings;
 
-import start.Main;
 import com.sun.org.apache.xerces.internal.dom.DeferredTextImpl;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import start.Main;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

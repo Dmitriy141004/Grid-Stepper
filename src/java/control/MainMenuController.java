@@ -56,7 +56,7 @@ public class MainMenuController extends FXController {
 //    }
 
     /**
-     * Event handler for all menu buttons. Moved in one method because of {@link ActionEvent} as param - it was not used.
+     * Event handler for all menu buttons.
      *
      * @param event event from button.
      */
@@ -87,5 +87,10 @@ public class MainMenuController extends FXController {
 
                 break;
         }
+    }
+
+    @Override
+    public FXController newInstance() {
+        return new MainMenuController();
     }
 }
