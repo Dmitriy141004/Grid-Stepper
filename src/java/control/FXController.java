@@ -44,11 +44,24 @@ public abstract class FXController {
     }
 
     /**
-     * Alternative for method {@code initialize} in standard JavaFX controllers. But, there's a difference. When
-     * {@link Main#changeScene(String, String)} changes scene - this method activates.
+     * Initializes controller's components. This method is activated when {@link util.SceneLoader#loadPackage(String)}
+     * loads scene, this thing is like constructor or JavaFX's native {@code initialize}.
      *
      */
     public abstract void init();
+
+    /**
+     * This method is called after {@link Main#changeScene(String, String)} have been used. Runs controller.
+     *
+     */
+    public abstract void run();
+
+    /**
+     * This method is called after {@link Main#changeScene(String, String)} have been used. Is used to reset controller's
+     * old data.
+     *
+     */
+    public abstract void reset();
 
     /**
      * Sets all fields annotated as {@link FXMLLink} to real links with {@code .fxml} elements.
@@ -83,19 +96,5 @@ public abstract class FXController {
                 if (fieldIsPrivate) field.setAccessible(false);
             }
         }
-    }
-
-    /**
-     * Method returns new instance of controller, like factory.
-     *
-     * @return new instance of controller.
-     */
-    public abstract FXController newInstance();
-
-    public static void initController(FXController target, Parent parent, ResourceBundle resourceBundle) {
-        target.setParent(parent);
-        target.setResources(resourceBundle);
-        target.registerElements();
-        target.init();
     }
 }

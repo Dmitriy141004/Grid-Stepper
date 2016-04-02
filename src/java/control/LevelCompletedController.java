@@ -20,14 +20,19 @@ public class LevelCompletedController extends FXController {
 
     @Override
     public void init() {
+
+    }
+
+    @Override
+    public void run() {
         // If you close window you'll be moved into main menu
         passingTimeLabel.getScene().getWindow().setOnCloseRequest(event ->
                 Main.changeScene("main.fxml", getLocaleStr("header.base")));
     }
 
     @Override
-    public FXController newInstance() {
-        return new LevelCompletedController();
+    public void reset() {
+
     }
 
     /**

@@ -43,24 +43,33 @@ public class SettingsMenuController extends FXController {
         // Creating list of languages
         Wrapper<Language> currentLang = new Wrapper<>(null);          // Current language to select in combo-box
 
+        // Converting locale tags ("ru", "en", "ua", "uk", "de", "fr", etc) to ArrayList with Language objects
         ArrayList<Language> outputLocales = Main.getAvailableLocales().stream()
+                // Mapping stream to collection of Language objects...
                 .map(tag -> {
                     Language lang = new Language(tag);
-
+                    // And searching current language between them
                     if (tag.equals(XMLSettingsLoader.getSetting("lang"))) currentLang.set(lang);
-
                     return lang;
                 })
                 .collect(Collectors.toCollection(ArrayList<Language>::new));
 
         // Setting items of language combo-box
         langSelector.setItems(FXCollections.observableArrayList(outputLocales));
-
         langSelector.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            XMLSettingsLoader.setSetting("lang", newValue.tag);
+            if (newValue != null) XMLSettingsLoader.setSetting("lang", newValue.tag);
         });
-
         langSelector.getSelectionModel().select(currentLang.get());
+    }
+
+    @Override
+    public void run() {
+
+    }
+
+    @Override
+    public void reset() {
+
     }
 
     /**
@@ -89,7 +98,7 @@ public class SettingsMenuController extends FXController {
         String tag;
 
         /**
-         * Constructor for class.
+         * Creates new instance of class.
          *
          * @param tag received tag of language. Using {@link #LANG_CONVERT_TABLE} and this argument constructor generates
          *            value for {@link #fullName}.
@@ -130,10 +139,5 @@ public class SettingsMenuController extends FXController {
         }
 
         return out;
-    }
-
-    @Override
-    public FXController newInstance() {
-        return new SettingsMenuController();
     }
 }

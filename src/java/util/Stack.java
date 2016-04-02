@@ -22,7 +22,7 @@ public class Stack<E> implements LIFOQueue<E> {
     private ArrayList<E> stackData = new ArrayList<>(0);
 
     /**
-     * Standard constructor for class.
+     * Creates new stack.
      *
      * @param source stack to copy. <i><b>Note:</b> clones another stack's {@link #stackData}, not sets link!</i>
      */

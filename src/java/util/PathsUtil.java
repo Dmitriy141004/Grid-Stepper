@@ -64,50 +64,19 @@ public class PathsUtil {
     }
 
     /**
-     * Converts varargs or array to {@link Collection} (in fact - {@link ArrayList}).
+     * Converts varargs or array to {@link Collection}.
      *
      * @param array varargs or array of items
-     * @param <T> type of items in collection and array
+     * @param <C> collection type
+     * @param <T> type of items in collection
      * @return converted array to collection.
      */
     @SafeVarargs
-    @SuppressWarnings("varargs")
-    private static <T> Collection<T> asCollection(T... array) {
+    @SuppressWarnings({"varargs", "unchecked"})
+    private static <C extends Collection, T> C asCollection(T... array) {
         ArrayList<T> out = new ArrayList<>(array.length);
         Collections.addAll(out, array);
-        return out;
-    }
-
-    /**
-     * Returns class that called some method. In fact, it returns first class, whose name doesn't equal current's name.
-     *
-     * @param current class where this method is being called (e.g. {@code Class.getClass()} or
-     *                {@code &lt;ClassName&gt;.class})
-     * @return caller class.
-     */
-    @SuppressWarnings("unchecked")
-    private static Class<?> getCallerClass(Class<?> current) {
-        try {
-            // Getting and iterating stack trace
-            StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-            Class<?> caller = null;
-            for (int i = 0; i < stackTrace.length; i++) {
-                StackTraceElement next = stackTrace[i];
-
-                // Skipping method java.lang.Thread#getStackTrace(), it always appeared in stack trace when I was testing
-                if (i == 0 && next.getClassName().equals("java.lang.Thread") && next.getMethodName().equals("getStackTrace"))
-                    continue;
-                if (!next.getClassName().equals(current.getName())) {
-                    caller = Class.forName(next.getClassName());
-                    break;
-                }
-            }
-
-            return caller;
-        } catch (ClassNotFoundException e) {
-            // Unreachable in this case
-            throw new RuntimeException(e);
-        }
+        return (C) out;
     }
 
     /**
@@ -117,38 +86,55 @@ public class PathsUtil {
      * @return real path from relative.
      */
     public static String realPath(String relative) {
-        // Replacing used FILE separators ('\', '//' etc, but not '/') to '/'
-        relative = relative.replaceAll("(/{2}|\\\\)", "/");
+        try {
+            // Replacing used FILE separators ('\', '//' etc, but not '/') to '/'
+            relative = relative.replaceAll("(/{2}|\\\\)", "/");
 
-        // Parts of relative path
-        ArrayList<String> relativePathParts = (ArrayList<String>) asCollection(splitPath(relative));
+            // Parts of relative path
+            ArrayList<String> relativePathParts = asCollection(splitPath(relative));
 
-        // Getting caller class location and its parts (caller class is on second stack trace element, on first is
-        // this function). If class is in JAR - caller class location will be like "build/jar/Application.jarapp/util/",
-        // but it is proper location!
-        Class<?> callerClass = getCallerClass(PathsUtil.class);
-        String callerClassLocation = callerClass.getProtectionDomain().getCodeSource().getLocation().getPath() +
-                callerClass.getPackage().getName().replaceAll("\\.", "/") + "/";
-        ArrayList<String> callerClasspathParts = (ArrayList<String>) asCollection(splitPath(callerClassLocation));
+            // Getting caller class location and its parts (caller class is on third stack trace element, on second is
+            // this function, and on first - "Thread#getStackTrace()").
+            Class<?> callerClass = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName());
+            // Is class in JAR?
+            boolean classPackedInJar = callerClass.getProtectionDomain()
+                    .getCodeSource()
+                    .getLocation()
+                    .getFile()
+                    // Pattern passes, for example, "package.jar", but won't pass ".jar"
+                    .matches("(.+)\\.jar");
+            StringBuilder callerClassLocation = new StringBuilder(callerClass.getProtectionDomain()
+                    .getCodeSource()
+                    .getLocation()
+                    .getPath()
+            );
+            if (classPackedInJar) callerClassLocation.append('/');
+            callerClassLocation.append(callerClass.getPackage().getName().replaceAll("\\.", "/")).append('/');
 
-        // "Counting" real path
-        ArrayList<String> out = new ArrayList<>(0);
-        for (int i = 0; i < relativePathParts.size(); i++) {
-            String part = relativePathParts.get(i);
+            ArrayList<String> callerClasspathParts = asCollection(splitPath(callerClassLocation.toString()));
 
-            if ((part.equals("./") || part.equals(".")) && i > 0) continue;
+            // "Counting" real path
+            ArrayList<String> out = new ArrayList<>(0);
+            for (int i = 0; i < relativePathParts.size(); i++) {
+                String part = relativePathParts.get(i);
 
-            if ((part.equals("./") || part.equals(".")) && i == 0) out.addAll(callerClasspathParts);
-            else if (part.equals("../") || part.equals("..")) {
-                if (out.size() == 0) out.addAll(callerClasspathParts);
-                out.remove(out.size() - 1);
-            } else out.add(part);
+                if ((part.equals("./") || part.equals(".")) && i > 0) continue;
+
+                if ((part.equals("./") || part.equals(".")) && i == 0) out.addAll(callerClasspathParts);
+                else if (part.equals("../") || part.equals("..")) {
+                    if (out.size() == 0) out.addAll(callerClasspathParts);
+                    out.remove(out.size() - 1);
+                } else out.add(part);
+            }
+            // Converting result from ArrayList<String> to string
+            StringBuilder madeRealPath = new StringBuilder(0);
+            out.forEach(madeRealPath::append);
+
+            // Also replacing all slashes to current FILE separators
+            return madeRealPath.toString().replaceAll("/", File.separator);
+        } catch (ClassNotFoundException e) {
+            // Isn't reachable in this case
+            throw new RuntimeException(e);
         }
-        // Converting result from ArrayList<String> to string
-        StringBuilder madeRealPath = new StringBuilder(0);
-        out.forEach(madeRealPath::append);
-
-        // Also replacing all slashes to current FILE separators
-        return madeRealPath.toString().replaceAll("/", File.separator);
     }
 }

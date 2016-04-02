@@ -1,3 +1,5 @@
 Manifest-Version: 1.0
 Main-Class: start.Main
+Built-Using: Apache Ant
+Project-Author: Meleshko Dmytriy
 

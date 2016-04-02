@@ -3,9 +3,6 @@ package control;
 import com.sun.javafx.geom.Line2D;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
@@ -18,12 +15,8 @@ import javafx.stage.Stage;
 import levels.LevelCell;
 import levels.XMLLevelLoader;
 import start.Main;
-import util.ExtendedAnimationTimer;
-import util.ExtendedMath;
-import util.LIFOQueue;
-import util.Stack;
+import util.*;
 
-import java.io.ByteArrayInputStream;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.ArrayList;
@@ -281,6 +274,16 @@ public class GamePlayController extends FXController {
          *     animation stops.</li>
          * </ol>
          *
+         * <p>Starting cell is peculiar (see {@link levels.LevelCell.CellType#START} to read how it looks).
+         * Firstly, it must be on smaller layer than GP, but higher than lines, that GP leaves. Secondly, to draw triangle
+         * on the start in use this scheme:
+         * <ol>
+         *     <li>Using some value in range 0.0 - 100.0 for current point (start - {@code x1})</li>
+         *     <li>Mapping this value to range 0.0 - {@value CELL_SIZE}.0</li>
+         *     <li>Giving received value to method that draws triangle</li>
+         *     <li>Repeating with {@code y1}, {@code x2}, {@code y2}, {@code x3} and {@code y3}</li>
+         * </ol></p>
+         *
          * @param now time in nanoseconds (same as {@link System#nanoTime()}, but with some additions)
          */
         @Override
@@ -310,13 +313,14 @@ public class GamePlayController extends FXController {
 
             // This thing draws green triangle on start cell
             graphics.setFill(Color.GREEN);
-                                                                                                // double SHIFT = 25.0
-            final double x1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
-            final double y1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
-            final double x2 = ExtendedMath.map(80.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT + 5.0
-            final double y2 = ExtendedMath.map(50.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 / 2.0
-            final double x3 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
-            final double y3 = ExtendedMath.map(75.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT
+
+            final double SHIFT = 25.0;
+            final double x1 = ExtendedMath.map(SHIFT, 0.0, 100.0, 0.0, (double) CELL_SIZE);
+            final double y1 = ExtendedMath.map(SHIFT, 0.0, 100.0, 0.0, (double) CELL_SIZE);
+            final double x2 = ExtendedMath.map(100.0 - SHIFT + 5.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);
+            final double y2 = ExtendedMath.map(100.0 / 2.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);
+            final double x3 = ExtendedMath.map(SHIFT, 0.0, 100.0, 0.0, (double) CELL_SIZE);
+            final double y3 = ExtendedMath.map(100.0 - SHIFT, 0.0, 100.0, 0.0, (double) CELL_SIZE);
             drawTriangle(startCellX + x1, startCellY + y1,
                          startCellX + x2, startCellY + y2,
                          startCellX + x3, startCellY + y3);
@@ -338,7 +342,7 @@ public class GamePlayController extends FXController {
                         levelHeight, undoStack);
 
                 // Are all cells visited?
-                boolean allCellsVisited = true;
+                boolean allCellsAreVisited = true;
                 // To see this, we must iterate all rows in each column
                 for (ArrayList<LevelCell> levelPart : level) {
                     // And each cell in each row
@@ -346,10 +350,9 @@ public class GamePlayController extends FXController {
                         // If cell is neither empty nor starting cell nor finish and it isn't visited -
                         // level isn't completed
                         if (Arrays.asList(LevelCell.CellType.EMPTY,
-                                LevelCell.CellType.START,
                                 LevelCell.CellType.FINISH).contains(levelCell.getCellType())
                                 && !levelCell.isVisited()) {
-                            allCellsVisited = false;
+                            allCellsAreVisited = false;
                             break;
                         }
                     }
@@ -357,7 +360,7 @@ public class GamePlayController extends FXController {
 
                 // If all cells are visited and current cell is finish...
                 if (level.get(goalX / CELL_SIZE).get(goalY / CELL_SIZE).getCellType() == LevelCell.CellType.FINISH
-                        && allCellsVisited) {
+                        && allCellsAreVisited) {
                     // Level is completed!
 
                     // This thing will be activated after timer will be stopped
@@ -367,25 +370,23 @@ public class GamePlayController extends FXController {
                         try {
                             // Small delay
                             delay(500);
-                            // Loading content
-                            FXMLLoader dialogLoader = new FXMLLoader();
-                            dialogLoader.setResources(resourceBundle);
-                            Parent dialogRoot = dialogLoader.load(
-                                    new ByteArrayInputStream(Main.getSceneContent("level-completed-dialog.fxml").getBytes()));
+                            //Getting scene content
+                            SceneContent sceneContent = Main.getSceneContent("level-completed-dialog.fxml");
 
-                            // Creating and customising window/stage
+                                // Creating and customising window/stage
                             Stage levelCompletedDialog = new Stage();
                             levelCompletedDialog.setTitle(getLocaleStr("header.base") + " - Level Completed!");
                             levelCompletedDialog.setMinHeight(150);
                             levelCompletedDialog.setMinWidth(300);
                             levelCompletedDialog.setResizable(false);
-                            levelCompletedDialog.setScene(new Scene(dialogRoot));
+                            levelCompletedDialog.setScene(sceneContent.scene);
                             levelCompletedDialog.initModality(Modality.WINDOW_MODAL);
                             levelCompletedDialog.initOwner(Main.primaryStage);
 
                             // Initializing controller
-                            LevelCompletedController controller = dialogLoader.getController();
-                            FXController.initController(controller, dialogRoot, resourceBundle);
+                            LevelCompletedController controller = (LevelCompletedController) sceneContent.controller;
+                            controller.reset();
+                            controller.run();
                             // Setting count of moves and time used to complete level
                             controller.moveCountLabel.setText(String.valueOf(stepLines.size()));
                             controller.passingTimeLabel.setText((new BigDecimal(
@@ -395,7 +396,7 @@ public class GamePlayController extends FXController {
                                     // 3. 1 second      = 1000 milliseconds
                                     ((double) System.nanoTime() - startTime) / 1_000_000_000.0)
                                     // Rounding received passing time in seconds to third digit after point
-                                    .round(new MathContext(4))) + " " + getLocaleStr("abbreviations.sec"));
+                                    .round(new MathContext(4))) + " " + getLocaleStr("abbreviations.seconds"));
 
                             // Showing stage/window
                             levelCompletedDialog.showAndWait();
@@ -497,7 +498,7 @@ public class GamePlayController extends FXController {
         }
 
         /**
-         * This constructor sets {@link #length} to given value.
+         * Creates new animation part with given length
          *
          * @param length length of this state/"frame"/point.
          */
@@ -670,9 +671,6 @@ public class GamePlayController extends FXController {
     public void init() {
         graphics = gameCanvas.getGraphicsContext2D();
 
-        System.out.printf("%15s\t|\t%15s\t|\t%15s\t|\t%15s\t|\t%15s\t\n", "pointer x", "pointer y", "level width",
-                "level height", "undo stack");
-
         // Loading level
         try {
             level = XMLLevelLoader.loadLevel(Main.getResource("levels/classic.xml"), "1");
@@ -711,9 +709,31 @@ public class GamePlayController extends FXController {
                 }
             }
         }
+    }
+
+    @Override
+    public void run() {
+        System.out.printf("%15s\t|\t%15s\t|\t%15s\t|\t%15s\t|\t%15s\t\n", "pointer x", "pointer y", "level width",
+                "level height", "undo stack");
 
         FieldDrawAnimation drawAnimation = new FieldDrawAnimation();
         drawAnimation.start();
+    }
+
+    @Override
+    public void reset() {
+        graphics.clearRect(0, 0, gameCanvas.getWidth(), gameCanvas.getHeight());
+
+        this.startTime = System.nanoTime();
+        this.pointerX = startCellX;
+        this.pointerY = startCellY;
+        this.movingPointer = false;
+        this.undoFlag = false;
+        this.undoStack = new Stack<>();
+        this.redoStack = new Stack<>();
+        this.stepLines = new ArrayList<>();
+
+        level.forEach(column -> column.forEach(levelCell -> levelCell.setVisited(false)));
     }
 
     /**
@@ -771,15 +791,6 @@ public class GamePlayController extends FXController {
 
     /**
      * Redraws <b>one</b> cell on field.
-     *
-     * <p>Starting cell is peculiar (see {@link levels.LevelCell.CellType#START} to read how it looks). To draw triangle
-     * on the start in use this scheme:
-     * <ol>
-     *     <li>Using some value in range 0.0 - 100.0 for current point (start - {@code x1})</li>
-     *     <li>Mapping this value to range 0.0 - {@value CELL_SIZE}.0</li>
-     *     <li>Giving received value to method that draws triangle</li>
-     *     <li>Repeating this 5 times with {@code y1}, {@code x2}, {@code y2}, {@code x3} and {@code y3}</li>
-     * </ol></p>
      *
      * @param x x position of cell. <i><b>Note:</b> it's position in {@link #level collection}, not in canvas.</i>
      * @param y y position of cell. <i><b>Note:</b> it's position in {@link #level collection}, not in canvas.</i>
@@ -945,10 +956,5 @@ public class GamePlayController extends FXController {
 
         undoFlag = true;
         startMovingPointer(move);
-    }
-
-    @Override
-    public FXController newInstance() {
-        return new GamePlayController();
     }
 }

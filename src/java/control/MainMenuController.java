@@ -55,6 +55,16 @@ public class MainMenuController extends FXController {
 //        }
 //    }
 
+    @Override
+    public void run() {
+
+    }
+
+    @Override
+    public void reset() {
+
+    }
+
     /**
      * Event handler for all menu buttons.
      *
@@ -87,10 +97,5 @@ public class MainMenuController extends FXController {
 
                 break;
         }
-    }
-
-    @Override
-    public FXController newInstance() {
-        return new MainMenuController();
     }
 }

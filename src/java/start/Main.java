@@ -2,12 +2,8 @@ package start;
 
 import com.sun.org.apache.xml.internal.serialize.OutputFormat;
 import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
-import control.FXController;
 import control.MainMenuController;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
@@ -17,13 +13,9 @@ import javafx.stage.Stage;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import settings.XMLSettingsLoader;
-import util.FileIO;
-import util.PathsUtil;
+import util.*;
 
-import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.validation.SchemaFactory;
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
@@ -53,12 +45,10 @@ public class Main extends Application {
 
     /** Primary stage of application. */
     public static Stage primaryStage;
-    /** FXML/{@code .prototypes} file loader. */
-    private static FXMLLoader fxmlLoader = new FXMLLoader();
     /** Already loaded {@code .fxml} files from scene directory ({@code fxml}).
      * {@code key} - name of file
      * {@code value} - {@code .fxml} file. */
-    private static HashMap<String, String> loadedScenes = new HashMap<>(0);
+    private static HashMap<String, SceneContent> loadedScenes = new HashMap<>(0);
 
     /** Exit dialog object. I store this object in this class, instead of {@link MainMenuController},
      * because it is shown when shutdown hook activates. */
@@ -79,7 +69,7 @@ public class Main extends Application {
     private static final Pattern LOCALE_RB_SEARCH_PATTERN = Pattern.compile("Locale_(\\w{2})\\.properties");
     /** Path to directory with resources. I don't put slash at the end, because it is everywhere between this constant
      * and path to certain resource. */
-    private static final String RESOURCES_ROOT = "../../resources/";
+    private static String RESOURCES_ROOT;
     /** Field for build version. It looks like this:
      *
      * <pre><code>1.23.40</code></pre>
@@ -92,6 +82,8 @@ public class Main extends Application {
      * </ol>
      */
     private static String PRODUCT_VERSION;
+    /** Locale resource bundle object. */
+    public static ResourceBundle resourceBundle;
 
     /**
      * Getter for field {@link #PRODUCT_VERSION}.
@@ -113,8 +105,7 @@ public class Main extends Application {
     }
 
     /**
-     * Returns relative path to resource. At start adds constant {@link #RESOURCES_ROOT}
-     * (<code>{@value #RESOURCES_ROOT}</code>), and at the end - resource name.
+     * Returns relative path to resource. At start adds constant {@link #RESOURCES_ROOT}, and at the end - resource name.
      *
      * @param pathSuffix name of resource. It will be added at the end.
      * @return real path to resource.
@@ -147,7 +138,15 @@ public class Main extends Application {
         return exitDialog;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        // Setting path to root of resources
+        String callerClassFile = Main.class.getProtectionDomain().getCodeSource().getLocation().getFile();
+
+        StringBuilder builder = new StringBuilder();
+        if (callerClassFile.matches("(.+).jar")) builder.append("../");
+        builder.append("../../resources/");
+        RESOURCES_ROOT = builder.toString();
+
         // Loading product version
         try {
             PRODUCT_VERSION = "v. " + FileIO.load(getResource(".build_version"));
@@ -162,8 +161,6 @@ public class Main extends Application {
                 // Some XML util classes are used at once
                 DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
                 documentBuilderFactory.setNamespaceAware(true);
-                documentBuilderFactory.setSchema(SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
-                        .newSchema(new File(Main.getResource("settings/settings-schema.xsd"))));
 
 
                 // Creating document for saving
@@ -212,7 +209,7 @@ public class Main extends Application {
      * @return string value.
      */
     public static String getLocaleStr(String key) {
-        return fxmlLoader.getResources().getString(key);
+        return resourceBundle.getString(key);
     }
 
     @Override
@@ -223,8 +220,8 @@ public class Main extends Application {
                 new File(getResource("bundles/")).toURI().toURL()
         });
 
-        fxmlLoader.setResources(ResourceBundle.getBundle("Locale",
-                new Locale(XMLSettingsLoader.getSetting("lang")), bundleClassLoader, new UTF8Control()));
+        resourceBundle = ResourceBundle.getBundle("Locale",
+                new Locale(XMLSettingsLoader.getSetting("lang")), bundleClassLoader, new UTF8Control());
 
         // This code gets available locales
         availableLocales = new ArrayList<>(0);
@@ -239,10 +236,12 @@ public class Main extends Application {
         EXIT_OPTION = new ButtonType(getLocaleStr("exit"), ButtonBar.ButtonData.OK_DONE);
         CANCEL_OPTION = new ButtonType(getLocaleStr("cancel"), ButtonBar.ButtonData.CANCEL_CLOSE);
 
-
+        // Setting primary stage
         Main.primaryStage = primaryStage;
-
-        loadScenes();
+        primaryStage.setWidth(DEFAULT_WINDOW_WIDTH);
+        primaryStage.setHeight(DEFAULT_WINDOW_HEIGHT);
+        // Loading scenes
+        loadedScenes = (HashMap<String, SceneContent>) SceneLoader.loadPackage(Main.getResource("fxml/"));
 
         // Exit dialog setup
         exitDialog = new Alert(Alert.AlertType.CONFIRMATION, getLocaleStr("dialogs.body.exit-from-game"),
@@ -289,64 +288,20 @@ public class Main extends Application {
      */
     public static void changeScene(String sceneIdentifier, String windowTitle) {
         try {
-            // Preparing to load scene
-            fxmlLoader.setController(null);
-            fxmlLoader.setRoot(null);
-            // Loading scene
-            Parent root = fxmlLoader.load(new ByteArrayInputStream(loadedScenes.get(sceneIdentifier).getBytes()));
-            // Customising primaryStage
+            // Getting scene content
+            SceneContent sceneContent = loadedScenes.get(sceneIdentifier);
+
             primaryStage.setTitle(windowTitle);
             primaryStage.setMinWidth(Main.MIN_WINDOW_WIDTH);
             primaryStage.setMinHeight(Main.MIN_WINDOW_HEIGHT);
-            primaryStage.setScene(new Scene(root, Main.DEFAULT_WINDOW_WIDTH, Main.DEFAULT_WINDOW_HEIGHT));
-            // Initializing controller
-            FXController.initController(fxmlLoader.getController(), root, fxmlLoader.getResources());
+            primaryStage.setScene(sceneContent.scene);
+            // Resetting controller
+            sceneContent.controller.reset();
+            sceneContent.controller.run();
             // Showing window if it isn't present
             if (!primaryStage.isShowing()) primaryStage.show();
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }
-    }
-
-    /**
-     * Loads all {@code .fxml} files from scene directory ({@code fxml} and saves loaded files to {@link #loadedScenes}.
-     * Why I load {@link String} file data instead of {@link Parent} object? If I had loaded {@link Parent} objects
-     * parser would have activated {@code initialize} method from controllers, and this's bad for me. So, if I want
-     * change scene - I just type:
-     *
-     * <p><code>Main.changeScene(SCENE_NAME_HERE, AND_WINDOW_TITLE_HERE);</code></p>
-     *
-     * Where {@link #changeScene(String, String)} changes scene such way:
-     *
-     * <pre><code>
-     * // ...
-     * fxmlLoader.setController(null);
-     * fxmlLoader.setRoot(null);
-     * Parent root = fxmlLoader.load(new ByteArrayInputStream(loadedScenes.get(sceneIdentifier).getBytes()));
-     *
-     * // ...
-     * primaryStage.setScene(new Scene(root, Main.DEFAULT_WINDOW_WIDTH, Main.DEFAULT_WINDOW_HEIGHT));
-     * primaryStage.show();
-     * // ...
-     * </code></pre>
-     *
-     * @throws Exception when loading fails
-     *
-     */
-    private static void loadScenes() throws Exception {
-        // Directory file-object
-        File file = new File(Main.getResource("fxml/"));
-
-        // Iterating all files in directory
-        for (String fileName : file.list()) {
-            File currentFile = new File(Main.getResource("fxml/" + fileName));
-
-            // If current file-object is real file, and ends with ".fxml"...
-            if (currentFile.isFile() && fileName.endsWith(".fxml")) {
-                // It is "scene storage" and we must add its data
-                loadedScenes.put(fileName,
-                        FileIO.load(Main.getResource("fxml/" + fileName)));
-            }
         }
     }
 
@@ -356,7 +311,7 @@ public class Main extends Application {
      * @param sceneIdentifier name of {@link .fxml} file in which scene is (includes {@link .fxml}).
      * @return string content of selected scene.
      */
-    public static String getSceneContent(String sceneIdentifier) {
+    public static SceneContent getSceneContent(String sceneIdentifier) {
         return loadedScenes.get(sceneIdentifier);
     }
 }

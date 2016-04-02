@@ -24,7 +24,7 @@ public class Wrapper<T> {
     private T value;
 
     /**
-     * Simple constructor for object.
+     * Creates new wrapper.
      *
      * @param value initial value of {@link #value storage}
      */

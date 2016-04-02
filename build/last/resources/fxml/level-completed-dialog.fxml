@@ -81,7 +81,5 @@
             <Insets left="50.0" />
          </GridPane.margin>
       </Label>
-      <Pane blendMode="MULTIPLY" style="-fx-background-color: linear-gradient(#FFF 25%, #DDD 75%, #DDD 75%, #DDD 100%);" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2" />
-      <Pane blendMode="MULTIPLY" style="-fx-background-color: linear-gradient(#DDD 0%, #DDD 25%, #DDD 25%, #FFF 75%);" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" GridPane.rowSpan="2" />
    </children>
 </GridPane>

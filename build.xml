@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<project name="Grid-Stepper" default="compile" xmlns:unless="ant:unless">
+<project name="Grid-Stepper" default="build and compile" xmlns:unless="ant:unless">
     <property name="path.build.root" value="build"/>
     <property name="path.build.last.root" value="${path.build.root}/last"/>
     <property name="path.src" value="./src/java"/>
@@ -12,6 +12,13 @@
     <property name="path.scripts.models" value="./run-scripts"/>
     <property name="path.build.info.root" value="./build-info"/>
 
+    <condition property="resourcesInLocalBuild">
+        <available file="${path.build.local.root}/.project_root" type="file"/>
+    </condition>
+    <tstamp>
+        <format property="build.date" pattern="dd/MMMM/yyyy hh:mm:ss"/>
+    </tstamp>
+
     <target name="clear build">
         <delete dir="${path.build.last.root}"/>
         <delete dir="${path.editions.root}"/>
@@ -21,10 +28,6 @@
     <target name="full build clear">
         <delete dir="${path.build.root}"/>
     </target>
-
-    <condition property="resourcesInLocalBuild">
-        <available file="${path.build.local.root}/.project_root" type="file"/>
-    </condition>
 
     <target name="prepare structure" depends="clear build">
         <mkdir dir="${path.build.root}"/>
@@ -50,12 +53,24 @@
 
         <copydir src="${path.build.last.root}/java" dest="${path.build.jar.temp}/"/>
 
+        <loadfile property="build.version" srcfile="${path.build.info.root}/.build_version"/>
         <jar destfile="${path.build.jar.root}/java/Grid-Stepper.jar" compress="false" basedir="${path.build.jar.temp}"
-             manifest="${path.src}/META-INF/MANIFEST.MF" encoding="UTF-8"/>
+             manifest="${path.src}/META-INF/MANIFEST.MF" encoding="UTF-8">
+            <manifest>
+                <attribute name="Ant-Version" value="${ant.version}"/>
+                <attribute name="Built-On" value="${build.date}"/>
+                <attribute name="Build-Version" value="${build.version}"/>
+            </manifest>
+        </jar>
         <copyfile src="${path.scripts.models}/bash-jar-run-model.sh" dest="${path.build.jar.root}/run.sh"/>
         <copyfile src="${path.scripts.models}/batch-jar-run-model.bat" dest="${path.build.jar.root}/run.bat"/>
 
         <delete dir="${path.build.jar.temp}"/>
+
+        <exec executable="chmod">
+            <arg value="+x"/>
+            <arg value="${path.build.jar.root}/run.sh"/>
+        </exec>
     </target>
 
     <target name="make editions">
@@ -73,13 +88,24 @@
     </target>
 
     <target name="compile">
-        <javac srcdir="${path.src}" destdir="${path.build.last.root}/java" debug="true"/>
-        <javac srcdir="${path.src}" destdir="${path.build.local.root}/java" debug="true"/>
+        <javac srcdir="${path.src}" destdir="${path.build.last.root}/java" debug="true"
+                includeantruntime="yes"/>
+        <javac srcdir="${path.src}" destdir="${path.build.local.root}/java" debug="true"
+                includeantruntime="yes"/>
     </target>
 
     <target name="make run scripts">
         <copyfile src="${path.scripts.models}/bash-run-model.sh" dest="${path.build.last.root}/run.sh"/>
+        <exec executable="chmod">
+            <arg value="+x"/>
+            <arg value="${path.build.last.root}/run.sh"/>
+        </exec>
+
         <copyfile src="${path.scripts.models}/bash-run-model.sh" dest="${path.build.local.root}/run.sh"/>
+        <exec executable="chmod">
+            <arg value="+x"/>
+            <arg value="${path.build.local.root}/run.sh"/>
+        </exec>
 
         <copyfile src="${path.scripts.models}/batch-run-model.bat" dest="${path.build.last.root}/run.bat"/>
         <copyfile src="${path.scripts.models}/batch-run-model.bat" dest="${path.build.local.root}/run.bat"/>

@@ -3,7 +3,7 @@
 # =================== Python script for incrementing build version ===================
 # Info about build version is stored in file "./.build_version". It looks like this:
 #
-# 1.23.40
+# 1.23.40 alpha
 #
 # Description for numbers:
 # 1. GLOBAL VERSION. It's number of realizes with many differences.
@@ -13,21 +13,25 @@
 # ======================== Help (--help argument prints this) ========================
 # Usage:
 #     version-util.py [SELECTOR] [MODE]
-#
+# Wrote in EBNF:
+#     command call = command name, selector, mode ;
+#     selector     = commit | build     | global  ;
+#     mode         = update | increment | zero    ;
+
 # SELECTOR-s are:
 #     commit
 #     build
 #     global
-#
+
 # MODE-s are:
-#     update          increment this selector (number) and zero next numbers at the right
-#     increment       increment only this selector
-#     zero            zero this selector
+#     update       increment this selector (number) and zero next numbers at the right
+#     increment    increment only this selector
+#     zero         zero this selector
 
 import os
 import posixpath as file_sys
-from sys import argv as script_args
 import re
+from sys import argv as script_args
 
 # Printing help if there's --help argument in available
 if "--help" in script_args:
@@ -80,24 +84,29 @@ buildFile = open(file_sys.join(thisFilePath, ".build_version"), 'r')
 buildTextInfo = buildFile.read()
 # If there's no info about build - set to initial value
 if buildTextInfo == "":
-    buildTextInfo = "0.0.0"
+    buildTextInfo = "0.0.0 pre-realise"
 buildFile.close()
 
 # Opening file for writing
 buildFile = open(file_sys.join(thisFilePath, ".build_version"), 'w')
 # Getting match of regexp that searches all three numbers
-parsedBuildInfo = re.match("""(\\d+)\\.      # Global version
-                              (\\d+)\\.      # Commit number
-                              (\\d+)         # Build number""", buildTextInfo, re.VERBOSE)
+parsedBuildInfo = re.match("""(\d+)\.                         # Global version
+                              (\d+)\.                         # Commit number
+                              (\d+)                           # Build number
+                              \\s (alpha|beta|pre-realise)   # Realize identifier (alpha, beta)""", buildTextInfo,
+                           re.VERBOSE)
 # If there's no match - it's error!
 if parsedBuildInfo is None:
-    print "Content of file \"" + file_sys.join(thisFilePath, ".build_version") + """\" doesn't match pattern
-<global_version>.<commit number>.<build number>!"""
+    print "Content of file \"" + file_sys.join(thisFilePath, ".build_version") + """\" doesn't match this pattern:
+[GLOBAL VERSION].[COMMIT NUMBER].[BUILD NUMBER] [REALISE IDENTIFIER]"""
+    buildFile.close()
     exit(1)
 # Getting each number
 globalVersion = int(parsedBuildInfo.group(1))
 commitNumber = int(parsedBuildInfo.group(2))
 buildNumber = int(parsedBuildInfo.group(3))
+# And realize
+realise = parsedBuildInfo.group(4)
 
 
 if script_args[1] == "build":
@@ -126,5 +135,5 @@ elif script_args[1] == "global":
         globalVersion = 0
 
 # Writing and closing file
-buildFile.write(str(globalVersion) + "." + str(commitNumber) + "." + str(buildNumber))
+buildFile.write(str(globalVersion) + "." + str(commitNumber) + "." + str(buildNumber) + " " + realise)
 buildFile.close()
