@@ -2,43 +2,62 @@
 
 <level-pack name="classic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="level-pack-schema.xsd">
-
-    <level id="1" completed="false">
+    <level name="first steps" number="1">
         <game-field>
             <column>
-                <cell type="wall" />
-                <cell type="empty" />
-                <cell type="empty" />
-                <cell type="empty" />
-                <cell type="start" />
+                <wall   />
+                <empty  />
+                <empty  />
             </column>
             <column>
-                <cell type="empty" />
-                <cell type="empty" />
-                <cell type="empty" />
-                <cell type="empty" />
-                <cell type="wall" />
+                <empty  />
+                <empty  />
+                <empty  />
             </column>
             <column>
-                <cell type="empty" />
-                <cell type="wall" />
-                <cell type="empty" />
-                <cell type="empty" />
-                <cell type="empty" />
+                <start  />
+                <wall   />
+                <finish />
+            </column>
+        </game-field>
+    </level>
+
+    <level name="err..." number="2">
+        <game-field>
+            <column>
+                <wall  />
+                <empty />
+                <empty />
+                <empty />
+                <start />
             </column>
             <column>
-                <cell type="empty" />
-                <cell type="empty" />
-                <cell type="empty" />
-                <cell type="wall" />
-                <cell type="empty" />
+                <empty  />
+                <empty  />
+                <empty  />
+                <empty  />
+                <wall   />
             </column>
             <column>
-                <cell type="empty" />
-                <cell type="empty" />
-                <cell type="wall" />
-                <cell type="finish" />
-                <cell type="empty" />
+                <empty  />
+                <wall   />
+                <empty  />
+                <empty  />
+                <empty  />
+            </column>
+            <column>
+                <empty  />
+                <empty  />
+                <empty  />
+                <wall   />
+                <empty  />
+            </column>
+            <column>
+                <empty  />
+                <empty  />
+                <wall   />
+                <finish />
+                <empty  />
             </column>
         </game-field>
     </level>

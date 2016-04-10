@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Grid Stepper Game
+GenericName=Application
+Comment=Game where you need to go from A to B stepping on all empty cells once
+Exec=grid-stepper-game
+Terminal=false
+Type=Application
+NoDisplay=false

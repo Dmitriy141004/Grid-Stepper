@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Grid-Stepper.iml" filepath="$PROJECT_DIR$/Grid-Stepper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Grid-Stepper-Game.iml" filepath="$PROJECT_DIR$/Grid-Stepper-Game.iml" />
       <module fileurl="file://$PROJECT_DIR$/build-info/build-info.iml" filepath="$PROJECT_DIR$/build-info/build-info.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deploy/deb-building-utils/deb-building-utils.iml" filepath="$PROJECT_DIR$/deploy/deb-building-utils/deb-building-utils.iml" />
     </modules>
   </component>
 </project>

@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<project name="Grid-Stepper" default="build and compile" xmlns:unless="ant:unless">
+<project name="Grid-Stepper-Game" default="build"
+         xmlns:unless="ant:unless">
+         <!--xmlns:fx="javafx:com.sun.javafx.tools.ant">
+    <taskdef resource="com/sun/javafx/tools/ant/antlib.xml"
+             uri="javafx:com.sun.javafx.tools.ant"
+             classpath="${path.separator}${java.home}/../lib/ant-javafx.jar"/>-->
+
     <property name="path.build.root" value="build"/>
     <property name="path.build.last.root" value="${path.build.root}/last"/>
-    <property name="path.src" value="./src/java"/>
-    <property name="path.resources" value="./resources"/>
+    <property name="path.src" value="./src/main/java"/>
+    <property name="path.resources.root" value="./src/main/resources"/>
     <property name="path.editions.root" value="${path.build.root}/editions"/>
     <property name="path.build.local.root" value="${path.build.root}/local"/>
     <property name="path.build.jar.root" value="${path.build.root}/jar"/>
     <property name="path.javadoc" value="./javadoc"/>
     <property name="path.scripts.models" value="./run-scripts"/>
     <property name="path.build.info.root" value="./build-info"/>
+    <property name="path.deploy.root" value="${path.build.root}/deploy"/>
+    <property name="manifest-file" value="src/main/java/META-INF/MANIFEST.MF"/>
+    <property name="product.vendor" value="Dmitriy Meleshko"/>
 
     <condition property="resourcesInLocalBuild">
         <available file="${path.build.local.root}/.project_root" type="file"/>
@@ -23,6 +32,7 @@
         <delete dir="${path.build.last.root}"/>
         <delete dir="${path.editions.root}"/>
         <delete dir="${path.build.jar.root}"/>
+        <delete dir="${path.deploy.root}"/>
     </target>
 
     <target name="full build clear">
@@ -31,35 +41,35 @@
 
     <target name="prepare structure" depends="clear build">
         <mkdir dir="${path.build.root}"/>
-        <mkdir dir="${path.build.last.root}/java"/>
+        <mkdir dir="${path.build.last.root}/app"/>
         <mkdir dir="${path.editions.root}"/>
-        <mkdir dir="${path.build.local.root}/java"/>
+        <mkdir dir="${path.build.local.root}/app"/>
         <mkdir dir="${path.build.jar.root}"/>
+        <mkdir dir="${path.deploy.root}"/>
 
-        <!-- Note: Intellij IDEA don't recognize attribute "unless:set", but ant successfully builds project. -->
-        <copydir unless:set="resourcesInLocalBuild" src="${path.resources}" dest="${path.build.local.root}/resources"/>
+        <copydir unless:set="resourcesInLocalBuild" src="src/main/resources" dest="${path.build.local.root}/resources"/>
         <copyfile src="${path.src}/.project_root" dest="${path.build.local.root}"/>
         <copyfile src="${path.build.info.root}/.build_version" dest="${path.build.local.root}/resources/.build_version"/>
 
-        <copydir src="${path.resources}" dest="${path.build.last.root}/resources"/>
+        <copydir src="src/main/resources" dest="${path.build.last.root}/resources"/>
         <copyfile src="${path.build.info.root}/.build_version" dest="${path.build.last.root}/resources/.build_version"/>
 
-        <copydir src="${path.resources}" dest="${path.build.jar.root}/resources"/>
+        <copydir src="src/main/resources" dest="${path.build.jar.root}/resources"/>
         <copyfile src="${path.build.info.root}/.build_version" dest="${path.build.jar.root}/resources/.build_version"/>
     </target>
 
     <target name="make jars">
         <property name="path.build.jar.temp" value="${path.build.jar.root}/temp"/>
 
-        <copydir src="${path.build.last.root}/java" dest="${path.build.jar.temp}/"/>
+        <copydir src="${path.build.last.root}/app" dest="${path.build.jar.temp}/"/>
 
-        <loadfile property="build.version" srcfile="${path.build.info.root}/.build_version"/>
-        <jar destfile="${path.build.jar.root}/java/Grid-Stepper.jar" compress="false" basedir="${path.build.jar.temp}"
-             manifest="${path.src}/META-INF/MANIFEST.MF" encoding="UTF-8">
+        <jar destfile="${path.build.jar.root}/app/Grid-Stepper-Game.jar" compress="false" basedir="${path.build.jar.temp}"
+             manifest="${manifest-file}" encoding="UTF-8">
             <manifest>
                 <attribute name="Ant-Version" value="${ant.version}"/>
                 <attribute name="Built-On" value="${build.date}"/>
-                <attribute name="Build-Version" value="${build.version}"/>
+                <attribute name="Build-Version" value="${product.version}"/>
+                <attribute name="Project-Author" value="${product.vendor}"/>
             </manifest>
         </jar>
         <copyfile src="${path.scripts.models}/bash-jar-run-model.sh" dest="${path.build.jar.root}/run.sh"/>
@@ -74,23 +84,23 @@
     </target>
 
     <target name="make editions">
-        <zip destfile="${path.editions.root}/Grid-Stepper-sources.zip">
-            <zipfileset dir="${path.src}" prefix="src/java"/>
-            <zipfileset dir="${path.resources}" prefix="resources"/>
+        <zip destfile="${path.editions.root}/Grid-Stepper-Game-sources.zip">
+            <zipfileset dir="${path.src}" prefix="src/app"/>
+            <zipfileset dir="src/main/resources" prefix="resources"/>
             <zipfileset dir="ant" prefix="ant"/>
             <zipfileset file="build.xml"/>
             <zipfileset dir="${path.javadoc}" prefix="javadoc"/>
         </zip>
 
-        <zip destfile="${path.editions.root}/Grid-Stepper-last-build.zip">
+        <zip destfile="${path.editions.root}/Grid-Stepper-Game-last-build.zip">
             <zipfileset dir="${path.build.last.root}"/>
         </zip>
     </target>
 
     <target name="compile">
-        <javac srcdir="${path.src}" destdir="${path.build.last.root}/java" debug="true"
+        <javac srcdir="${path.src}" destdir="${path.build.last.root}/app" debug="true"
                 includeantruntime="yes"/>
-        <javac srcdir="${path.src}" destdir="${path.build.local.root}/java" debug="true"
+        <javac srcdir="${path.src}" destdir="${path.build.local.root}/app" debug="true"
                 includeantruntime="yes"/>
     </target>
 
@@ -120,16 +130,91 @@
                 -splitindex" />
     </target>
 
-    <target name="build and compile">
+    <target name="build">
         <exec executable="${path.build.info.root}/version-util.py">
             <arg value="build"/>
             <arg value="update"/>
         </exec>
+        <loadfile property="product.version" srcfile="${path.build.info.root}/.build_version"/>
 
         <antcall target="prepare structure"/>
         <antcall target="compile"/>
         <antcall target="make run scripts"/>
         <antcall target="make editions"/>
         <antcall target="make jars"/>
+    </target>
+
+    <!--<target name="first deploy step">
+        <condition property="build.last.available">
+            <available file="${path.build.last.root}" type="dir"/>
+        </condition>
+        <fail unless:set="build.last.available" status="1" message="There's no compiled output to deploy app!"/>
+
+        <delete dir="${path.deploy.root}"/>
+
+        <fx:jar destfile="${path.deploy.root}/temp/Grid-Stepper.jar">
+            <fx:application name="${product.name}" mainClass="start.Main" />
+            <fx:fileset dir="${path.build.last.root}/app" />
+            <fx:platform javafx="2.1+" j2se="1.8+"/>
+
+            <manifest>
+                <attribute name="Ant-Version" value="${ant.version}"/>
+                <attribute name="Built-On" value="${build.date}"/>
+                <attribute name="Build-Version" value="${product.version}"/>
+                <attribute name="Project-Author" value="${product.vendor}"/>
+            </manifest>
+        </fx:jar>
+
+        <copyfile src="${path.deploy.root}/temp/Grid-Stepper.jar" dest="${path.deploy.root}/web/app/Grid-Stepper.jar"/>
+        <copyfile src="${path.build.info.root}/.build_version" dest="${path.deploy.root}/web/resources/.build_version"/>
+        <copydir src="${path.resources.root}" dest="${path.deploy.root}/web/resources"/>
+        <fx:deploy width="100" height="100" outdir="${path.deploy.root}/web/app" outfile="Grid-Stepper">
+            <fx:application name="${product.name}" mainClass="start.Main"/>
+            <fx:info title="${product.name}" vendor="${product.vendor}"/>
+            
+            <fx:resources>
+                <fx:fileset dir="${path.deploy.root}/temp" includes="*.jar"/>
+            </fx:resources>
+
+            <fx:platform javafx="2.1+" j2se="1.8+"/>
+            <fx:permissions elevated="true" cacheCertificates="true"/>
+        </fx:deploy>
+    </target>
+
+    <target name="second deploy step">
+        <property unless:set="task.timeout" name="task.timeout" value="${defaults.build.timeout.ms}"/>
+
+        <parallel threadcount="1" timeout="${task.timeout}" failonany="false">
+            <sequential>
+                <fx:deploy width="100" height="100" nativeBundles="all" outdir="${path.deploy.native.root}"
+                           outfile="Grid-Stepper">
+                    <fx:application name="${product.name}" mainClass="start.Main"/>
+                    <fx:info title="${product.name}" vendor="${product.vendor}"/>
+
+                    <fx:resources>
+                        <fx:fileset dir="${path.deploy.root}/temp" includes="*.jar"/>
+                    </fx:resources>
+
+                    <fx:platform javafx="2.1+" j2se="1.8+"/>
+                    <fx:permissions elevated="true" cacheCertificates="true"/>
+                </fx:deploy>
+            </sequential>
+        </parallel>
+    </target>
+
+    <target name="third deploy step">
+        <copydir src="${path.resources.root}"
+                 dest="${path.deploy.native.root}/bundles/GridStepperGame/resources"/>
+        <copyfile src="${path.build.info.root}/.build_version"
+                  dest="${path.deploy.native.root}/bundles/GridStepperGame/resources/.build_version"/>
+
+        <delete dir="${path.deploy.root}/temp"/>
+        <delete file="${path.deploy.native.root}/Grid-Stepper.html"/>
+        <delete file="${path.deploy.native.root}/Grid-Stepper.jar"/>
+        <delete file="${path.deploy.native.root}/Grid-Stepper.jnlp"/>
+    </target>-->
+
+    <target name="full deploy">
+        <exec executable="./deploy.sh"/>
     </target>
 </project>

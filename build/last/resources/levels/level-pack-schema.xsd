@@ -10,206 +10,42 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="direction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="up"/>
+            <xs:enumeration value="down"/>
+            <xs:enumeration value="left"/>
+            <xs:enumeration value="right"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:element name="level-pack">
-        <xs:annotation>
-            <xs:documentation>
-                <h1>Documentation for tag</h1>
-
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Value</th>
-                    </tr>
-                    <tr>
-                        <td>Short description</td>
-                        <td>Root element for level pack</td>
-                    </tr>
-                    <tr>
-                        <td>Tag name</td>
-                        <td>level-pack</td>
-                    </tr>
-                    <tr>
-                        <td>Max count</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Min count</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Attributes</td>
-                        <td>
-                            <ol>
-                                <li>&#x00AB;<code>name</code>&#x00BB; - string, must-have</li>
-                            </ol>
-                        </td>
-                    </tr>
-                </table>
-            </xs:documentation>
-        </xs:annotation>
-
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="level" minOccurs="0" maxOccurs="unbounded">
-                    <xs:annotation>
-                        <xs:documentation>
-                            <h1>Documentation for tag</h1>
-
-                            <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Value</th>
-                                </tr>
-                                <tr>
-                                    <td>Short description</td>
-                                    <td>Root element for each level</td>
-                                </tr>
-                                <tr>
-                                    <td>Tag name</td>
-                                    <td>level</td>
-                                </tr>
-                                <tr>
-                                    <td>Max count</td>
-                                    <td>&#x221E;</td>
-                                </tr>
-                                <tr>
-                                    <td>Min count</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>Attributes</td>
-                                    <td>
-                                        <ol>
-                                            <li>&#x00AB;<code>id</code>&#x00BB; - string, must-have</li>
-                                            <li>&#x00AB;<code>completed</code>&#x00BB; - boolean, must-have</li>
-                                        </ol>
-                                    </td>
-                                </tr>
-                            </table>
-                        </xs:documentation>
-                    </xs:annotation>
-
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="game-field" minOccurs="1" maxOccurs="1">
-                                <xs:annotation>
-                                    <xs:documentation>
-                                        <h1>Documentation for tag</h1>
-
-                                        <table>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Value</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Short description</td>
-                                                <td>Root element for storing game field</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tag name</td>
-                                                <td>game-field</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Max count</td>
-                                                <td>1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Min count</td>
-                                                <td>1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Attributes</td>
-                                                <td>None</td>
-                                            </tr>
-                                        </table>
-                                    </xs:documentation>
-                                </xs:annotation>
-
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="column" maxOccurs="unbounded" minOccurs="1">
-                                            <xs:annotation>
-                                                <xs:documentation>
-                                                    <h1>Documentation for tag</h1>
-
-                                                    <table>
-                                                        <tr>
-                                                            <th>Name</th>
-                                                            <th>Value</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Short description</td>
-                                                            <td>Element for storing <b>1</b> column of cells</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Tag name</td>
-                                                            <td>grid</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Max count</td>
-                                                            <td>&#x221E;</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Min count</td>
-                                                            <td>1</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Attributes</td>
-                                                            <td>None</td>
-                                                        </tr>
-                                                    </table>
-                                                </xs:documentation>
-                                            </xs:annotation>
-
                                             <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="cell" maxOccurs="unbounded" minOccurs="1">
-                                                        <xs:annotation>
-                                                            <xs:documentation>
-                                                                <h1>Documentation for tag</h1>
-
-                                                                <table>
-                                                                    <tr>
-                                                                        <th>Name</th>
-                                                                        <th>cell</th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Short description</td>
-                                                                        <td>Element for storing <b>1</b> cell</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Tag name</td>
-                                                                        <td>grid</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Max count</td>
-                                                                        <td>&#x221E;</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Min count</td>
-                                                                        <td>1</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Attributes</td>
-                                                                        <td>
-                                                                            <ol>
-                                                                                <li>&#x00AB;<code>type</code>&#x00BB; - string from enum, must-have</li>
-                                                                            </ol>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </xs:documentation>
-                                                        </xs:annotation>
-
+                                                <xs:choice maxOccurs="unbounded" minOccurs="1">
+                                                    <xs:element name="wall"/>
+                                                    <xs:element name="empty"/>
+                                                    <xs:element name="finish"/>
+                                                    <xs:element name="start"/>
+                                                    <xs:element name="optional"/>
+                                                    <xs:element name="direction-pad">
                                                         <xs:complexType>
-                                                            <xs:simpleContent>
+                                                            <xs:complexContent>
                                                                 <xs:extension base="xs:string">
-                                                                    <xs:attribute type="cellType" name="type" use="required" />
+                                                                    <xs:attribute name="pass-direct" use="required" type="direction"/>
                                                                 </xs:extension>
-                                                            </xs:simpleContent>
+                                                            </xs:complexContent>
                                                         </xs:complexType>
                                                     </xs:element>
-                                                </xs:sequence>
+                                                </xs:choice>
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
@@ -217,8 +53,8 @@
                             </xs:element>
                         </xs:sequence>
 
-                        <xs:attribute type="xs:string" name="id" use="required" />
-                        <xs:attribute type="xs:boolean" name="completed" use="required" />
+                        <xs:attribute type="xs:string" name="name" use="required" />
+                        <xs:attribute type="xs:unsignedInt" name="number" use="required" />
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

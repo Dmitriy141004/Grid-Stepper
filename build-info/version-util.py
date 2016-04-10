@@ -14,9 +14,9 @@
 # Usage:
 #     version-util.py [SELECTOR] [MODE]
 # Wrote in EBNF:
-#     command call = command name, selector, mode ;
-#     selector     = commit | build     | global  ;
-#     mode         = update | increment | zero    ;
+#     command call = command name, selector, mode      ;
+#     selector     = commit | build     | global | get ;
+#     mode         = update | increment | zero   | get ;
 
 # SELECTOR-s are:
 #     commit
@@ -27,9 +27,9 @@
 #     update       increment this selector (number) and zero next numbers at the right
 #     increment    increment only this selector
 #     zero         zero this selector
+#     get          returns value of specified selector
 
 import os
-import posixpath as file_sys
 import re
 from sys import argv as script_args
 
@@ -37,11 +37,12 @@ from sys import argv as script_args
 if "--help" in script_args:
     print """
 Usage:
-    version-util.py [SELECTOR] [MODE]
+    %s [SELECTOR] [MODE]
 Wrote in EBNF:
     command call = command name, selector, mode ;
     selector     = commit | build     | global  ;
     mode         = update | increment | zero    ;
+    command name = %s
 
 SELECTOR-s are:
     commit
@@ -52,35 +53,36 @@ MODE-s are:
     update       increment this selector (number) and zero next numbers at the right
     increment    increment only this selector
     zero         zero this selector
-"""
+    get          returns value of specified selector
+""" % (script_args[0], script_args[0])
     exit(0)
 
 if len(script_args) < 3:
-    print "Missing mode argument!\nType \"--help\" to get help"
+    print "Missing mode argument!\nType \"" + script_args[0] + " --help\" to get help"
     exit(1)
 
 # If-s for unknown SELECTOR-s and MODE-s
 if script_args[1] not in ["global", "commit", "build"]:
-    print "Unknown SELECTOR \"" + script_args[1] + "\"!\nType \"--help\" to get help"
+    print "Unknown SELECTOR \"" + script_args[1] + "\"!\nType \"" + script_args[0] + " --help\" to get help"
     exit(1)
 
-if script_args[2] not in ["update", "increment", "zero"]:
-    print "Unknown MODE \"" + script_args[2] + "\"!\nType \"--help\" to get help"
+if script_args[2] not in ["update", "increment", "zero", "get"]:
+    print "Unknown MODE \"" + script_args[2] + "\"!\nType \"" + script_args[0] + " --help\" to get help"
     exit(1)
 
 # Getting directory, where is this file
 thisFilePath = os.path.realpath(__file__)
-thisFilePath = file_sys.dirname(thisFilePath)
+thisFilePath = os.path.dirname(thisFilePath)
 
 # Loading data from stopper-file
-stopperFile = open(file_sys.join(thisFilePath, ".stop_counter"))
+stopperFile = open(os.path.join(thisFilePath, ".stop_counter"))
 if stopperFile.read(1) == "1":
     stopperFile.close()
     exit(0)
 stopperFile.close()
 
 # Opening file to read
-buildFile = open(file_sys.join(thisFilePath, ".build_version"), 'r')
+buildFile = open(os.path.join(thisFilePath, ".build_version"), 'r')
 buildTextInfo = buildFile.read()
 # If there's no info about build - set to initial value
 if buildTextInfo == "":
@@ -88,16 +90,16 @@ if buildTextInfo == "":
 buildFile.close()
 
 # Opening file for writing
-buildFile = open(file_sys.join(thisFilePath, ".build_version"), 'w')
+buildFile = open(os.path.join(thisFilePath, ".build_version"), 'w')
 # Getting match of regexp that searches all three numbers
 parsedBuildInfo = re.match("""(\d+)\.                         # Global version
                               (\d+)\.                         # Commit number
                               (\d+)                           # Build number
-                              \\s (alpha|beta|pre-realise)   # Realize identifier (alpha, beta)""", buildTextInfo,
+                              \\s ([^\n]+)                      # Realize identifier (alpha, beta)""", buildTextInfo,
                            re.VERBOSE)
 # If there's no match - it's error!
 if parsedBuildInfo is None:
-    print "Content of file \"" + file_sys.join(thisFilePath, ".build_version") + """\" doesn't match this pattern:
+    print "Content of file \"" + os.path.join(thisFilePath, ".build_version") + """\" doesn't match this pattern:
 [GLOBAL VERSION].[COMMIT NUMBER].[BUILD NUMBER] [REALISE IDENTIFIER]"""
     buildFile.close()
     exit(1)
@@ -114,6 +116,8 @@ if script_args[1] == "build":
         buildNumber += 1
     elif script_args[2] == "zero":
         buildNumber = 0
+    elif script_args[2] == "get":
+        print buildNumber
 
 elif script_args[1] == "commit":
     if script_args[2] == "update":
@@ -123,6 +127,8 @@ elif script_args[1] == "commit":
         commitNumber += 1
     elif script_args[2] == "zero":
         commitNumber = 0
+    elif script_args[2] == "get":
+        print commitNumber
 
 elif script_args[1] == "global":
     if script_args[2] == "update":
@@ -133,6 +139,8 @@ elif script_args[1] == "global":
         globalVersion += 1
     elif script_args[2] == "zero":
         globalVersion = 0
+    elif script_args[2] == "get":
+        print globalVersion
 
 # Writing and closing file
 buildFile.write(str(globalVersion) + "." + str(commitNumber) + "." + str(buildNumber) + " " + realise)

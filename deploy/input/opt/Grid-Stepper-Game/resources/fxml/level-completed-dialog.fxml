@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LevelCompletedController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="275.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="472.0" minWidth="10.0" prefWidth="275.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="173.0" minHeight="0.0" prefHeight="99.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="267.0" minHeight="7.0" prefHeight="56.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="278.0" minHeight="5.0" prefHeight="47.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="%level-completed" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Ubuntu" size="28.0" />
+         </font>
+      </Label>
+      <Label text="%stats" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="%stats.keys.time" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Ubuntu" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="%stats.keys.moves" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Ubuntu" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Label>
+      <Button fx:id="mainMenuButton" cancelButton="true" mnemonicParsing="false" onAction="#actionButtonPressed" text="%main-menu" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+         <font>
+            <Font name="Ubuntu" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="15.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="nextLevelButton" defaultButton="true" mnemonicParsing="false" onAction="#actionButtonPressed" text="%next-level" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+         <font>
+            <Font name="Ubuntu" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="15.0" />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="passingTimeLabel" text="0.0 seconds" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Ubuntu" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="moveCountLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font name="Ubuntu" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </Label>
+   </children>
+</GridPane>

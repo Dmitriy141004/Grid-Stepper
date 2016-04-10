@@ -7,3 +7,4 @@ README.*
 /build/local
 *~
 /.git
+*.pyc

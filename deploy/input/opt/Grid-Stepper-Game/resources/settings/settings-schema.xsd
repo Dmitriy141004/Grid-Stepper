@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="settings">
+        <xs:annotation>
+            <xs:documentation>
+                <h1>Documentation for tag</h1>
+
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Short description</td>
+                        <td>Root element for config document</td>
+                    </tr>
+                    <tr>
+                        <td>Tag name</td>
+                        <td>settings</td>
+                    </tr>
+                    <tr>
+                        <td>Max count</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Min count</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Attributes</td>
+                        <td>None</td>
+                    </tr>
+                </table>
+            </xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="storage" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            <h1>Documentation for tag</h1>
+
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Value</th>
+                                </tr>
+                                <tr>
+                                    <td>Short description</td>
+                                    <td>Root element for mapping of settings, here're key-value pairs</td>
+                                </tr>
+                                <tr>
+                                    <td>Tag name</td>
+                                    <td>storage</td>
+                                </tr>
+                                <tr>
+                                    <td>Max count</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Min count</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Attributes</td>
+                                    <td>None</td>
+                                </tr>
+                            </table>
+                        </xs:documentation>
+                    </xs:annotation>
+
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="setting" maxOccurs="unbounded" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        <h1>Documentation for tag</h1>
+
+                                        <table>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Value</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Short description</td>
+                                                <td>Key-Value pair for <b>only one</b> config element</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tag name</td>
+                                                <td>setting</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Max count</td>
+                                                <td>&#x221E;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Min count</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Attributes</td>
+                                                <td>
+                                                    <ol>
+                                                        <li>&#x00AB;<code>key</code>&#x00BB; - string, must-have</li>
+                                                        <li>&#x00AB;<code>value</code>&#x00BB; - string, must-have</li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </xs:documentation>
+                                </xs:annotation>
+
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute type="xs:string" name="key" use="required" />
+                                            <xs:attribute type="xs:string" name="value" use="required" />
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

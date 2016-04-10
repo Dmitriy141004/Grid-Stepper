@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm -r /opt/Grid-Stepper-Game
+rm /usr/bin/grid-stepper-game
+rm /usr/share/applications/grid-stepper-game.desktop

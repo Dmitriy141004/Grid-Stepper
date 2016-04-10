@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+
+# Script that configures some thing (such as version) before building .deb package.
+
+import pairs_parser
+import os
+
+# Getting directory where user is now (working directory) and getting folder with name "DEBIAN"
+debianFolder = os.path.join(os.getcwdu(), "DEBIAN")
+# If directory exists, starting configuring, otherwise - printing error message
+if os.path.exists(debianFolder):
+    # Iterating each file in directory
+    for filename in os.listdir(debianFolder):
+        # If file is file and its name is "control" - we must configure this file
+        if os.path.isfile(os.path.join(debianFolder, filename)) and filename == "control":
+            # Parsing content of file
+            f = open(os.path.join(debianFolder, filename), 'r')
+            contentPairs = pairs_parser.parse_pairs(f.read())
+            f.close()
+
+            # Configuring version, read from file "build-info/.build_version"
+            # Note: element "Version" will always be in file content, it is must-have
+            versionFilePath = os.path.realpath(os.path.dirname(__file__) +
+                                               "../../../build-info/.build_version")
+            versionFile = open(versionFilePath, 'r')
+            contentPairs["Version"] = versionFile.read().split(' ')[0] + "-1"
+            versionFile.close()
+
+            # Dumping result to file
+            f = open(os.path.join(debianFolder, filename), 'w')
+            fileData = ""
+            for key in contentPairs:
+                fileData += key + ": " + contentPairs[key] + '\n'
+            f.write(fileData)
+            f.close()
+
+else:
+    print "No folder/directory/catalogue \"DEBIAN\" in working folder/directory/catalogue!"
+    exit(1)
