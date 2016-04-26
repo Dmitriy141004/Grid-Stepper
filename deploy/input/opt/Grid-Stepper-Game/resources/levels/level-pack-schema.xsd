@@ -53,7 +53,6 @@
                             </xs:element>
                         </xs:sequence>
 
-                        <xs:attribute type="xs:string" name="name" use="required" />
                         <xs:attribute type="xs:unsignedInt" name="number" use="required" />
                     </xs:complexType>
                 </xs:element>

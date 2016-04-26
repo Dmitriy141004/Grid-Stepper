@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cd `pwd`/`dirname $0`/java
+cd `dirname $0`/app
 java start.Main

@@ -1,10 +1,9 @@
 Priority: optional
-Depends: oracle-java8-installer
-Version: 1.35.7-1
+Depends: java-runtime-headless (>= 1.8)
+Version: 1.36.26-1
 Maintainer: Dmitriy Meleshko <dmytro.meleshko@gmail.com>
 Architecture: all
-Package: Grid-Stepper-Game
+Package: grid-stepper-game
 Section: games
-Installed-Size: 189424
 Description: Game where you need to go from A to B stepping on all empty cells once
  Nothing here.

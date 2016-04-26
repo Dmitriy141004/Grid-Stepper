@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# =================== Python script for incrementing build version ===================
+# ===================== Python script for working with versions ======================
 # Info about build version is stored in file "./.build_version". It looks like this:
 #
 # 1.23.40 alpha

@@ -2,68 +2,63 @@
 
 <project name="Grid-Stepper-Game" default="build"
          xmlns:unless="ant:unless">
-         <!--xmlns:fx="javafx:com.sun.javafx.tools.ant">
-    <taskdef resource="com/sun/javafx/tools/ant/antlib.xml"
-             uri="javafx:com.sun.javafx.tools.ant"
-             classpath="${path.separator}${java.home}/../lib/ant-javafx.jar"/>-->
 
-    <property name="path.build.root" value="build"/>
-    <property name="path.build.last.root" value="${path.build.root}/last"/>
-    <property name="path.src" value="./src/main/java"/>
-    <property name="path.resources.root" value="./src/main/resources"/>
-    <property name="path.editions.root" value="${path.build.root}/editions"/>
-    <property name="path.build.local.root" value="${path.build.root}/local"/>
-    <property name="path.build.jar.root" value="${path.build.root}/jar"/>
-    <property name="path.javadoc" value="./javadoc"/>
-    <property name="path.scripts.models" value="./run-scripts"/>
-    <property name="path.build.info.root" value="./build-info"/>
-    <property name="path.deploy.root" value="${path.build.root}/deploy"/>
+    <property name="dir.build-root" value="build"/>
+    <property name="dir.build.last" value="${dir.build-root}/last"/>
+    <property name="dir.src.java" value="./src/main/java"/>
+    <property name="dir.resources" value="./src/main/resources"/>
+    <property name="dir.editions" value="${dir.build-root}/editions"/>
+    <property name="dir.build.local" value="${dir.build-root}/local"/>
+    <property name="dir.build.jar" value="${dir.build-root}/jar"/>
+    <property name="dir.javadoc" value="./javadoc"/>
+    <property name="dir.script-models" value="./run-scripts"/>
+    <property name="dir.build-info" value="./build-info"/>
+    <property name="dir.deploy" value="./deploy"/>
     <property name="manifest-file" value="src/main/java/META-INF/MANIFEST.MF"/>
     <property name="product.vendor" value="Dmitriy Meleshko"/>
 
     <condition property="resourcesInLocalBuild">
-        <available file="${path.build.local.root}/.project_root" type="file"/>
+        <available file="${dir.build.local}/.project_root" type="file"/>
     </condition>
     <tstamp>
         <format property="build.date" pattern="dd/MMMM/yyyy hh:mm:ss"/>
     </tstamp>
 
-    <target name="clear build">
-        <delete dir="${path.build.last.root}"/>
-        <delete dir="${path.editions.root}"/>
-        <delete dir="${path.build.jar.root}"/>
-        <delete dir="${path.deploy.root}"/>
+    <target name="clean">
+        <delete dir="${dir.build.last}"/>
+        <delete dir="${dir.editions}"/>
+        <delete dir="${dir.build.jar}"/>
     </target>
 
-    <target name="full build clear">
-        <delete dir="${path.build.root}"/>
+    <target name="full-clear">
+        <delete dir="${dir.build-root}"/>
     </target>
 
-    <target name="prepare structure" depends="clear build">
-        <mkdir dir="${path.build.root}"/>
-        <mkdir dir="${path.build.last.root}/app"/>
-        <mkdir dir="${path.editions.root}"/>
-        <mkdir dir="${path.build.local.root}/app"/>
-        <mkdir dir="${path.build.jar.root}"/>
-        <mkdir dir="${path.deploy.root}"/>
+    <target name="prepare" depends="clean">
+        <mkdir dir="${dir.build-root}"/>
+        <mkdir dir="${dir.build.last}/app"/>
+        <mkdir dir="${dir.editions}"/>
+        <mkdir dir="${dir.build.local}/app"/>
+        <mkdir dir="${dir.build.jar}"/>
+        <mkdir dir="${dir.deploy}"/>
 
-        <copydir unless:set="resourcesInLocalBuild" src="src/main/resources" dest="${path.build.local.root}/resources"/>
-        <copyfile src="${path.src}/.project_root" dest="${path.build.local.root}"/>
-        <copyfile src="${path.build.info.root}/.build_version" dest="${path.build.local.root}/resources/.build_version"/>
+        <copydir unless:set="resourcesInLocalBuild" src="src/main/resources" dest="${dir.build.local}/resources"/>
+        <copyfile src="${dir.src.java}/.project_root" dest="${dir.build.local}"/>
+        <copyfile src="${dir.build-info}/.build_version" dest="${dir.build.local}/resources/.build_version"/>
 
-        <copydir src="src/main/resources" dest="${path.build.last.root}/resources"/>
-        <copyfile src="${path.build.info.root}/.build_version" dest="${path.build.last.root}/resources/.build_version"/>
+        <copydir src="src/main/resources" dest="${dir.build.last}/resources"/>
+        <copyfile src="${dir.build-info}/.build_version" dest="${dir.build.last}/resources/.build_version"/>
 
-        <copydir src="src/main/resources" dest="${path.build.jar.root}/resources"/>
-        <copyfile src="${path.build.info.root}/.build_version" dest="${path.build.jar.root}/resources/.build_version"/>
+        <copydir src="src/main/resources" dest="${dir.build.jar}/resources"/>
+        <copyfile src="${dir.build-info}/.build_version" dest="${dir.build.jar}/resources/.build_version"/>
     </target>
 
-    <target name="make jars">
-        <property name="path.build.jar.temp" value="${path.build.jar.root}/temp"/>
+    <target name="jars">
+        <property name="dir.build.jar-temp" value="${dir.build.jar}/temp"/>
 
-        <copydir src="${path.build.last.root}/app" dest="${path.build.jar.temp}/"/>
+        <copydir src="${dir.build.last}/app" dest="${dir.build.jar-temp}/"/>
 
-        <jar destfile="${path.build.jar.root}/app/Grid-Stepper-Game.jar" compress="false" basedir="${path.build.jar.temp}"
+        <jar destfile="${dir.build.jar}/app/Grid-Stepper-Game.jar" compress="false" basedir="${dir.build.jar-temp}"
              manifest="${manifest-file}" encoding="UTF-8">
             <manifest>
                 <attribute name="Ant-Version" value="${ant.version}"/>
@@ -72,149 +67,78 @@
                 <attribute name="Project-Author" value="${product.vendor}"/>
             </manifest>
         </jar>
-        <copyfile src="${path.scripts.models}/bash-jar-run-model.sh" dest="${path.build.jar.root}/run.sh"/>
-        <copyfile src="${path.scripts.models}/batch-jar-run-model.bat" dest="${path.build.jar.root}/run.bat"/>
+        <copyfile src="${dir.script-models}/bash-jar-run-model.sh" dest="${dir.build.jar}/run.sh"/>
+        <copyfile src="${dir.script-models}/batch-jar-run-model.bat" dest="${dir.build.jar}/run.bat"/>
 
-        <delete dir="${path.build.jar.temp}"/>
+        <delete dir="${dir.build.jar-temp}"/>
 
         <exec executable="chmod">
             <arg value="+x"/>
-            <arg value="${path.build.jar.root}/run.sh"/>
+            <arg value="${dir.build.jar}/run.sh"/>
         </exec>
     </target>
 
-    <target name="make editions">
-        <zip destfile="${path.editions.root}/Grid-Stepper-Game-sources.zip">
-            <zipfileset dir="${path.src}" prefix="src/app"/>
-            <zipfileset dir="src/main/resources" prefix="resources"/>
+    <target name="editions">
+        <zip destfile="${dir.editions}/Grid-Stepper-Game-sources.zip">
+            <zipfileset dir="${dir.src.java}" prefix="src/"/>
             <zipfileset dir="ant" prefix="ant"/>
-            <zipfileset file="build.xml"/>
-            <zipfileset dir="${path.javadoc}" prefix="javadoc"/>
+            <zipfileset file="build.xml"/><zipfileset dir="${dir.javadoc}" prefix="javadoc"/>
+            <zipfileset dir="${dir.javadoc}" prefix="javadoc"/>
         </zip>
 
-        <zip destfile="${path.editions.root}/Grid-Stepper-Game-last-build.zip">
-            <zipfileset dir="${path.build.last.root}"/>
+        <zip destfile="${dir.editions}/Grid-Stepper-Game-last-build.zip">
+            <zipfileset dir="${dir.build.last}"/>
         </zip>
     </target>
 
     <target name="compile">
-        <javac srcdir="${path.src}" destdir="${path.build.last.root}/app" debug="true"
-                includeantruntime="yes"/>
-        <javac srcdir="${path.src}" destdir="${path.build.local.root}/app" debug="true"
-                includeantruntime="yes"/>
+        <javac srcdir="${dir.src.java}" destdir="${dir.build.last}/app" debug="true"
+               includeantruntime="yes"/>
+        <javac srcdir="${dir.src.java}" destdir="${dir.build.local}/app" debug="true"
+               includeantruntime="yes"/>
     </target>
 
-    <target name="make run scripts">
-        <copyfile src="${path.scripts.models}/bash-run-model.sh" dest="${path.build.last.root}/run.sh"/>
+    <target name="make-scripts">
+        <copyfile src="${dir.script-models}/bash-run-model.sh" dest="${dir.build.last}/run.sh"/>
         <exec executable="chmod">
             <arg value="+x"/>
-            <arg value="${path.build.last.root}/run.sh"/>
+            <arg value="${dir.build.last}/run.sh"/>
         </exec>
 
-        <copyfile src="${path.scripts.models}/bash-run-model.sh" dest="${path.build.local.root}/run.sh"/>
+        <copyfile src="${dir.script-models}/bash-run-model.sh" dest="${dir.build.local}/run.sh"/>
         <exec executable="chmod">
             <arg value="+x"/>
-            <arg value="${path.build.local.root}/run.sh"/>
+            <arg value="${dir.build.local}/run.sh"/>
         </exec>
 
-        <copyfile src="${path.scripts.models}/batch-run-model.bat" dest="${path.build.last.root}/run.bat"/>
-        <copyfile src="${path.scripts.models}/batch-run-model.bat" dest="${path.build.local.root}/run.bat"/>
+        <copyfile src="${dir.script-models}/batch-run-model.bat" dest="${dir.build.last}/run.bat"/>
+        <copyfile src="${dir.script-models}/batch-run-model.bat" dest="${dir.build.local}/run.bat"/>
     </target>
 
-    <target name="clear javadoc">
-        <delete dir="${path.javadoc}" />
+    <target name="clean-javadoc">
+        <delete dir="${dir.javadoc}" />
     </target>
 
-    <target name="generate javadoc" depends="clear javadoc">
-        <javadoc sourcepath="${path.src}" destdir="${path.javadoc}" access="private" additionalparam="-Xdoclint:none
+    <target name="javadoc" depends="clean-javadoc">
+        <javadoc sourcepath="${dir.src.java}" destdir="${dir.javadoc}" access="private" additionalparam="-Xdoclint:none
                 -splitindex" />
     </target>
 
     <target name="build">
-        <exec executable="${path.build.info.root}/version-util.py">
+        <exec executable="${dir.build-info}/version-util.py">
             <arg value="build"/>
             <arg value="update"/>
         </exec>
-        <loadfile property="product.version" srcfile="${path.build.info.root}/.build_version"/>
+        <loadfile property="product.version" srcfile="${dir.build-info}/.build_version"/>
 
-        <antcall target="prepare structure"/>
+        <antcall target="prepare"/>
         <antcall target="compile"/>
-        <antcall target="make run scripts"/>
-        <antcall target="make editions"/>
-        <antcall target="make jars"/>
+        <antcall target="make-scripts"/>
+        <antcall target="editions"/>
+        <antcall target="jars"/>
     </target>
 
-    <!--<target name="first deploy step">
-        <condition property="build.last.available">
-            <available file="${path.build.last.root}" type="dir"/>
-        </condition>
-        <fail unless:set="build.last.available" status="1" message="There's no compiled output to deploy app!"/>
-
-        <delete dir="${path.deploy.root}"/>
-
-        <fx:jar destfile="${path.deploy.root}/temp/Grid-Stepper.jar">
-            <fx:application name="${product.name}" mainClass="start.Main" />
-            <fx:fileset dir="${path.build.last.root}/app" />
-            <fx:platform javafx="2.1+" j2se="1.8+"/>
-
-            <manifest>
-                <attribute name="Ant-Version" value="${ant.version}"/>
-                <attribute name="Built-On" value="${build.date}"/>
-                <attribute name="Build-Version" value="${product.version}"/>
-                <attribute name="Project-Author" value="${product.vendor}"/>
-            </manifest>
-        </fx:jar>
-
-        <copyfile src="${path.deploy.root}/temp/Grid-Stepper.jar" dest="${path.deploy.root}/web/app/Grid-Stepper.jar"/>
-        <copyfile src="${path.build.info.root}/.build_version" dest="${path.deploy.root}/web/resources/.build_version"/>
-        <copydir src="${path.resources.root}" dest="${path.deploy.root}/web/resources"/>
-        <fx:deploy width="100" height="100" outdir="${path.deploy.root}/web/app" outfile="Grid-Stepper">
-            <fx:application name="${product.name}" mainClass="start.Main"/>
-            <fx:info title="${product.name}" vendor="${product.vendor}"/>
-            
-            <fx:resources>
-                <fx:fileset dir="${path.deploy.root}/temp" includes="*.jar"/>
-            </fx:resources>
-
-            <fx:platform javafx="2.1+" j2se="1.8+"/>
-            <fx:permissions elevated="true" cacheCertificates="true"/>
-        </fx:deploy>
-    </target>
-
-    <target name="second deploy step">
-        <property unless:set="task.timeout" name="task.timeout" value="${defaults.build.timeout.ms}"/>
-
-        <parallel threadcount="1" timeout="${task.timeout}" failonany="false">
-            <sequential>
-                <fx:deploy width="100" height="100" nativeBundles="all" outdir="${path.deploy.native.root}"
-                           outfile="Grid-Stepper">
-                    <fx:application name="${product.name}" mainClass="start.Main"/>
-                    <fx:info title="${product.name}" vendor="${product.vendor}"/>
-
-                    <fx:resources>
-                        <fx:fileset dir="${path.deploy.root}/temp" includes="*.jar"/>
-                    </fx:resources>
-
-                    <fx:platform javafx="2.1+" j2se="1.8+"/>
-                    <fx:permissions elevated="true" cacheCertificates="true"/>
-                </fx:deploy>
-            </sequential>
-        </parallel>
-    </target>
-
-    <target name="third deploy step">
-        <copydir src="${path.resources.root}"
-                 dest="${path.deploy.native.root}/bundles/GridStepperGame/resources"/>
-        <copyfile src="${path.build.info.root}/.build_version"
-                  dest="${path.deploy.native.root}/bundles/GridStepperGame/resources/.build_version"/>
-
-        <delete dir="${path.deploy.root}/temp"/>
-        <delete file="${path.deploy.native.root}/Grid-Stepper.html"/>
-        <delete file="${path.deploy.native.root}/Grid-Stepper.jar"/>
-        <delete file="${path.deploy.native.root}/Grid-Stepper.jnlp"/>
-    </target>-->
-
-    <target name="full deploy">
+    <target name="deploy" depends="build">
         <exec executable="./deploy.sh"/>
     </target>
 </project>

@@ -1,6 +1,6 @@
 package levels.cells;
 
-import control.GamePlayController;
+import mvc.controllers.GamePlayController;
 import javafx.scene.canvas.GraphicsContext;
 
 /**

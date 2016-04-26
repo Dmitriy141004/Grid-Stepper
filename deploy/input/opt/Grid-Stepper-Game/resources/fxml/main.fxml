@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="556.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainMenuController">
+<BorderPane prefHeight="556.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controllers.MainMenuController">
    <bottom>
       <AnchorPane prefHeight="242.0" prefWidth="760.0">
          <children>
@@ -26,7 +26,7 @@
                <children>
                   <Button fx:id="playButton" defaultButton="true" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="220.0" text="%play" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
-                        <Font name="Ubuntu" size="27.0" />
+                        <Font name="Arial" size="27.0" />
                      </font>
                      <GridPane.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -34,7 +34,7 @@
                   </Button>
                   <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="220.0" text="%settings" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
-                        <Font name="Ubuntu" size="27.0" />
+                        <Font name="Arial" size="27.0" />
                      </font>
                      <GridPane.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -42,7 +42,7 @@
                   </Button>
                   <Button fx:id="createButton" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="220.0" text="%create" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
-                        <Font name="Ubuntu" size="27.0" />
+                        <Font name="Arial" size="27.0" />
                      </font>
                      <GridPane.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -50,7 +50,7 @@
                   </Button>
                   <Button fx:id="exitButton" cancelButton="true" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="220.0" text="%exit" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
-                        <Font name="Ubuntu" size="27.0" />
+                        <Font name="Arial" size="27.0" />
                      </font>
                      <GridPane.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -67,7 +67,7 @@
    <top>
       <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="136.0" prefWidth="523.0" text="Grid Stepper" wrapText="true" BorderPane.alignment="CENTER">
          <font>
-            <Font name="Ubuntu Bold" size="86.0" />
+            <Font name="Arial Bold" size="86.0" />
          </font>
          <BorderPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
@@ -81,7 +81,7 @@
                <center>
                   <Label fx:id="versionLabel" text="v. 1.0.0" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="Ubuntu" size="31.0" />
+                        <Font name="Arial" size="31.0" />
                      </font>
                   </Label>
                </center>

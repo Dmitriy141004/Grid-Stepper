@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<VBox minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.GamePlayController">
+<VBox minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controllers.GamePlayController">
    <children>
       <HBox prefHeight="43.0" prefWidth="640.0">
          <children>
             <Button fx:id="endButton" cancelButton="true" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="125.0" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="40.0" text="%game-play.end-game" wrapText="true">
                <font>
-                  <Font name="Ubuntu" size="16.0" />
+                  <Font name="Arial" size="16.0" />
                </font>
                <HBox.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -24,7 +24,7 @@
             </Button>
             <Button fx:id="undoButton" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="125.0" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="40.0" text="%undo">
                <font>
-                  <Font name="Ubuntu" size="16.0" />
+                  <Font name="Arial" size="16.0" />
                </font>
                <HBox.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -32,7 +32,7 @@
             </Button>
             <Button fx:id="redoButton" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="125.0" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="40.0" text="%redo">
                <font>
-                  <Font name="Ubuntu" size="16.0" />
+                  <Font name="Arial" size="16.0" />
                </font>
                <HBox.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -43,7 +43,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </HBox.margin>
                <font>
-                  <Font name="Ubuntu" size="16.0" />
+                  <Font name="Arial" size="16.0" />
                </font>
             </Button>
          </children>

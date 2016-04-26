@@ -101,8 +101,7 @@ public class XMLLevelLoader {
                         }
                     } // End of iterating columns
 
-                    levels.add(new Level(Integer.parseUnsignedInt(levelElement.getAttribute("number")),
-                            levelElement.getAttribute("name"), levelGrid));
+                    levels.add(new Level(Integer.parseUnsignedInt(levelElement.getAttribute("number")), levelGrid));
                 }
             }
 

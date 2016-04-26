@@ -7,11 +7,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CampaignSelectController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controllers.CampaignSelectController">
    <children>
       <Button fx:id="backButton" cancelButton="true" mnemonicParsing="false" onAction="#actionButtonPressed" text="%back">
          <font>
-            <Font name="Ubuntu" size="16.0" />
+            <Font name="Arial" size="16.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -22,14 +22,14 @@
       </Button>
       <Button fx:id="classicButton" mnemonicParsing="false" onAction="#actionButtonPressed" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <font>
-            <Font name="Ubuntu" size="25.0" />
+            <Font name="Arial" size="25.0" />
          </font>
          <graphic>
             <BorderPane prefHeight="200.0">
                <top>
                   <Label text="%campaign.mode.classic" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="Ubuntu" size="25.0" />
+                        <Font name="Arial" size="25.0" />
                      </font>
                   </Label>
                </top>
@@ -39,7 +39,7 @@
                <bottom>
                   <Label text="Classic game: start, finish, empty cells, walls and you - anything else for good time?" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="Ubuntu" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                </bottom>
@@ -51,14 +51,14 @@
       </Button>
       <Button fx:id="extendedButton" mnemonicParsing="false" onAction="#actionButtonPressed" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <font>
-            <Font name="Ubuntu" size="25.0" />
+            <Font name="Arial" size="25.0" />
          </font>
          <graphic>
             <BorderPane prefHeight="200.0">
                <top>
                   <Label text="%campaign.mode.extended" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="Ubuntu" size="25.0" />
+                        <Font name="Arial" size="25.0" />
                      </font>
                      <BorderPane.margin>
                         <Insets />
@@ -68,7 +68,7 @@
                <bottom>
                   <Label text="Extended game - classic things, direction pads, bridges, moving blocks, and more... Do you want to ACCEPT CHALANGE?" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="Ubuntu" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                </bottom>

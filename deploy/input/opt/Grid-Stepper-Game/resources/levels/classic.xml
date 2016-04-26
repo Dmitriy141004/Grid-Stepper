@@ -2,7 +2,7 @@
 
 <level-pack name="classic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="level-pack-schema.xsd">
-    <level name="first steps" number="1">
+    <level number="1">
         <game-field>
             <column>
                 <wall   />
@@ -22,7 +22,7 @@
         </game-field>
     </level>
 
-    <level name="err..." number="2">
+    <level number="2">
         <game-field>
             <column>
                 <wall  />

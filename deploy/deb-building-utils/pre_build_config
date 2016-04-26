@@ -1,12 +1,18 @@
 #!/usr/bin/env python
 
-# Script that configures some thing (such as version) before building .deb package.
+# Script that configures some things (such as version) before building .deb package.
+#
+# Arguments help:
+#     1st - working directory
+#     2nd - build's version
+#     3rd - package's version
 
-import pairs_parser
+import header_file_parser
 import os
+import sys
 
-# Getting directory where user is now (working directory) and getting folder with name "DEBIAN"
-debianFolder = os.path.join(os.getcwdu(), "DEBIAN")
+# Getting working directory and getting folder with name "DEBIAN"
+debianFolder = sys.argv[1]
 # If directory exists, starting configuring, otherwise - printing error message
 if os.path.exists(debianFolder):
     # Iterating each file in directory
@@ -15,16 +21,12 @@ if os.path.exists(debianFolder):
         if os.path.isfile(os.path.join(debianFolder, filename)) and filename == "control":
             # Parsing content of file
             f = open(os.path.join(debianFolder, filename), 'r')
-            contentPairs = pairs_parser.parse_pairs(f.read())
+            contentPairs = header_file_parser.parse_pairs(f.read())
             f.close()
 
             # Configuring version, read from file "build-info/.build_version"
             # Note: element "Version" will always be in file content, it is must-have
-            versionFilePath = os.path.realpath(os.path.dirname(__file__) +
-                                               "../../../build-info/.build_version")
-            versionFile = open(versionFilePath, 'r')
-            contentPairs["Version"] = versionFile.read().split(' ')[0] + "-1"
-            versionFile.close()
+            contentPairs["Version"] = sys.argv[2].split(' ')[0] + sys.argv[3]
 
             # Dumping result to file
             f = open(os.path.join(debianFolder, filename), 'w')

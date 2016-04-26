@@ -2,8 +2,8 @@ package start;
 
 import com.sun.org.apache.xml.internal.serialize.OutputFormat;
 import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
-import control.FXController;
-import control.MainMenuController;
+import mvc.util.FXController;
+import mvc.controllers.MainMenuController;
 import javafx.application.Application;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
@@ -13,6 +13,7 @@ import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 import levels.Level;
 import levels.XMLLevelLoader;
+import mvc.controllers.GamePlayController;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import settings.XMLSettingsLoader;
@@ -316,7 +317,7 @@ public class Main extends Application {
      * @param sceneIdentifier name of scene's {@code .fxml} file
      * @param windowTitle window's title
      * @param setupFunc independent function that setups controller. Why it can be used? For example, you can setup current
-     *                  level in {@link control.GamePlayController}.
+     *                  level in {@link GamePlayController}.
      * @throws RuntimeException when loading fails.
      *
      */

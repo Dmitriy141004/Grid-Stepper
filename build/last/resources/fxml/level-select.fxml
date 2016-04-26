@@ -6,11 +6,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LevelSelectController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controllers.LevelSelectController">
    <children>
       <Button fx:id="backButton" cancelButton="true" mnemonicParsing="false" onAction="#actionButtonPressed" text="%back">
          <font>
-            <Font name="Ubuntu" size="16.0" />
+            <Font name="Arial" size="16.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -25,7 +25,6 @@
          </columnResizePolicy>
          <columns>
             <TableColumn fx:id="levelNumbersColumn" editable="false" prefWidth="206.0" sortable="false" text="Level number" />
-            <TableColumn fx:id="levelNamesColumn" editable="false" minWidth="100.0" prefWidth="275.0" sortable="false" text="Level Name" />
             <TableColumn fx:id="levelCompletionColumn" editable="false" prefWidth="206.0" sortable="false" text="Is level completed?" />
          </columns>
          <GridPane.margin>
@@ -34,7 +33,7 @@
       </TableView>
       <Button fx:id="playButton" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="200.0" text="%play" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
          <font>
-            <Font name="Ubuntu" size="30.0" />
+            <Font name="Arial" size="30.0" />
          </font>
       </Button>
    </children>

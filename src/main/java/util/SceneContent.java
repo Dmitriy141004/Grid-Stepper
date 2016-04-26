@@ -1,6 +1,6 @@
 package util;
 
-import control.FXController;
+import mvc.util.FXController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

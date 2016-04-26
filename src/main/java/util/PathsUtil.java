@@ -95,7 +95,7 @@ public class PathsUtil {
 
             // Getting caller class location and its parts (caller class is on third stack trace element, on second is
             // this function, and on first - "Thread#getStackTrace()").
-            Class<?> callerClass = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName());
+            Class<?> callerClass = Class.forName(Thread.currentThread().getStackTrace()[2].getClassName());
             // Is class in JAR?
             boolean classPackedInJar = callerClass.getProtectionDomain()
                     .getCodeSource()

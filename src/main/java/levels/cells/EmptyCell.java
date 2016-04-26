@@ -1,10 +1,10 @@
 package levels.cells;
 
-import control.GamePlayController;
+import mvc.controllers.GamePlayController;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-import static control.GamePlayController.CELL_SIZE;
+import static mvc.controllers.GamePlayController.CELL_SIZE;
 
 /**
  * Class for empty cells.
