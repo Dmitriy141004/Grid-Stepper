@@ -1,11 +1,12 @@
 package mvc.util;
 
 import levels.Level;
+import levels.LevelPack;
 import mvc.controllers.GamePlayController;
 
 /**
- * External storage for values that will be used in {@link GamePlayController}. This values can unstably work in
- * {@link GamePlayController controller}.
+ * This class is storage for really global values, and values that unstably (I don't know why) work in
+ * {@link GamePlayController}.
  *
  * <p>Class uses Singleton pattern to match OOP dependencies.</p>
  *
@@ -13,23 +14,22 @@ import mvc.controllers.GamePlayController;
  * @see #instance
  */
 public class ExternalStorage {
-    /** Instance of class. */
     private static ExternalStorage instance;
 
-    /** Object for current level.
-      * @see levels.XMLLevelLoader#loadLevelPack(String) */
+    /** @see Level
+     * @see levels.XMLLevelLoader#loadLevelPack(String) */
     public volatile Level currentLevel;
-
-    /**
-     * Returns instance of class. If instance is {@code null}, it will be set to <code>new ExternalStorage();</code>.
-     *
-     * @return instance of class.
-     */
-    public static ExternalStorage getInstance() {
-        return (instance != null) ? instance : (instance = new ExternalStorage());
-    }
+    /** @see LevelPack
+     * @see levels.XMLLevelLoader#loadLevelPack(String) */
+    public volatile LevelPack selectedCampaign;
 
     private ExternalStorage() {
 
+    }
+
+    public static ExternalStorage getInstance() {
+        if (instance == null)
+            instance = new ExternalStorage();
+        return instance;
     }
 }

@@ -19,6 +19,13 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="levelNumber">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:element name="level-pack">
         <xs:complexType>
             <xs:sequence>
@@ -38,13 +45,15 @@
                                                     <xs:element name="optional"/>
                                                     <xs:element name="direction-pad">
                                                         <xs:complexType>
-                                                            <xs:complexContent>
+                                                            <xs:simpleContent>
                                                                 <xs:extension base="xs:string">
                                                                     <xs:attribute name="pass-direct" use="required" type="direction"/>
                                                                 </xs:extension>
-                                                            </xs:complexContent>
+                                                            </xs:simpleContent>
                                                         </xs:complexType>
                                                     </xs:element>
+                                                    <xs:element name="bridge"/>
+                                                    <xs:element name="background"/>
                                                 </xs:choice>
                                             </xs:complexType>
                                         </xs:element>
@@ -53,7 +62,8 @@
                             </xs:element>
                         </xs:sequence>
 
-                        <xs:attribute type="xs:unsignedInt" name="number" use="required" />
+                        <xs:attribute type="levelNumber" name="number" use="required" />
+                        <xs:attribute type="xs:boolean" name="completed" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

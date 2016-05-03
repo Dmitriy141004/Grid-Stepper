@@ -1,24 +1,27 @@
 package mvc.controllers;
 
-import mvc.util.FXController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
+import javafx.scene.control.*;
+import javafx.scene.layout.Region;
+import levels.Level;
+import levels.LevelPack;
+import mvc.util.ExternalStorage;
+import mvc.util.FXController;
 import start.Main;
+import util.future.FutureTasks;
+
+import java.util.Optional;
 
 /**
  * Controller for "Level Completed!" dialog.
- *
  */
 public class LevelCompletedController extends FXController {
-    /** Link to label that shows how many time you used to pass level. */
     @FXML
     Label passingTimeLabel;
-    /** Link to label that shows how many moves you used to pass level. */
     @FXML
     Label moveCountLabel;
+    private Alert campaignCompletedDialog;
 
     /**
      * {@inheritDoc}
@@ -33,7 +36,6 @@ public class LevelCompletedController extends FXController {
      */
     @Override
     public void run() {
-        // If you close window you'll be moved into main menu
         passingTimeLabel.getScene().getWindow().setOnCloseRequest(event ->
                 Main.changeScene("main.fxml"));
     }
@@ -46,25 +48,67 @@ public class LevelCompletedController extends FXController {
 
     }
 
-    /**
-     * Event handler for all buttons.
-     *
-     * @param event action event from button.
-     */
     public void actionButtonPressed(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
 
-        // Closing window of dialog. It doesn't matter to know what button was pressed before this action
-        ((Stage) clickedButton.getScene().getWindow()).hide();
+        // It doesn't matter what button was pressed before closing dialog
+        clickedButton.getScene().getWindow().hide();
+
+        final LevelPack selectedCampaign = ExternalStorage.getInstance().selectedCampaign;
+        final Level currentLevel = ExternalStorage.getInstance().currentLevel;
+        final Optional<Level> nextLevel = selectedCampaign.getLevelAfter(currentLevel);
 
         switch (clickedButton.getId()) {
             case "mainMenuButton":
-                Main.changeScene("main.fxml");
+                if (nextLevel.isPresent())
+                    Main.changeScene("main.fxml");
+                else
+                    showCampaignCompletedDialog(() ->
+                            Main.changeScene("main.fxml"));
                 break;
 
             case "nextLevelButton":
-                Main.changeScene("main.fxml");
+                if (nextLevel.isPresent()) {
+                    ExternalStorage.getInstance().currentLevel = nextLevel.get();
+                    Main.changeScene("game-field.fxml", " - " + getLocaleStr("header.game-play"));
+                } else
+                    showCampaignCompletedDialog(() ->
+                            Main.changeScene("campaign-select.fxml",
+                                    " - " + getLocaleStr("campaign.mode.select.header")));
+
+
                 break;
         }
+    }
+
+    private void showCampaignCompletedDialog(Runnable nextTask) {
+        // Run later with permissions to show properly new stage
+        FutureTasks.runLaterWithPermissions(() -> {
+            if (campaignCompletedDialog == null)
+                setupCampaignCompletedDialog();
+            campaignCompletedDialog.showAndWait();
+            nextTask.run();
+        });
+    }
+
+    private void setupCampaignCompletedDialog() {
+        ButtonType okOpt = new ButtonType("OK!", ButtonBar.ButtonData.OK_DONE);
+
+        campaignCompletedDialog = new Alert(Alert.AlertType.INFORMATION,
+                String.format(getLocaleStr("campaign.completed.fmt-str"),
+                        ExternalStorage.getInstance().selectedCampaign.getName()),
+                okOpt);
+        campaignCompletedDialog.setTitle(getLocaleStr("header.base") + " - " +
+                getLocaleStr("campaign.completed.header"));
+        campaignCompletedDialog.setHeaderText(getLocaleStr("congratulations"));
+
+        // Adding CSS-Stylesheet to customize dialog's fonts
+        campaignCompletedDialog.getDialogPane().getStylesheets().add(
+                Main.getResourceURL("styles/bigger-dialog-fonts.css").toExternalForm());
+        campaignCompletedDialog.getDialogPane().getStyleClass().add("dialog-body");
+
+        campaignCompletedDialog.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+        campaignCompletedDialog.getDialogPane().setPrefHeight(Region.USE_COMPUTED_SIZE);
+        campaignCompletedDialog.getDialogPane().setMaxHeight(Region.USE_PREF_SIZE);
     }
 }

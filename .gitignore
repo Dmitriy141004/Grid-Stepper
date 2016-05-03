@@ -8,3 +8,5 @@ README.*
 *~
 /.git
 *.pyc
+/build-info/svarit-borshch
+/build-info/text-centerer

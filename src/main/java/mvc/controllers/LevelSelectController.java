@@ -1,62 +1,31 @@
 package mvc.controllers;
 
+import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Font;
+import levels.Level;
+import levels.LevelPack;
 import mvc.util.ExternalStorage;
 import mvc.util.FXController;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import levels.Level;
 import start.Main;
+
+import java.util.stream.Collectors;
 
 /**
  * Controller for level select menu.
- *
- * <p><span style="color: #A8C023; font-style: italic">
- *     TODO: Upgrade level select menu (from simple table to "Angry Birds"-like menu).
- * </span></p>
- *
  */
 public class LevelSelectController extends FXController {
-    /** Link to table with levels. All columns are got by {@code fx:id} using {@code switch}-construction, not
-     * class fields with {@link FXML @FXML}. */
     @FXML
-    TableView<Level> levelsTable;
-    @FXML
-    private Button playButton;
+    private BorderPane levelsPaneWrapper;
 
     /**
      * {@inheritDoc}
      */
     @Override
     public void init() {
-        // Setting value factories to columns of table
-        for (TableColumn<Level, ?> column : levelsTable.getColumns()) {
-            switch (column.getId()) {
-                case "levelNumbersColumn":
-                    column.setCellValueFactory(new PropertyValueFactory<>("number"));
-                    break;
-
-                case "levelCompletionColumn":
-                    column.setCellValueFactory(new PropertyValueFactory<>("completed"));
-            }
-        }
-
-        // Adding two-click-listener to table
-        levelsTable.setOnMouseClicked(event -> {
-            if (event.getClickCount() == 2)
-                Main.changeScene("game-field.fxml", " - " + getLocaleStr("header.game-play"),
-                    fxController -> {
-                        ExternalStorage.getInstance().currentLevel = levelsTable.getSelectionModel().getSelectedItem();
-                        return fxController;
-                    });
-        });
-
-        // If there's no selection in table, "Play" button must be disabled (and it is disabled by default)
-        levelsTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
-            playButton.setDisable(newValue == null));
     }
 
     /**
@@ -64,7 +33,23 @@ public class LevelSelectController extends FXController {
      */
     @Override
     public void run() {
+        final LevelPack selectedCampaign = ExternalStorage.getInstance().selectedCampaign;
 
+        if (!selectedCampaign.isEmpty()) {
+            FlowPane levelsPane = new FlowPane();
+            levelsPane.getChildren().addAll(selectedCampaign.stream()
+                    // Transforming Level objects to buttons
+                    .map(Level::getButtonRepresentation)
+                    .collect(Collectors.toList()));
+
+            levelsPane.setPadding(new Insets(Level.LEVEL_BUTTON_MARGIN));
+            levelsPaneWrapper.setCenter(levelsPane);
+
+        } else {
+            Label sorryLabel = new Label(getLocaleStr("campaign.no-levels-label"));
+            sorryLabel.setFont(new Font(Main.APP_FONT_NAME, 18));
+            levelsPaneWrapper.setCenter(sorryLabel);
+        }
     }
 
     /**
@@ -75,25 +60,7 @@ public class LevelSelectController extends FXController {
 
     }
 
-    /**
-     * Event handler for all buttons.
-     *
-     * @param event event from button.
-     */
-    public void actionButtonPressed(ActionEvent event) {
-        Button clickedButton = (Button) event.getSource();
-
-        switch (clickedButton.getId()) {
-            case "backButton":
-                Main.changeScene("campaign-select.fxml");
-                break;
-
-            case "playButton":
-                Main.changeScene("game-field.fxml", " - " + getLocaleStr("header.game-play"),
-                        fxController -> {
-                            ExternalStorage.getInstance().currentLevel = levelsTable.getSelectionModel().getSelectedItem();
-                            return fxController;
-                        });
-        }
+    public void backAction() {
+        Main.changeScene("campaign-select.fxml", " - " + getLocaleStr("campaign.mode.select.header"));
     }
 }

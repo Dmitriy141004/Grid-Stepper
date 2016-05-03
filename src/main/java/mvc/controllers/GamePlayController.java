@@ -1,8 +1,6 @@
 package mvc.controllers;
 
 import com.sun.javafx.geom.Line2D;
-import mvc.util.ExternalStorage;
-import mvc.util.FXController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -18,11 +16,13 @@ import javafx.stage.Stage;
 import levels.Level;
 import levels.cells.CellType;
 import levels.cells.LevelCell;
+import mvc.util.ExternalStorage;
+import mvc.util.FXController;
 import start.Main;
-import util.ExtendedAnimationTimer;
-import util.LIFOQueue;
-import util.SceneContent;
-import util.Stack;
+import util.javafx.animation.ExtendedAnimationTimer;
+import util.collections.LIFOQueue;
+import util.javafx.scenes.SceneContent;
+import util.collections.Stack;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -91,10 +91,9 @@ public class GamePlayController extends FXController {
     /** Exit dialog object. */
     private volatile Alert exitDialog;
     /** Exit action of exit dialog. */
-    private static final ButtonType EXIT_OPTION = new ButtonType(Main.getLocaleStr("exit"), ButtonBar.ButtonData.OK_DONE);
+    private static final ButtonType EXIT_OPTION = new ButtonType(Main.getLocaleStr("exit"), ButtonBar.ButtonData.YES);
     /** Cancel action of exit dialog. */
-    private static final ButtonType CANCEL_OPTION = new ButtonType(Main.getLocaleStr("cancel"),
-            ButtonBar.ButtonData.CANCEL_CLOSE);
+    private static final ButtonType CANCEL_OPTION = new ButtonType(Main.getLocaleStr("cancel"), ButtonBar.ButtonData.NO);
 
     /** Handler for key input. Extracted to object because I need to remove it from list of handlers when
      * {@link #actionButtonPressed(ActionEvent)} receives action from "end game" button. */
@@ -173,8 +172,9 @@ public class GamePlayController extends FXController {
                     break;
             }
 
-            if (currentLevel().getGrid().get(goalX / CELL_SIZE).get(goalY / CELL_SIZE).getType() == CellType.WALL ||
-                    (currentLevel().getGrid().get(goalX / CELL_SIZE).get(goalY / CELL_SIZE).isVisited()) && !undoFlag) {
+            LevelCell currentCell = currentLevel().getGrid().get(goalX / CELL_SIZE).get(goalY / CELL_SIZE);
+            if (currentCell.getType() == CellType.WALL || currentCell.getType() == CellType.BACKGROUND_SQUARE ||
+                    (currentCell.isVisited()) && !undoFlag) {
                 stop();
                 return;
             }
@@ -238,7 +238,7 @@ public class GamePlayController extends FXController {
          * on the start in use this scheme:
          * <ol>
          *     <li>Using some value in range 0.0 - 100.0 for current point (start - {@code x1})</li>
-         *     <li>Mapping this value to range 0.0 - {@value CELL_SIZE}.0</li>
+         *     <li>Mapping this value to range 0.0 - {@value mvc.controllers.GamePlayController#CELL_SIZE}.0</li>
          *     <li>Giving received value to method that draws triangle</li>
          *     <li>Repeating with {@code y1}, {@code x2}, {@code y2}, {@code x3} and {@code y3}</li>
          * </ol></p>
@@ -288,9 +288,6 @@ public class GamePlayController extends FXController {
                 if (!undoFlag) stepLines.add(new Line2D(startX, startY, pointerX, pointerY));
                 currentLevel().getGrid().get(pointerX / CELL_SIZE).get(pointerY / CELL_SIZE).setVisited(true);
 
-                System.out.printf("%15d\t|\t%15d\t|\t%15d\t|\t%15d\t|\t%s\t\n", pointerX, pointerY, levelWidth,
-                        levelHeight, undoStack);
-
                 // Are all cells visited?
                 boolean allCellsAreVisited = true;
                 // To see this, we must iterate all rows in each column
@@ -315,17 +312,27 @@ public class GamePlayController extends FXController {
 
                     // This thing will be activated after timer will be stopped
                     // I use this because if ExtendedAnimationTimer isn't stopped, you can't show new stage
-                    // And my own implementation allows to do this
+                    // And my own implementation allows to do this--*
                     setEndAction(() -> {
                         removeGPMoving();
+
+                        // Getting index of current level
+                        int currentLvlI = ExternalStorage.getInstance().selectedCampaign.indexOfLevel(currentLevel());
+                        currentLevel().setCompleted(true);
+
+                        if (currentLvlI + 1 < ExternalStorage.getInstance().selectedCampaign.levelsCount())
+                            ExternalStorage.getInstance().selectedCampaign.getLevel(currentLvlI + 1)
+                                    .getButtonRepresentation().setDisable(false);
+
                         // Small delay
                         delay(500);
-                        //Getting scene content
+                        // Getting scene content
                         SceneContent sceneContent = Main.getSceneContent("level-completed-dialog.fxml");
 
-                            // Creating and customising window/stage
+                        // Creating and customising window/stage
                         Stage levelCompletedDialog = new Stage();
-                        levelCompletedDialog.setTitle(getLocaleStr("header.base") + " - Level Completed!");
+                        levelCompletedDialog.setTitle(getLocaleStr("header.base") + " - " +
+                                getLocaleStr("levels.completed.header"));
                         levelCompletedDialog.setMinHeight(150);
                         levelCompletedDialog.setMinWidth(300);
                         levelCompletedDialog.setResizable(false);
@@ -649,10 +656,6 @@ public class GamePlayController extends FXController {
         exitDialog.getDialogPane().getStylesheets().add(Main.getResourceURL("styles/bigger-dialog-fonts.css").toExternalForm());
         exitDialog.getDialogPane().getStyleClass().add("dialog-body");
 
-        // And, customizing dialog with setters
-        Label contentLabel = (Label) exitDialog.getDialogPane().lookup(".content");
-        contentLabel.setWrapText(true);
-
         exitDialog.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
         exitDialog.getDialogPane().setPrefHeight(Region.USE_COMPUTED_SIZE);
         exitDialog.getDialogPane().setMaxHeight(Region.USE_PREF_SIZE);
@@ -663,11 +666,6 @@ public class GamePlayController extends FXController {
      */
     @Override
     public void run() {
-        ExternalStorage.getInstance().currentLevel = currentLevel().clone();
-
-        System.out.printf("%15s\t|\t%15s\t|\t%15s\t|\t%15s\t|\t%15s\t\n", "pointer x", "pointer y", "level width",
-                "level height", "undo stack");
-
         currentLevel().getGrid().forEach(column -> column.forEach(levelCell -> levelCell.setVisited(false)));
         levelWidth = currentLevel().getGrid().size();
         levelHeight = currentLevel().getGrid().get(0).size();
@@ -709,35 +707,6 @@ public class GamePlayController extends FXController {
     }
 
     /**
-     * Draws finish cell. Finish is 4x4 grid in cell. And, for drawing finish columns as normal, I use variable
-     * {@code fillColumnShift}. When loop for {@code y} axis starts, variable {@code fillBlack} sets to shift variable.
-     * When this loop ends, {@code fillColumnShift} inverts.
-     *
-     * @param x x of cell
-     * @param y y of cell
-     */
-    private void drawFinish(int x, int y) {
-        boolean fillColumnShift = true;
-
-        for (int x1 = 0; x1 < 4; x1++) {
-            boolean fillBlack = fillColumnShift;
-
-            for (int y1 = 0; y1 < 4; y1++) {
-                if (fillBlack) graphics.setFill(Color.BLACK);
-                else graphics.setFill(Color.WHITE);
-                fillBlack = !fillBlack;
-
-                graphics.fillRect(x * CELL_SIZE + x1 * (CELL_SIZE / 4) + 1, y * CELL_SIZE + y1 * (CELL_SIZE / 4) + 1,
-                        CELL_SIZE / 4, CELL_SIZE / 4);
-                graphics.strokeRect(x * CELL_SIZE + x1 * (CELL_SIZE / 4) + 1, y * CELL_SIZE + y1 * (CELL_SIZE / 4) + 1,
-                        CELL_SIZE / 4, CELL_SIZE / 4);
-            }
-
-            fillColumnShift = !fillColumnShift;
-        }
-    }
-
-    /**
      * Redraws <b>one</b> cell on field.
      *
      * @param x x position of cell. <i><b>Note:</b> it's position in {@link Level#grid}, not in canvas.</i>
@@ -745,43 +714,8 @@ public class GamePlayController extends FXController {
      */
     @SuppressWarnings("deprecation")
     private void redrawFieldCell(int x, int y) {
-        switch (currentLevel().getGrid().get(x).get(y).getType()) {
-            case EMPTY:
-                graphics.setFill(Color.WHITE);
-                graphics.strokeRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
-                graphics.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
-                break;
-
-            case WALL:
-                graphics.setFill(Color.grayRgb(40));
-                graphics.strokeRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
-                graphics.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
-                break;
-            /*
-            case START:
-                // Green triangle on start cell must be in higher level than lines, which GP leaves
-
-                graphics.setFill(Color.GREEN);
-                                                                                                    // double SHIFT = 25.0
-                final double x1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
-                final double y1 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
-                final double x2 = ExtendedMath.map(80.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT + 5.0
-                final double y2 = ExtendedMath.map(50.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 / 2.0
-                final double x3 = ExtendedMath.map(25.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // SHIFT
-                final double y3 = ExtendedMath.map(75.0, 0.0, 100.0, 0.0, (double) CELL_SIZE);      // 100.0 - SHIFT
-                drawTriangle(startCellX + x1, startCellY + y1,
-                             startCellX + x2, startCellY + y2,
-                             startCellX + x3, startCellY + y3);
-
-                break;
-                */
-
-            case FINISH:
-                drawFinish(x, y);
-                break;
-        }
-
-        graphics.strokeRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+        LevelCell cell = currentLevel().getGrid().get(x).get(y);
+        if (cell.getType() != CellType.START) cell.draw(x, y, graphics, this);
     }
 
     /**

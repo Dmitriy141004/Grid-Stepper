@@ -1,21 +1,33 @@
 package mvc.controllers;
 
-import mvc.util.FXController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.layout.Region;
+import mvc.util.FXController;
 import start.Main;
 
 import java.util.Optional;
 
 /**
  * Controller for main menu.
- *
  */
 public class MainMenuController extends FXController {
     @FXML
     private Label versionLabel;
+
+    private Alert exitDialog;
+    public Alert getExitDialog() {
+        return exitDialog;
+    }
+    private ButtonType exitOption;
+    public ButtonType getExitOption() {
+        return exitOption;
+    }
+    private ButtonType cancelOption;
+    public ButtonType getCancelOption() {
+        return cancelOption;
+    }
 
     /**
      * {@inheritDoc}
@@ -23,39 +35,8 @@ public class MainMenuController extends FXController {
     @Override
     public void init() {
         versionLabel.setText(Main.getProductVersion());
-//        parseChildren(exitDialog.getDialogPane(), 0);
+        setupExitDialog();
     }
-
-//    private String cloneChar(char c, int times) {
-//        String out = "";
-//
-//        for (int i = 0; i < times; i++) {
-//            out += c;
-//        }
-//
-//        return out;
-//    }
-//
-//    private void parseChildren(Node node, int multiplicity) {
-//        if (node instanceof Parent && !(node instanceof Pane) && !(node instanceof ButtonBar)) {
-//            System.out.println(cloneChar('\t', multiplicity) + node);
-//            for (Node child : ((Parent) node).getChildrenUnmodifiable()) {
-//                parseChildren(child, multiplicity + 1);
-//            }
-//        } else if (node instanceof Pane) {
-//            System.out.println(cloneChar('\t', multiplicity) + node);
-//            for (Node child : ((Pane) node).getChildren()) {
-//                parseChildren(child, multiplicity + 1);
-//            }
-//        } else if (node instanceof ButtonBar) {
-//            System.out.println(cloneChar('\t', multiplicity) + node);
-//            for (Node child : ((ButtonBar) node).getButtons()) {
-//                parseChildren(child, multiplicity + 1);
-//            }
-//        } else {
-//            System.out.println(cloneChar('\t', multiplicity) + node);
-//        }
-//    }
 
     /**
      * {@inheritDoc}
@@ -73,11 +54,28 @@ public class MainMenuController extends FXController {
 
     }
 
-    /**
-     * Event handler for all menu buttons.
-     *
-     * @param event event from button.
-     */
+    private void setupExitDialog() {
+        exitOption = new ButtonType(getLocaleStr("exit"), ButtonBar.ButtonData.YES);
+        cancelOption = new ButtonType(getLocaleStr("cancel"), ButtonBar.ButtonData.NO);
+
+        exitDialog = new Alert(Alert.AlertType.CONFIRMATION, getLocaleStr("dialogs.body.exit-from-game"),
+                exitOption, cancelOption);
+        exitDialog.setTitle(getLocaleStr("header.base") + " - " + getLocaleStr("exit"));
+        exitDialog.setHeaderText(getLocaleStr("dialogs.head.exit-from-game"));
+
+        // Adding CSS-Stylesheet to customize dialog, for example, fonts
+        exitDialog.getDialogPane().getStylesheets().add(Main.getResourceURL("styles/bigger-dialog-fonts.css").toExternalForm());
+        exitDialog.getDialogPane().getStyleClass().add("dialog-body");
+
+        // And, customizing dialog with setters
+        Label contentLabel = (Label) exitDialog.getDialogPane().lookup(".content");
+        contentLabel.setWrapText(true);
+
+        exitDialog.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+        exitDialog.getDialogPane().setPrefHeight(Region.USE_COMPUTED_SIZE);
+        exitDialog.getDialogPane().setMaxHeight(Region.USE_PREF_SIZE);
+    }
+
     public void actionButtonPressed(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
 
@@ -95,12 +93,12 @@ public class MainMenuController extends FXController {
 
             case "exitButton":
                 // Class "Main" stores this exit dialog
-                Optional result = Main.getExitDialog().showAndWait();
+                Optional result = exitDialog.showAndWait();
 
-                if (result.isPresent() && result.get() == Main.EXIT_OPTION) {
+                if (result.isPresent() && result.get() == exitOption) {
                     System.exit(0);
-                } else if (result.isPresent() && result.get() == Main.CANCEL_OPTION) {
-                    Main.getExitDialog().hide();
+                } else if (result.isPresent() && result.get() == cancelOption) {
+                    exitDialog.hide();
                 }
 
                 break;

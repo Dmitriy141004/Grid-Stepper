@@ -34,14 +34,16 @@
         <delete dir="${dir.build-root}"/>
     </target>
 
-    <target name="prepare" depends="clean">
+    <target name="mkdirs">
         <mkdir dir="${dir.build-root}"/>
         <mkdir dir="${dir.build.last}/app"/>
         <mkdir dir="${dir.editions}"/>
         <mkdir dir="${dir.build.local}/app"/>
         <mkdir dir="${dir.build.jar}"/>
         <mkdir dir="${dir.deploy}"/>
+    </target>
 
+    <target name="put-resources">
         <copydir unless:set="resourcesInLocalBuild" src="src/main/resources" dest="${dir.build.local}/resources"/>
         <copyfile src="${dir.src.java}/.project_root" dest="${dir.build.local}"/>
         <copyfile src="${dir.build-info}/.build_version" dest="${dir.build.local}/resources/.build_version"/>
@@ -131,7 +133,9 @@
         </exec>
         <loadfile property="product.version" srcfile="${dir.build-info}/.build_version"/>
 
-        <antcall target="prepare"/>
+        <antcall target="clean"/>
+        <antcall target="mkdirs"/>
+        <antcall target="put-resources"/>
         <antcall target="compile"/>
         <antcall target="make-scripts"/>
         <antcall target="editions"/>

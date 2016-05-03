@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-
+<?import javafx.scene.text.*?>
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controllers.CampaignSelectController">
    <children>
       <Button fx:id="backButton" cancelButton="true" mnemonicParsing="false" onAction="#actionButtonPressed" text="%back">
@@ -37,7 +34,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <bottom>
-                  <Label text="Classic game: start, finish, empty cells, walls and you - anything else for good time?" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+                  <Label text="%campaign.classic.desc" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
@@ -66,7 +63,7 @@
                   </Label>
                </top>
                <bottom>
-                  <Label text="Extended game - classic things, direction pads, bridges, moving blocks, and more... Do you want to ACCEPT CHALANGE?" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+                  <Label text="%campaign.extended.desc" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>

@@ -1,9 +1,9 @@
 package levels.cells;
 
-import mvc.controllers.GamePlayController;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import util.ExtendedMath;
+import mvc.controllers.GamePlayController;
+import util.math.ExtendedMath;
 
 import static mvc.controllers.GamePlayController.CELL_SIZE;
 
@@ -11,7 +11,6 @@ import static mvc.controllers.GamePlayController.CELL_SIZE;
  * Class for start cells.
  *
  * @see levels.cells.CellType#START
- *
  */
 public class StartCell extends LevelCell {
     /**
@@ -32,6 +31,7 @@ public class StartCell extends LevelCell {
      * @param y2 second {@code y} coordinate
      * @param x3 third {@code x} coordinate
      * @param y3 third {@code y} coordinate
+     * @param graphics graphics context for drawing
      */
     private void drawTriangle(double x1, double y1, double x2, double y2, double x3, double y3, GraphicsContext graphics) {
         graphics.fillPolygon(new double[] {x1, x2, x3}, new double[] {y1, y2, y3}, 3);
@@ -51,7 +51,6 @@ public class StartCell extends LevelCell {
      */
     @Override
     public void draw(int x, int y, GraphicsContext graphics, GamePlayController controller) {
-        // This thing draws green triangle on start cell
         graphics.setFill(Color.GREEN);
 
         final double SHIFT = 25.0;
@@ -65,5 +64,6 @@ public class StartCell extends LevelCell {
                 controller.startCellX + x2, controller.startCellY + y2,
                 controller.startCellX + x3, controller.startCellY + y3,
                 graphics);
+        graphics.strokeRect(x, y, CELL_SIZE, CELL_SIZE);
     }
 }

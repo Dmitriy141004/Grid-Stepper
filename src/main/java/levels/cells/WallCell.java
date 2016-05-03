@@ -1,8 +1,8 @@
 package levels.cells;
 
-import mvc.controllers.GamePlayController;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import mvc.controllers.GamePlayController;
 
 import static mvc.controllers.GamePlayController.CELL_SIZE;
 
@@ -10,7 +10,6 @@ import static mvc.controllers.GamePlayController.CELL_SIZE;
  * Class for walls.
  *
  * @see levels.cells.CellType#WALL
- *
  */
 public class WallCell extends LevelCell {
     /**

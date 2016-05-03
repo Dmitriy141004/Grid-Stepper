@@ -1,14 +1,13 @@
 package mvc.controllers;
 
-import mvc.util.FXController;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import mvc.util.ExternalStorage;
+import mvc.util.FXController;
 import start.Main;
 
 /**
  * Controller for selecting campaign.
- *
  */
 public class CampaignSelectController extends FXController {
     /**
@@ -35,11 +34,6 @@ public class CampaignSelectController extends FXController {
 
     }
 
-    /**
-     * Event handler for all buttons.
-     *
-     * @param event event from button.
-     */
     public void actionButtonPressed(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
 
@@ -49,23 +43,15 @@ public class CampaignSelectController extends FXController {
                 break;
 
             case "classicButton":
+                ExternalStorage.getInstance().selectedCampaign = Main.classicCampaign;
                 Main.changeScene("level-select.fxml", " - " + getLocaleStr("campaign.mode.classic") + ", "
-                        + getLocaleStr("levels.select.header"),
-                        fxController -> {
-                            ((LevelSelectController) fxController).levelsTable.setItems(
-                                    FXCollections.observableList(Main.CLASSIC_CAMPAIGN));
-                            return fxController;
-                        });
+                        + getLocaleStr("levels.select.header"));
                 break;
 
             case "extendedButton":
+                ExternalStorage.getInstance().selectedCampaign = Main.extendedCampaign;
                 Main.changeScene("level-select.fxml", " - " + getLocaleStr("campaign.mode.extended") + ", "
-                        + getLocaleStr("levels.select.header"),
-                        fxController -> {
-                            ((LevelSelectController) fxController).levelsTable.setItems(
-                                    FXCollections.observableList(Main.EXTENDED_CAMPAIGN));
-                            return fxController;
-                        });
+                        + getLocaleStr("levels.select.header"));
                 break;
         }
     }

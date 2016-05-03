@@ -4,4 +4,12 @@ mvc.controllers
 mvc.util
 settings
 start
-util
+util.collections
+util.future
+util.io
+util.javafx.animation
+util.javafx.nodes
+util.javafx.scenes
+util.math
+util.objects
+util.xml

@@ -7,9 +7,10 @@
 #     2nd - build's version
 #     3rd - package's version
 
-import header_file_parser
 import os
 import sys
+
+import header_file_parser
 
 # Getting working directory and getting folder with name "DEBIAN"
 debianFolder = sys.argv[1]
