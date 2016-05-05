@@ -55,7 +55,7 @@ public class LevelPack implements XMLSerializable {
     }
 
     /**
-     * Gets next level.
+     * Gets next level after specified.
      *
      * @param level source level
      * @return {@link Optional} with {@link Level} if there're level after other one, otherwise - {@link Optional#EMPTY}.
@@ -63,7 +63,7 @@ public class LevelPack implements XMLSerializable {
     public Optional<Level> getLevelAfter(Level level) {
         int levelIndex = indexOfLevel(level);
         if (levelIndex < levelsCount())
-            return Optional.of(getLevel(levelIndex));
+            return Optional.of(getLevel(levelIndex + 1));
         else
             return Optional.empty();
     }

@@ -84,7 +84,7 @@
         </game-field>
     </level>
 
-    <level number="4" completed="false">
+    <level number="5" completed="false">
         <game-field>
             <column>
                 <wall   />
@@ -123,4 +123,149 @@
             </column>
         </game-field>
     </level>
+
+    <!--<level number="6" completed="false">-->
+        <!--<game-field>-->
+            <!--<column>-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+            <!--</column>-->
+            <!--<column>-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+            <!--</column>-->
+            <!--<column>-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+            <!--</column>-->
+            <!--<column>-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+            <!--</column>-->
+            <!--<column>-->
+                <!--<start      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+            <!--</column>-->
+            <!--<column>-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+            <!--</column>-->
+            <!--<column>-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+            <!--</column>-->
+            <!--<column>-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+            <!--</column>-->
+            <!--<column>-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<finish     />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+            <!--</column>-->
+            <!--<column>-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+                <!--<empty      />-->
+                <!--<empty      />-->
+                <!--<wall       />-->
+                <!--<wall       />-->
+            <!--</column>-->
+        <!--</game-field>-->
+    <!--</level>-->
 </level-pack>

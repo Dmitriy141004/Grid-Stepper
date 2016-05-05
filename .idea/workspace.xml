@@ -2,128 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed0051cc-6d42-4920-94de-af679a53e7f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/file.template.settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/levels/LevelPack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/levels/cells/BackgroundSquare.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/settings/Settings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/collections/MapUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/future/FutureTasks.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/io/InvalidPathSyntaxException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/javafx/nodes/JFXNodes.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/xml/XMLSerializable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/xml/XMLUtils.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-last-build.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-sources.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/app/Grid-Stepper-Game.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/.build_version" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/bundles/Locale_en.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/bundles/Locale_ru.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/bundles/Locale_ua.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/campaign-select.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/game-field.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/level-completed-dialog.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/level-select.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/main.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/settings-menu.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/levels/classic.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/levels/extended.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/levels/level-pack-schema.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/settings/settings-schema.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/settings/settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/styles/bigger-dialog-fonts.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/run.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/run.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/levels/InvalidPathSyntaxException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/levels/Level.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/level-utils/level-utils.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/level-utils/simple_uncompressing.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/levels/XMLLevelLoader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/levels/cells/CellType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/levels/cells/EmptyCell.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/levels/cells/FinishCell.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/levels/cells/LevelCell.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/levels/cells/StartCell.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/levels/cells/WallCell.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/CampaignSelectController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$FieldDrawAnimation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerMoveAnimation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerSpawnState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$StepCause.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/LevelCompletedController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/LevelSelectController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/MainMenuController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController$Language.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/util/ExternalStorage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/util/FXController.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/settings/XMLSettingsLoader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/start/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/ExtendedAnimationTimer$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/ExtendedAnimationTimer$AnimationTimerReceiver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/ExtendedAnimationTimer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/ExtendedMath.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/FileIO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/LIFOQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/PathsUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/SceneContent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/SceneLoader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/Stack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/UTF8Control.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/util/Wrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/.build_version" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/bundles/Locale_en.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/bundles/Locale_ru.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/bundles/Locale_ua.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/fxml/campaign-select.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/fxml/game-field.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/fxml/level-completed-dialog.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/fxml/level-select.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/fxml/main.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/fxml/settings-menu.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/levels/classic.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/levels/extended.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/levels/level-pack-schema.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/settings/settings-schema.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/settings/settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/styles/bigger-dialog-fonts.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/run.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/run.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/InvalidPathSyntaxException.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/ExtendedAnimationTimer.AnimationTimerReceiver.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/ExtendedAnimationTimer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/ExtendedMath.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/FileIO.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/LIFOQueue.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/PathsUtil.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/SceneContent.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/SceneLoader.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/Stack.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/UTF8Control.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/Wrapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/util/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/levels/InvalidPathSyntaxException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/levels/XMLLevelLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/settings/XMLSettingsLoader.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/ExtendedAnimationTimer.java" afterPath="$PROJECT_DIR$/src/main/java/util/javafx/animation/ExtendedAnimationTimer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/ExtendedMath.java" afterPath="$PROJECT_DIR$/src/main/java/util/math/ExtendedMath.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/FileIO.java" afterPath="$PROJECT_DIR$/src/main/java/util/io/FileIO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/LIFOQueue.java" afterPath="$PROJECT_DIR$/src/main/java/util/collections/LIFOQueue.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/PathsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/util/io/PathsUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/SceneContent.java" afterPath="$PROJECT_DIR$/src/main/java/util/javafx/scenes/SceneContent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/SceneLoader.java" afterPath="$PROJECT_DIR$/src/main/java/util/javafx/scenes/SceneLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/Stack.java" afterPath="$PROJECT_DIR$/src/main/java/util/collections/Stack.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/UTF8Control.java" afterPath="$PROJECT_DIR$/src/main/java/util/io/UTF8Control.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/util/Wrapper.java" afterPath="$PROJECT_DIR$/src/main/java/util/objects/Wrapper.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deploy/output/grid-stepper-game_1.36.58-8_all.deb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/levels/XMLLevelLoader.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/settings/XMLSettingsLoader.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-last-build.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-last-build.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-sources.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-sources.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/app/Grid-Stepper-Game.jar" afterPath="$PROJECT_DIR$/build/jar/app/Grid-Stepper-Game.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/levels/LevelPack$1.class" afterPath="$PROJECT_DIR$/build/last/app/levels/LevelPack$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/levels/LevelPack.class" afterPath="$PROJECT_DIR$/build/last/app/levels/LevelPack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/settings/Settings$Setting.class" afterPath="$PROJECT_DIR$/build/last/app/settings/Settings$Setting.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/settings/Settings.class" afterPath="$PROJECT_DIR$/build/last/app/settings/Settings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/start/Main.class" afterPath="$PROJECT_DIR$/build/last/app/start/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/app/Grid-Stepper-Game.jar" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/app/Grid-Stepper-Game.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-info/.build_version" afterPath="$PROJECT_DIR$/build-info/.build_version" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/deb-building-utils/pre_build_config" afterPath="$PROJECT_DIR$/deploy/deb-building-utils/pre_build_config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/.build_version" afterPath="$PROJECT_DIR$/build/jar/resources/.build_version" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/levels/classic.xml" afterPath="$PROJECT_DIR$/build/jar/resources/levels/classic.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/styles/bigger-dialog-fonts.css" afterPath="$PROJECT_DIR$/build/jar/resources/styles/bigger-dialog-fonts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/.build_version" afterPath="$PROJECT_DIR$/build/last/resources/.build_version" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/levels/classic.xml" afterPath="$PROJECT_DIR$/build/last/resources/levels/classic.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/styles/bigger-dialog-fonts.css" afterPath="$PROJECT_DIR$/build/last/resources/styles/bigger-dialog-fonts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/.package_version" afterPath="$PROJECT_DIR$/deploy/.package_version" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/DEBIAN/md5sums" afterPath="$PROJECT_DIR$/deploy/input/DEBIAN/md5sums" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/.build_version" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/.build_version" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_en.properties" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_ru.properties" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_ru.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_ua.properties" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_ua.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/campaign-select.fxml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/campaign-select.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/game-field.fxml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/game-field.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/level-completed-dialog.fxml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/level-completed-dialog.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/level-select.fxml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/level-select.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/main.fxml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/settings-menu.fxml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/settings-menu.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/levels/classic.xml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/levels/classic.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/levels/extended.xml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/levels/extended.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/levels/level-pack-schema.xsd" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/levels/level-pack-schema.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/styles/bigger-dialog-fonts.css" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/styles/bigger-dialog-fonts.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/javadoc/allclasses-frame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/constant-values.html" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" />
@@ -142,6 +63,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-19.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-19.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-20.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-20.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-21.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-21.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-22.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-22.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-23.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-23.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" />
@@ -151,7 +75,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-9.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index.html" afterPath="$PROJECT_DIR$/javadoc/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/Level.html" afterPath="$PROJECT_DIR$/javadoc/levels/Level.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/XMLLevelLoader.html" afterPath="$PROJECT_DIR$/javadoc/levels/XMLLevelLoader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/LevelPack.html" afterPath="$PROJECT_DIR$/javadoc/levels/LevelPack.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/BackgroundSquare.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/BackgroundSquare.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/CellType.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/CellType.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/EmptyCell.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/EmptyCell.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/FinishCell.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/FinishCell.html" />
@@ -186,9 +111,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-frame.html" afterPath="$PROJECT_DIR$/javadoc/overview-frame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" afterPath="$PROJECT_DIR$/javadoc/overview-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/package-list" afterPath="$PROJECT_DIR$/javadoc/package-list" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/serialized-form.html" afterPath="$PROJECT_DIR$/javadoc/serialized-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/XMLSettingsLoader.html" afterPath="$PROJECT_DIR$/javadoc/settings/XMLSettingsLoader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/Settings.Setting.html" afterPath="$PROJECT_DIR$/javadoc/settings/Settings.Setting.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/Settings.html" afterPath="$PROJECT_DIR$/javadoc/settings/Settings.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/settings/package-frame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/settings/package-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/settings/package-tree.html" />
@@ -196,34 +121,52 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/start/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/start/package-frame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/start/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/start/package-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/start/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/start/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/Level.java" afterPath="$PROJECT_DIR$/src/main/java/levels/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/cells/CellType.java" afterPath="$PROJECT_DIR$/src/main/java/levels/cells/CellType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/cells/EmptyCell.java" afterPath="$PROJECT_DIR$/src/main/java/levels/cells/EmptyCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/cells/FinishCell.java" afterPath="$PROJECT_DIR$/src/main/java/levels/cells/FinishCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/cells/LevelCell.java" afterPath="$PROJECT_DIR$/src/main/java/levels/cells/LevelCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/cells/StartCell.java" afterPath="$PROJECT_DIR$/src/main/java/levels/cells/StartCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/cells/WallCell.java" afterPath="$PROJECT_DIR$/src/main/java/levels/cells/WallCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/CampaignSelectController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/CampaignSelectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelCompletedController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelCompletedController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelSelectController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelSelectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/MainMenuController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/MainMenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/SettingsMenuController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/SettingsMenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/util/ExternalStorage.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/util/ExternalStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/util/FXController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/util/FXController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/start/Main.java" afterPath="$PROJECT_DIR$/src/main/java/start/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundles/Locale_en.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundles/Locale_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundles/Locale_ru.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundles/Locale_ru.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundles/Locale_ua.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundles/Locale_ua.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/campaign-select.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/campaign-select.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/game-field.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/game-field.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/level-completed-dialog.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/level-completed-dialog.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/level-select.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/level-select.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/settings-menu.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/settings-menu.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/LIFOQueue.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/LIFOQueue.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/MapUtils.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/MapUtils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/Stack.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/Stack.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/future/FutureTasks.html" afterPath="$PROJECT_DIR$/javadoc/util/future/FutureTasks.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/future/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/future/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/future/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/future/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/future/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/future/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/FileIO.html" afterPath="$PROJECT_DIR$/javadoc/util/io/FileIO.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/InvalidPathSyntaxException.html" afterPath="$PROJECT_DIR$/javadoc/util/io/InvalidPathSyntaxException.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/PathsUtil.html" afterPath="$PROJECT_DIR$/javadoc/util/io/PathsUtil.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/UTF8Control.html" afterPath="$PROJECT_DIR$/javadoc/util/io/UTF8Control.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/io/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/io/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/io/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/ExtendedAnimationTimer.AnimationTimerReceiver.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/ExtendedAnimationTimer.AnimationTimerReceiver.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/ExtendedAnimationTimer.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/ExtendedAnimationTimer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/nodes/JFXNodes.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/nodes/JFXNodes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/SceneContent.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/SceneContent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/SceneLoader.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/SceneLoader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/math/ExtendedMath.html" afterPath="$PROJECT_DIR$/javadoc/util/math/ExtendedMath.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/math/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/math/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/math/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/math/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/math/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/math/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/objects/Wrapper.html" afterPath="$PROJECT_DIR$/javadoc/util/objects/Wrapper.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/objects/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/objects/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/objects/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/objects/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/objects/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/objects/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/XMLSerializable.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/XMLSerializable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/XMLUtils.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/XMLUtils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/LevelPack.java" afterPath="$PROJECT_DIR$/src/main/java/levels/LevelPack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/levels/classic.xml" afterPath="$PROJECT_DIR$/src/main/resources/levels/classic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/levels/extended.xml" afterPath="$PROJECT_DIR$/src/main/resources/levels/extended.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/levels/level-pack-schema.xsd" afterPath="$PROJECT_DIR$/src/main/resources/levels/level-pack-schema.xsd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/bigger-dialog-fonts.css" afterPath="$PROJECT_DIR$/src/main/resources/styles/bigger-dialog-fonts.css" />
     </list>
     <ignored path="Grid-Stepper.iws" />
@@ -245,7 +188,48 @@
     <favorites_list name="Grid-Stepper" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="classic.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/levels/classic.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="126" column="15" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deploy.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deploy.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tmp-level-file" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/level-utils/tmp-level-file">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -254,12 +238,12 @@
         <option value="XSD Schema" />
         <option value="Enum" />
         <option value="XML Document" />
-        <option value="Python Script" />
         <option value="FXML Scene" />
         <option value="package-info" />
         <option value="Utility Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -279,12 +263,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/io/Reader.java" />
-        <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Readable.java" />
-        <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/math/BitSieve.java" />
-        <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/util/BitSet.java" />
-        <option value="/usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/control/ButtonBar.java" />
-        <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/math/MathContext.java" />
         <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/math/RoundingMode.java" />
         <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/lang/System.java" />
         <option value="$PROJECT_DIR$/src/main/resources/bundles/Locale_en.properties" />
@@ -298,7 +276,6 @@
         <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/util/Optional.java" />
         <option value="$PROJECT_DIR$/src/main/java/mvc/util/ExternalStorage.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/future/FutureTasks.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/styles/bigger-dialog-fonts.css" />
         <option value="$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java" />
         <option value="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelCompletedController.java" />
         <option value="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelSelectController.java" />
@@ -326,10 +303,17 @@
         <option value="$PROJECT_DIR$/src/main/java/levels/XMLLevelLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/xml/XMLDeSerializable.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/xml/XMLSerializable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/levels/LevelPack.java" />
         <option value="$PROJECT_DIR$/src/main/java/settings/XMLSettingsLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/settings/Settings.java" />
         <option value="$PROJECT_DIR$/src/main/java/start/Main.java" />
+        <option value="$PROJECT_DIR$/level-utils/level" />
+        <option value="$PROJECT_DIR$/level-utils/simple_uncompresser.py" />
+        <option value="$PROJECT_DIR$/level-utils/simple_uncompressing.py" />
+        <option value="$PROJECT_DIR$/src/main/resources/styles/bigger-dialog-fonts.css" />
+        <option value="$PROJECT_DIR$/src/main/java/levels/LevelPack.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/levels/classic.xml" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -419,6 +403,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -533,10 +519,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Grid-Stepper-Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Grid-Stepper-Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level-utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,10 +544,10 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="grid-stepper" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/level-utils/simple_uncompressing.py" />
     <property name="SearchEverywhereHistoryKey" value="Locale&#9;FILE&#9;file:///home/dmitriy/Projects/Grid-Stepper-Game/src/main/resources/bundles/Locale_en.properties&#10;campaign&#9;FILE&#9;file:///home/dmitriy/Projects/Grid-Stepper-Game/src/main/resources/fxml/campaign-completed-dialog.fxml&#10;Main.java:428&#9;FILE&#9;file:///home/dmitriy/Projects/Grid-Stepper-Game/src/main/java/start/Main.java&#10;VirtualD&#9;null&#9;null&#10;SPRING&#9;PSI&#9;JAVA://javafx.scene.paint.Color#SPRINGGREEN&#10;Anim&#9;FILE&#9;jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/animation/AnimationTimer.java&#10;Anima&#9;FILE&#9;jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/animation/AnimationTimer.java&#10;URl&#9;PSI&#9;JAVA://java.net.URL" />
     <property name="last.edited.regexp" value="" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="195" />
@@ -585,7 +583,7 @@
       <recent name="$PROJECT_DIR$/resources/settings" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Run and make project">
+  <component name="RunManager" selected="Python.simple_uncompressing">
     <configuration default="false" name="deploy.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
@@ -1116,15 +1114,33 @@
         <option name="AntTarget" enabled="true" antfile="file://$PROJECT_DIR$/build.xml" target="build" />
       </method>
     </configuration>
-    <list size="8">
+    <configuration default="false" name="simple_uncompressing" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/level-utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="level-utils" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/level-utils/simple_uncompressing.py" />
+      <option name="PARAMETERS" value="tmp-level-file out-file.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Ant Target.Ant Build" />
       <item index="1" class="java.lang.String" itemvalue="Ant Target.Ant Deploy" />
       <item index="2" class="java.lang.String" itemvalue="Application.Run and make project" />
-      <item index="3" class="java.lang.String" itemvalue="JAR Application.Built project in JAR" />
-      <item index="4" class="java.lang.String" itemvalue="Bash.deploy.sh" />
-      <item index="5" class="java.lang.String" itemvalue="Bash.run.sh" />
-      <item index="6" class="java.lang.String" itemvalue="Python.pre_build_config" />
-      <item index="7" class="java.lang.String" itemvalue="Python.get-deploy-file" />
+      <item index="3" class="java.lang.String" itemvalue="Bash.deploy.sh" />
+      <item index="4" class="java.lang.String" itemvalue="Bash.run.sh" />
+      <item index="5" class="java.lang.String" itemvalue="JAR Application.Built project in JAR" />
+      <item index="6" class="java.lang.String" itemvalue="Python.simple_uncompressing" />
+      <item index="7" class="java.lang.String" itemvalue="Python.pre_build_config" />
+      <item index="8" class="java.lang.String" itemvalue="Python.get-deploy-file" />
     </list>
     <recent_temporary>
       <list size="4">
@@ -1208,19 +1224,15 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3295099" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5041459" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="682" y="525" width="1027" height="562" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.49585405" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65589154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20563847" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2100608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1229,8 +1241,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="682" y="525" width="1027" height="562" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -1259,6 +1275,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/level-utils/simple_uncompressing.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="273" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mvc/controllers/LevelCompletedController.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="274" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -1269,7 +1298,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="273" />
+      <option name="time" value="276" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1294,147 +1323,10 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/levels/cells/LevelCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/levels/cells/StartCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/levels/cells/WallCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/io/InvalidPathSyntaxException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="115" selection-start-line="3" selection-start-column="115" selection-end-line="3" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/CampaignCompletedController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/levels/NullLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="75" column="55" selection-start-line="75" selection-start-column="55" selection-end-line="75" selection-end-column="55" />
-          <folding>
-            <element signature="e#2256#2286#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/styles/bigger-dialog-fonts.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/LevelCompletedController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/LevelSelectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/MainMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="e#426#427#0" expanded="false" />
-            <element signature="e#459#460#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/SettingsMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mvc/util/ExternalStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/CampaignSelectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mvc/util/FXController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/net/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="330" column="11" selection-start-line="330" selection-start-column="11" selection-end-line="330" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="332" column="34" selection-start-line="332" selection-start-column="34" selection-end-line="332" selection-end-column="34" />
-          <folding>
-            <element signature="e#11566#11567#0" expanded="true" />
-            <element signature="e#11597#11598#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1442,7 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="377" column="50" selection-start-line="377" selection-start-column="50" selection-end-line="377" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1450,7 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1458,7 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1466,7 +1355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-132">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1474,10 +1362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <element signature="e#259#260#0" expanded="false" />
-            <element signature="e#307#308#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1485,10 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-258">
           <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
-          <folding>
-            <element signature="e#3011#3012#0" expanded="true" />
-            <element signature="e#3058#3059#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1496,10 +1376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-          <folding>
-            <element signature="e#1063#1064#0" expanded="false" />
-            <element signature="e#1086#1087#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1507,7 +1383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="102" column="43" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1515,7 +1390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,7 +1397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-158">
           <caret line="66" column="54" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1531,7 +1404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1539,7 +1411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1547,7 +1418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1555,7 +1425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-92">
           <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1563,7 +1432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-720">
           <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1571,7 +1439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-390">
           <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1579,7 +1446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1587,7 +1453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1595,23 +1460,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-26">
           <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/io/InvalidURLException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/io/InvalidURLException.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/util/javafx/scenes/SceneLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1619,7 +1475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
           <caret line="63" column="99" selection-start-line="63" selection-start-column="99" selection-end-line="63" selection-end-column="99" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1627,7 +1482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1635,31 +1489,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/levels/XMLLevelLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/xml/XMLDeSerializable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/levels/XMLLevelLoader.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/xml/XMLDeSerializable.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/util/xml/XMLSerializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1667,33 +1505,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="752">
           <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/levels/LevelPack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="141" column="41" selection-start-line="141" selection-start-column="41" selection-end-line="141" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/settings/XMLSettingsLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/settings/XMLSettingsLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/settings/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1701,11 +1520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3476">
           <caret line="270" column="26" selection-start-line="270" selection-start-column="26" selection-end-line="270" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6669#6670#0" expanded="true" />
-            <element signature="e#6762#6763#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1713,7 +1527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1721,6 +1534,133 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="648" column="28" selection-start-line="648" selection-start-column="28" selection-end-line="648" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run-scripts/bash-jar-run-model.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run-scripts/bash-run-model.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run-scripts/batch-jar-run-model.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/jar/resources/levels/classic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.IdeaIC2016.1/system/python_stubs/-1247972723/sys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="409" column="7" selection-start-line="409" selection-start-column="7" selection-end-line="409" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/local/resources/levels/classic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/levels/LevelPack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/LevelCompletedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/styles/bigger-dialog-fonts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="131" column="33" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level-utils/simple_uncompressing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/levels/classic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="126" column="15" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level-utils/tmp-level-file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level-utils/out-file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2600">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1778,7 +1718,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Grid-Stepper-Game</last-edited>
+          <last-edited>level-utils</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

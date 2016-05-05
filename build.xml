@@ -142,7 +142,7 @@
         <antcall target="jars"/>
     </target>
 
-    <target name="deploy" depends="build">
+    <target name="deploy">
         <exec executable="./deploy.sh"/>
     </target>
 </project>

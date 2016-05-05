@@ -1,12 +1,8 @@
 /.idea/dictionaries
 /.idea/vcs.xml
 /.idea/workspace.xml
-/.idea/artifacts
-/.idea/libraries
-README.*
 /build/local
-*~
 /.git
 *.pyc
-/build-info/svarit-borshch
-/build-info/text-centerer
+/level-utils/tmp-level-file
+/level-utils/out-file.txt
