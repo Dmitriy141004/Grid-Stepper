@@ -1,5 +1,6 @@
 package settings;
 
+import com.sun.org.apache.xerces.internal.dom.DeferredCommentImpl;
 import com.sun.org.apache.xerces.internal.dom.TextImpl;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -118,7 +119,7 @@ public class Settings implements XMLSerializable {
                 Node settingNode = configRootNode.getChildNodes().item(i);
 
                 // Protection from texts
-                if (!(settingNode instanceof TextImpl)) {
+                if (!(settingNode instanceof TextImpl) && !(settingNode instanceof DeferredCommentImpl)) {
                     Element setting = (Element) settingNode;
 
                     if (setting.getTagName().equals("setting"))

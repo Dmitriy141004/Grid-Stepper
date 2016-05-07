@@ -31,4 +31,4 @@ cp LICENSE deploy/input/DEBIAN/copyright
 
 # Generating .deb package
 fakeroot dpkg-deb --build deploy/input ${OUTPUT_FILE}
-git add deploy/output/grid-stepper-game_1.39.12-10_all.deb
+git add ${OUTPUT_FILE}

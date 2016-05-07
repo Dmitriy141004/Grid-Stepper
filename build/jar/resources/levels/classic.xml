@@ -1,271 +1,122 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<level-pack name="Classic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<level-pack name="classic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="level-pack-schema.xsd">
     <level number="1" completed="false">
         <game-field>
             <column>
-                <empty />
-                <empty />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <finish />
-                <start  />
+                <finish      />
+                <start       />
             </column>
         </game-field>
     </level>
-
     <level number="2" completed="false">
         <game-field>
             <column>
-                <empty />
-                <empty />
-                <empty />
+                <empty       />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <empty />
-                <wall  />
-                <empty />
+                <empty       />
+                <wall        />
+                <empty       />
             </column>
             <column>
-                <start  />
-                <finish />
-                <empty  />
+                <start       />
+                <finish      />
+                <empty       />
             </column>
         </game-field>
     </level>
-
     <level number="3" completed="false">
         <game-field>
             <column>
-                <wall   />
-                <empty  />
-                <empty  />
+                <wall        />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <empty  />
+                <empty       />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <start  />
-                <wall   />
-                <finish />
+                <start       />
+                <wall        />
+                <finish      />
             </column>
         </game-field>
     </level>
-
     <level number="4" completed="false">
         <game-field>
             <column>
-                <empty  />
-                <empty  />
-                <wall   />
-                <wall   />
+                <empty       />
+                <empty       />
+                <wall        />
+                <wall        />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <empty  />
-                <empty  />
+                <empty       />
+                <empty       />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <empty  />
-                <wall   />
-                <wall   />
-                <empty  />
+                <empty       />
+                <wall        />
+                <wall        />
+                <empty       />
             </column>
             <column>
-                <start  />
-                <finish />
-                <empty  />
-                <empty  />
+                <start       />
+                <finish      />
+                <empty       />
+                <empty       />
             </column>
         </game-field>
     </level>
-
     <level number="5" completed="false">
         <game-field>
             <column>
-                <wall   />
-                <empty  />
-                <empty  />
-                <empty  />
-                <start  />
+                <wall        />
+                <empty       />
+                <empty       />
+                <empty       />
+                <start       />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <empty  />
-                <empty  />
-                <wall   />
+                <empty       />
+                <empty       />
+                <empty       />
+                <empty       />
+                <wall        />
             </column>
             <column>
-                <empty  />
-                <wall   />
-                <empty  />
-                <empty  />
-                <empty  />
+                <empty       />
+                <wall        />
+                <empty       />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <empty  />
-                <wall   />
-                <empty  />
+                <empty       />
+                <empty       />
+                <empty       />
+                <wall        />
+                <empty       />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <wall   />
-                <finish />
-                <empty  />
+                <empty       />
+                <empty       />
+                <wall        />
+                <finish      />
+                <empty       />
             </column>
         </game-field>
     </level>
-
-    <!--<level number="6" completed="false">-->
-        <!--<game-field>-->
-            <!--<column>-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-            <!--</column>-->
-            <!--<column>-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-            <!--</column>-->
-            <!--<column>-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-            <!--</column>-->
-            <!--<column>-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-            <!--</column>-->
-            <!--<column>-->
-                <!--<start      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-            <!--</column>-->
-            <!--<column>-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-            <!--</column>-->
-            <!--<column>-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-            <!--</column>-->
-            <!--<column>-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-            <!--</column>-->
-            <!--<column>-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<finish     />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-            <!--</column>-->
-            <!--<column>-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-                <!--<empty      />-->
-                <!--<empty      />-->
-                <!--<wall       />-->
-                <!--<wall       />-->
-            <!--</column>-->
-        <!--</game-field>-->
-    <!--</level>-->
 </level-pack>

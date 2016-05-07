@@ -1,5 +1,6 @@
 package levels;
 
+import com.sun.org.apache.xerces.internal.dom.DeferredCommentImpl;
 import com.sun.org.apache.xerces.internal.dom.TextImpl;
 import levels.cells.*;
 import org.w3c.dom.Document;
@@ -62,7 +63,7 @@ public class LevelPack implements XMLSerializable {
      */
     public Optional<Level> getLevelAfter(Level level) {
         int levelIndex = indexOfLevel(level);
-        if (levelIndex < levelsCount())
+        if (levelIndex < levelsCount() - 1)
             return Optional.of(getLevel(levelIndex + 1));
         else
             return Optional.empty();
@@ -165,7 +166,8 @@ public class LevelPack implements XMLSerializable {
                     // Iterating columns
                     for (int column = 0; column < columns.getChildNodes().getLength(); column++) {
                         ArrayList<levels.cells.LevelCell> currentRow = new ArrayList<>(0);
-                        if (!(columns.getChildNodes().item(column) instanceof TextImpl)) {
+                        if (!(columns.getChildNodes().item(column) instanceof TextImpl)
+                                && !(columns.getChildNodes().item(column) instanceof DeferredCommentImpl)) {
                             levelGrid.add(currentRow);
 
                             // Iterating rows
@@ -173,7 +175,7 @@ public class LevelPack implements XMLSerializable {
                                 Node currentCell = columns.getChildNodes().item(column).getChildNodes().item(cell);
 
                                 // Protection from texts
-                                if (!(currentCell instanceof TextImpl)) {
+                                if (!(currentCell instanceof TextImpl) && !(currentCell instanceof DeferredCommentImpl)) {
                                     levels.cells.LevelCell cellToAdd = null;
 
                                     switch (((Element) currentCell).getTagName()) {

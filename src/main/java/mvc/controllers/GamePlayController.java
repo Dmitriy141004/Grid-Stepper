@@ -172,9 +172,9 @@ public class GamePlayController extends FXController {
                     break;
             }
 
-            LevelCell currentCell = currentLevel().getGrid().get(goalX / CELL_SIZE).get(goalY / CELL_SIZE);
-            if (currentCell.getType() == CellType.WALL || currentCell.getType() == CellType.BACKGROUND_SQUARE ||
-                    (currentCell.isVisited()) && !undoFlag) {
+            LevelCell goalCell = currentLevel().getGrid().get(goalX / CELL_SIZE).get(goalY / CELL_SIZE);
+            if (goalCell.getType() == CellType.WALL || goalCell.getType() == CellType.BACKGROUND_SQUARE ||
+                    (goalCell.isVisited()) && !undoFlag) {
                 stop();
                 return;
             }

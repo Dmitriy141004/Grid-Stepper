@@ -12,7 +12,7 @@
 # wwweeewfeeew
 # wwwwwwwweeww
 #
-# Also, ignores newlines
+# Also, ignores newlines and spaces
 #
 # Usage:
 #     simple_uncompressing.py [INPUT_FILE] [OUTPUT_FILE]
