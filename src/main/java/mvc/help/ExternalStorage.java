@@ -1,4 +1,4 @@
-package mvc.util;
+package mvc.help;
 
 import levels.Level;
 import levels.LevelPack;
