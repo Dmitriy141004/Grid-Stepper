@@ -16,7 +16,6 @@ public class ColorUtils {
         String raw = String.format("#%2s%2s%2s", Integer.toHexString(red).toUpperCase(),
                 Integer.toHexString(green).toUpperCase(),
                 Integer.toHexString(blue).toUpperCase());
-        String result = raw.replace(' ', '0');
-        return result;
+        return raw.replace(' ', '0');
     }
 }
