@@ -1,125 +1,121 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<level-pack name="Classic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<level-pack name="classic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="level-pack-schema.xsd">
-    <level number="1" completed="false">
+    <level number="1" completed="true">
         <game-field>
             <column>
-                <empty />
-                <empty />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <finish />
-                <start  />
+                <finish      />
+                <start       />
             </column>
         </game-field>
     </level>
-
-    <level number="2" completed="false">
+    <level number="2" completed="true">
         <game-field>
             <column>
-                <empty />
-                <empty />
-                <empty />
+                <empty       />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <empty />
-                <wall  />
-                <empty />
+                <empty       />
+                <wall        />
+                <empty       />
             </column>
             <column>
-                <start  />
-                <finish />
-                <empty  />
+                <start       />
+                <finish      />
+                <empty       />
             </column>
         </game-field>
     </level>
-
-    <level number="3" completed="false">
+    <level number="3" completed="true">
         <game-field>
             <column>
-                <wall   />
-                <empty  />
-                <empty  />
+                <wall        />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <empty  />
+                <empty       />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <start  />
-                <wall   />
-                <finish />
+                <start       />
+                <wall        />
+                <finish      />
             </column>
         </game-field>
     </level>
-
-    <level number="4" completed="false">
+    <level number="4" completed="true">
         <game-field>
             <column>
-                <empty  />
-                <empty  />
-                <wall   />
-                <wall   />
+                <empty       />
+                <empty       />
+                <wall        />
+                <wall        />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <empty  />
-                <empty  />
+                <empty       />
+                <empty       />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <empty  />
-                <wall   />
-                <wall   />
-                <empty  />
+                <empty       />
+                <wall        />
+                <wall        />
+                <empty       />
             </column>
             <column>
-                <start  />
-                <finish />
-                <empty  />
-                <empty  />
+                <start       />
+                <finish      />
+                <empty       />
+                <empty       />
             </column>
         </game-field>
     </level>
-
-    <level number="5" completed="false">
+    <level number="5" completed="true">
         <game-field>
             <column>
-                <wall   />
-                <empty  />
-                <empty  />
-                <empty  />
-                <start  />
+                <wall        />
+                <empty       />
+                <empty       />
+                <empty       />
+                <start       />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <empty  />
-                <empty  />
-                <wall   />
+                <empty       />
+                <empty       />
+                <empty       />
+                <empty       />
+                <wall        />
             </column>
             <column>
-                <empty  />
-                <wall   />
-                <empty  />
-                <empty  />
-                <empty  />
+                <empty       />
+                <wall        />
+                <empty       />
+                <empty       />
+                <empty       />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <empty  />
-                <wall   />
-                <empty  />
+                <empty       />
+                <empty       />
+                <empty       />
+                <wall        />
+                <empty       />
             </column>
             <column>
-                <empty  />
-                <empty  />
-                <wall   />
-                <finish />
-                <empty  />
+                <empty       />
+                <empty       />
+                <wall        />
+                <finish      />
+                <empty       />
             </column>
         </game-field>
     </level>
