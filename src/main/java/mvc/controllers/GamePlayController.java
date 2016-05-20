@@ -103,10 +103,10 @@ public class GamePlayController extends FXController {
     private class PointerMoveAnimation extends ExtendedAnimationTimer {
         /** End position of pointer move on X axis. By default it equals {@link #pointerX}, but in
          * {@link #PointerMoveAnimation(Move, StepCause)}  constructor} it's changed by move value. */
-        int goalX;
+        int goalX = pointerX;
         /** End position of pointer move on Y axis. By default it equals {@link #pointerY}, but in
          * {@link #PointerMoveAnimation(Move, StepCause) constructor} it's changed by move value. */
-        int goalY;
+        int goalY = pointerY;
         /** Speed ({@code pixels/frame}) of pointer movement. It can be only a multiple of {@code 3} or {@code 5}, and also
          * it can equal {@code 1}. */
         final int MOVE_SPEED = 3;
@@ -320,8 +320,8 @@ public class GamePlayController extends FXController {
         private void incrementCoordinates() {
             if (pointerX < goalX) pointerX += MOVE_SPEED;
             if (pointerY < goalY) pointerY += MOVE_SPEED;
-            if (pointerX > goalX) pointerX += -MOVE_SPEED;
-            if (pointerY > goalY) pointerY += -MOVE_SPEED;
+            if (pointerX > goalX) pointerX -= MOVE_SPEED;
+            if (pointerY > goalY) pointerY -= MOVE_SPEED;
         }
 
         /**
@@ -577,7 +577,8 @@ public class GamePlayController extends FXController {
                 } else if (keyCode == KeyCode.R && event.isControlDown()) {
                     // Redo on Ctrl+R
                     doRedo();
-                } else
+                } else if (Arrays.asList(KeyCode.W, KeyCode.A, KeyCode.S, KeyCode.D,
+                        KeyCode.UP, KeyCode.LEFT, KeyCode.DOWN, KeyCode.RIGHT).contains(keyCode))
                     startMovingPointer(Move.getStepFromKeyCode(keyCode), StepCause.KEY_WAS_PRESSED);
             }
         };
