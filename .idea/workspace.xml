@@ -1,212 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed0051cc-6d42-4920-94de-af679a53e7f3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/util/ExternalStorage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/app/mvc/util/FXController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deploy/output/grid-stepper-game_1.39.12-10_all.deb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deploy/output/grid-stepper-game_1.42.1-11_all.deb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deploy/output/grid-stepper-game_1.42.2-12_all.deb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/mvc/util/ExternalStorage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/mvc/util/FXController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/mvc/util/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/mvc/util/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/mvc/util/package-tree.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-last-build.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-last-build.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-sources.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-sources.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/app/Grid-Stepper-Game.jar" afterPath="$PROJECT_DIR$/build/jar/app/Grid-Stepper-Game.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/levels/Level.class" afterPath="$PROJECT_DIR$/build/last/app/levels/Level.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/levels/cells/StartCell.class" afterPath="$PROJECT_DIR$/build/last/app/levels/cells/StartCell.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/CampaignSelectController.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/CampaignSelectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$1.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$FieldDrawAnimation.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$FieldDrawAnimation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerMoveAnimation.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerMoveAnimation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerSpawnState.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerSpawnState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$StepCause.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$StepCause.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/LevelCompletedController.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/LevelCompletedController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/LevelSelectController.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/LevelSelectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/MainMenuController.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/MainMenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController$Language.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController$Language.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/settings/Settings$Setting.class" afterPath="$PROJECT_DIR$/build/last/app/settings/Settings$Setting.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/settings/Settings.class" afterPath="$PROJECT_DIR$/build/last/app/settings/Settings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/start/Main.class" afterPath="$PROJECT_DIR$/build/last/app/start/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/util/javafx/scenes/SceneContent.class" afterPath="$PROJECT_DIR$/build/last/app/util/javafx/scenes/SceneContent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/app/Grid-Stepper-Game.jar" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/app/Grid-Stepper-Game.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+    <list default="true" id="ed0051cc-6d42-4920-94de-af679a53e7f3" name="Default" comment="Bug fixes&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/gameplay/Move$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/gameplay/Move.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/last/app/mvc/help/ExternalStorage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/last/app/mvc/help/FXController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/last/app/util/javafx/ColorUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/gameplay/Move.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/gameplay/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/gameplay/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/gameplay/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/mvc/help/ExternalStorage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/mvc/help/FXController.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/mvc/help/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/mvc/help/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/mvc/help/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/util/javafx/ColorUtils.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/util/javafx/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/util/javafx/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc/util/javafx/package-tree.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-info/.build_version" afterPath="$PROJECT_DIR$/build-info/.build_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/.build_version" afterPath="$PROJECT_DIR$/build/jar/resources/.build_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/bundles/Locale_en.properties" afterPath="$PROJECT_DIR$/build/jar/resources/bundles/Locale_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/bundles/Locale_ru.properties" afterPath="$PROJECT_DIR$/build/jar/resources/bundles/Locale_ru.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/bundles/Locale_ua.properties" afterPath="$PROJECT_DIR$/build/jar/resources/bundles/Locale_ua.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/game-field.fxml" afterPath="$PROJECT_DIR$/build/jar/resources/fxml/game-field.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/settings-menu.fxml" afterPath="$PROJECT_DIR$/build/jar/resources/fxml/settings-menu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/levels/classic.xml" afterPath="$PROJECT_DIR$/build/jar/resources/levels/classic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/levels/extended.xml" afterPath="$PROJECT_DIR$/build/jar/resources/levels/extended.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/settings/settings-schema.xsd" afterPath="$PROJECT_DIR$/build/jar/resources/settings/settings-schema.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/build/jar/resources/settings/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/run.bat" afterPath="$PROJECT_DIR$/build/jar/run.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/.build_version" afterPath="$PROJECT_DIR$/build/last/resources/.build_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/bundles/Locale_en.properties" afterPath="$PROJECT_DIR$/build/last/resources/bundles/Locale_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/bundles/Locale_ru.properties" afterPath="$PROJECT_DIR$/build/last/resources/bundles/Locale_ru.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/bundles/Locale_ua.properties" afterPath="$PROJECT_DIR$/build/last/resources/bundles/Locale_ua.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/fxml/game-field.fxml" afterPath="$PROJECT_DIR$/build/last/resources/fxml/game-field.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/fxml/settings-menu.fxml" afterPath="$PROJECT_DIR$/build/last/resources/fxml/settings-menu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/settings/settings-schema.xsd" afterPath="$PROJECT_DIR$/build/last/resources/settings/settings-schema.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/build/last/resources/settings/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/run.bat" afterPath="$PROJECT_DIR$/build/last/run.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/.package_version" afterPath="$PROJECT_DIR$/deploy/.package_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/DEBIAN/md5sums" afterPath="$PROJECT_DIR$/deploy/input/DEBIAN/md5sums" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/.build_version" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/.build_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_en.properties" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_ru.properties" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_ru.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_ua.properties" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/bundles/Locale_ua.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/game-field.fxml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/game-field.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/settings-menu.fxml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/fxml/settings-menu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/levels/classic.xml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/levels/classic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/settings/settings-schema.xsd" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/settings/settings-schema.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/settings/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/javadoc/allclasses-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/constant-values.html" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterPath="$PROJECT_DIR$/javadoc/deprecated-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/help-doc.html" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-10.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-11.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-14.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-15.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-15.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-16.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-16.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-17.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-17.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-18.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-18.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-19.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-19.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-20.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-20.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-21.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-21.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-22.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-22.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-23.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-23.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterPath="$PROJECT_DIR$/javadoc/index-files/index-9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/index.html" afterPath="$PROJECT_DIR$/javadoc/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/Level.html" afterPath="$PROJECT_DIR$/javadoc/levels/Level.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/LevelPack.html" afterPath="$PROJECT_DIR$/javadoc/levels/LevelPack.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/BackgroundSquare.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/BackgroundSquare.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/CellType.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/CellType.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/EmptyCell.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/EmptyCell.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/FinishCell.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/FinishCell.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/LevelCell.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/LevelCell.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/StartCell.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/StartCell.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/WallCell.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/WallCell.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/cells/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/levels/cells/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/levels/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/levels/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/levels/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/levels/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/CampaignSelectController.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/CampaignSelectController.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.FieldDrawAnimation.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.FieldDrawAnimation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.PointerMoveAnimation.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.PointerMoveAnimation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.PointerSpawnState.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.PointerSpawnState.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.StepCause.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.StepCause.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/GamePlayController.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/LevelCompletedController.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/LevelCompletedController.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/LevelSelectController.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/LevelSelectController.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/MainMenuController.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/MainMenuController.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/SettingsMenuController.Language.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/SettingsMenuController.Language.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/SettingsMenuController.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/SettingsMenuController.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/mvc/controllers/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/mvc/controllers/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-frame.html" afterPath="$PROJECT_DIR$/javadoc/overview-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" afterPath="$PROJECT_DIR$/javadoc/overview-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/package-list" afterPath="$PROJECT_DIR$/javadoc/package-list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/serialized-form.html" afterPath="$PROJECT_DIR$/javadoc/serialized-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/Settings.Setting.html" afterPath="$PROJECT_DIR$/javadoc/settings/Settings.Setting.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/Settings.html" afterPath="$PROJECT_DIR$/javadoc/settings/Settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/settings/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/settings/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/settings/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/settings/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/start/Main.html" afterPath="$PROJECT_DIR$/javadoc/start/Main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/start/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/start/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/start/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/start/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/start/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/start/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/LIFOQueue.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/LIFOQueue.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/MapUtils.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/MapUtils.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/Stack.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/Stack.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/collections/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/collections/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/future/FutureTasks.html" afterPath="$PROJECT_DIR$/javadoc/util/future/FutureTasks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/future/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/future/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/future/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/future/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/future/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/future/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/FileIO.html" afterPath="$PROJECT_DIR$/javadoc/util/io/FileIO.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/InvalidPathSyntaxException.html" afterPath="$PROJECT_DIR$/javadoc/util/io/InvalidPathSyntaxException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/PathsUtil.html" afterPath="$PROJECT_DIR$/javadoc/util/io/PathsUtil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/UTF8Control.html" afterPath="$PROJECT_DIR$/javadoc/util/io/UTF8Control.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/io/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/io/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/io/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/io/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/ExtendedAnimationTimer.AnimationTimerReceiver.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/ExtendedAnimationTimer.AnimationTimerReceiver.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/ExtendedAnimationTimer.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/ExtendedAnimationTimer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/animation/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/nodes/JFXNodes.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/nodes/JFXNodes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/nodes/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/SceneContent.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/SceneContent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/SceneLoader.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/SceneLoader.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/javafx/scenes/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/math/ExtendedMath.html" afterPath="$PROJECT_DIR$/javadoc/util/math/ExtendedMath.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/math/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/math/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/math/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/math/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/math/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/math/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/objects/Wrapper.html" afterPath="$PROJECT_DIR$/javadoc/util/objects/Wrapper.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/objects/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/objects/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/objects/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/objects/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/objects/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/objects/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/XMLSerializable.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/XMLSerializable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/XMLUtils.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/XMLUtils.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/package-frame.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/package-summary.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadoc/util/xml/package-tree.html" afterPath="$PROJECT_DIR$/javadoc/util/xml/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run-scripts/batch-jar-run-model.bat" afterPath="$PROJECT_DIR$/run-scripts/batch-jar-run-model.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run-scripts/batch-run-model.bat" afterPath="$PROJECT_DIR$/run-scripts/batch-run-model.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/Level.java" afterPath="$PROJECT_DIR$/src/main/java/levels/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/levels/cells/StartCell.java" afterPath="$PROJECT_DIR$/src/main/java/levels/cells/StartCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/CampaignSelectController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/CampaignSelectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelCompletedController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelCompletedController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelSelectController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelSelectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/MainMenuController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/MainMenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/SettingsMenuController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/SettingsMenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/settings/Settings.java" afterPath="$PROJECT_DIR$/src/main/java/settings/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/start/Main.java" afterPath="$PROJECT_DIR$/src/main/java/start/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/util/javafx/ColorUtils.java" afterPath="$PROJECT_DIR$/src/main/java/util/javafx/ColorUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/util/javafx/scenes/SceneContent.java" afterPath="$PROJECT_DIR$/src/main/java/util/javafx/scenes/SceneContent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundles/Locale_en.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundles/Locale_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundles/Locale_ru.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundles/Locale_ru.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundles/Locale_ua.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundles/Locale_ua.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/game-field.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/game-field.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/settings-menu.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/settings-menu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/settings/settings-schema.xsd" afterPath="$PROJECT_DIR$/src/main/resources/settings/settings-schema.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/src/main/resources/settings/settings.xml" />
     </list>
     <ignored path="Grid-Stepper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -231,15 +45,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/start/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="424">
-              <caret line="206" column="27" selection-start-line="206" selection-start-column="27" selection-end-line="206" selection-end-column="27" />
+              <caret line="207" column="27" selection-start-line="207" selection-start-column="27" selection-end-line="207" selection-end-column="27" />
               <folding>
-                <element signature="e#4649#4650#0" expanded="true" />
-                <element signature="e#4697#4698#0" expanded="true" />
+                <element signature="e#4696#4697#0" expanded="true" />
+                <element signature="e#4744#4745#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grid-stepper-game_1.42.1-11_all.deb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/deploy/output/grid-stepper-game_1.42.1-11_all.deb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -248,8 +72,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="20">
-              <caret line="218" column="24" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="24" />
-              <folding />
+              <caret line="221" column="24" selection-start-line="221" selection-start-column="24" selection-end-line="221" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -329,7 +155,6 @@
         <option value="/usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/beans/Observable.java" />
         <option value="$PROJECT_DIR$/src/main/java/mvc/controllers/SettingsMenuController.java" />
         <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/util/StringJoiner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/start/Main.java" />
         <option value="$PROJECT_DIR$/build/local/resources/settings/settings.xml" />
         <option value="$PROJECT_DIR$/src/main/java/settings/Settings.java" />
         <option value="$PROJECT_DIR$/src/main/java/mvc/controllers/LevelCompletedController.java" />
@@ -339,6 +164,7 @@
         <option value="$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java" />
         <option value="$PROJECT_DIR$/run-scripts/batch-run-model.bat" />
         <option value="$PROJECT_DIR$/run-scripts/batch-jar-run-model.bat" />
+        <option value="$PROJECT_DIR$/src/main/java/start/Main.java" />
       </list>
     </option>
   </component>
@@ -1423,7 +1249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1461687870874</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Bug fixes&#10;">
+      <created>1463769861489</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1463769861489</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1489,7 +1322,9 @@
     <MESSAGE value="Performance changes" />
     <MESSAGE value="Technical Commit" />
     <MESSAGE value="Small updates and bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small updates and bug fixes" />
+    <MESSAGE value="Bug fixes&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes&#10;" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1528,17 +1363,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/settings-menu.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/bundles/Locale_en.properties">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1879,8 +1703,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
-          <caret line="218" column="24" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="24" />
-          <folding />
+          <caret line="221" column="24" selection-start-line="221" selection-start-column="24" selection-end-line="221" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1895,11 +1721,19 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/start/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
-          <caret line="206" column="27" selection-start-line="206" selection-start-column="27" selection-end-line="206" selection-end-column="27" />
+          <caret line="207" column="27" selection-start-line="207" selection-start-column="27" selection-end-line="207" selection-end-column="27" />
           <folding>
-            <element signature="e#4649#4650#0" expanded="true" />
-            <element signature="e#4697#4698#0" expanded="true" />
+            <element signature="e#4696#4697#0" expanded="true" />
+            <element signature="e#4744#4745#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy/output/grid-stepper-game_1.42.1-11_all.deb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
