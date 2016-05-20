@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed0051cc-6d42-4920-94de-af679a53e7f3" name="Default" comment="Bug fixes&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-last-build.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-last-build.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-sources.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-sources.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/app/Grid-Stepper-Game.jar" afterPath="$PROJECT_DIR$/build/jar/app/Grid-Stepper-Game.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$1.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$FieldDrawAnimation.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$FieldDrawAnimation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerMoveAnimation.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerMoveAnimation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerSpawnState.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$PointerSpawnState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$StepCause.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController$StepCause.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/GamePlayController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController$Language.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController$Language.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController.class" afterPath="$PROJECT_DIR$/build/last/app/mvc/controllers/SettingsMenuController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/start/Main.class" afterPath="$PROJECT_DIR$/build/last/app/start/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/util/javafx/ColorUtils.class" afterPath="$PROJECT_DIR$/build/last/app/util/javafx/ColorUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-info/.build_version" afterPath="$PROJECT_DIR$/build-info/.build_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/levels/classic.xml" afterPath="$PROJECT_DIR$/build/jar/resources/levels/classic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/levels/extended.xml" afterPath="$PROJECT_DIR$/build/jar/resources/levels/extended.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/build/jar/resources/settings/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/levels/classic.xml" afterPath="$PROJECT_DIR$/build/last/resources/levels/classic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/levels/extended.xml" afterPath="$PROJECT_DIR$/build/last/resources/levels/extended.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/build/last/resources/settings/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java" afterPath="$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/.build_version" afterPath="$PROJECT_DIR$/build/jar/resources/.build_version" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/settings-menu.fxml" afterPath="$PROJECT_DIR$/build/jar/resources/fxml/settings-menu.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/.build_version" afterPath="$PROJECT_DIR$/build/last/resources/.build_version" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/fxml/settings-menu.fxml" afterPath="$PROJECT_DIR$/build/last/resources/fxml/settings-menu.fxml" />
     </list>
     <ignored path="Grid-Stepper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="580" column="96" selection-start-line="580" selection-start-column="96" selection-end-line="580" selection-end-column="96" />
+              <caret line="580" column="93" selection-start-line="580" selection-start-column="93" selection-end-line="580" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -1092,7 +1101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1463770024131</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Bug fixes&#10;">
+      <created>1463771169704</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1463771169704</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1106,7 +1122,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3295099" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1115,7 +1131,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5041459" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.49585405" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65589154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1587,7 +1603,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/mvc/controllers/GamePlayController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="580" column="96" selection-start-line="580" selection-start-column="96" selection-end-line="580" selection-end-column="96" />
+          <caret line="580" column="93" selection-start-line="580" selection-start-column="93" selection-end-line="580" selection-end-column="93" />
           <folding />
         </state>
       </provider>
