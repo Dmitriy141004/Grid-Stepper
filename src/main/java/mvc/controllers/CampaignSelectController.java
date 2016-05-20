@@ -2,8 +2,8 @@ package mvc.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
-import mvc.util.ExternalStorage;
-import mvc.util.FXController;
+import mvc.help.ExternalStorage;
+import mvc.help.FXController;
 import start.Main;
 
 /**

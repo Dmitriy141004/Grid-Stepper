@@ -8,8 +8,8 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Font;
 import levels.Level;
 import levels.LevelPack;
-import mvc.util.ExternalStorage;
-import mvc.util.FXController;
+import mvc.help.ExternalStorage;
+import mvc.help.FXController;
 import start.Main;
 
 import java.util.stream.Collectors;

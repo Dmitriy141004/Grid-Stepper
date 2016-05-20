@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <VBox minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controllers.GamePlayController">
    <children>
-      <HBox prefHeight="43.0" prefWidth="640.0">
+      <HBox prefHeight="43.0" prefWidth="640.0" fx:id="ctrlButtonsBox">
          <children>
             <Button fx:id="endButton" cancelButton="true" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="125.0" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="40.0" text="%game-play.end-game" wrapText="true">
                <font>

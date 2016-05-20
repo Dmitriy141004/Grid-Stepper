@@ -29,15 +29,20 @@ public class Settings implements XMLSerializable {
      * </ul>
      */
     private Map<String, String> settingsStorage = new HashMap<>(0);
-    public void setSetting(String key, Object value) {
-        String stringVal = value.toString();
+    public void setSetting(String key, String value) {
         if (settingsStorage.containsKey(key))
-            settingsStorage.replace(key, stringVal);
+            settingsStorage.replace(key, value);
         else
-            settingsStorage.put(key, stringVal);
+            settingsStorage.put(key, value);
     }
     public String getSetting(String key) {
         return settingsStorage.get(key);
+    }
+    public String getSettingOrElse(String key, String orElse) {
+        if (settingsStorage.containsKey(key) && !settingsStorage.get(key).isEmpty())
+            return settingsStorage.get(key);
+        else
+            return orElse;
     }
 
     //////////////////////////////////// Serializing ////////////////////////////////////

@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Region;
-import mvc.util.FXController;
+import mvc.help.FXController;
 import start.Main;
 
 import java.util.Optional;

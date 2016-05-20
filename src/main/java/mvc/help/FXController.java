@@ -1,4 +1,4 @@
-package mvc.util;
+package mvc.help;
 
 import start.Main;
 import util.javafx.scenes.SceneLoader;

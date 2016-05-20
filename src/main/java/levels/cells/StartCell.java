@@ -47,6 +47,18 @@ public class StartCell extends LevelCell {
     }
 
     /**
+     * Draws starting cell.
+     *
+     * <p>Starting cell is peculiar (see {@link levels.cells.CellType#START} to read how it looks).
+     * Firstly, it must be on lower layer than GP, but higher than lines, that GP leaves. Secondly, to draw triangle
+     * on the start in use this scheme:
+     * <ol>
+     *     <li>Using some value in range 0.0 - 100.0 for current point (start - {@code x1})</li>
+     *     <li>Mapping this value to range 0.0 - {@value mvc.controllers.GamePlayController#CELL_SIZE}.0</li>
+     *     <li>Giving received value to method that draws triangle</li>
+     *     <li>Repeating with {@code y1}, {@code x2}, {@code y2}, {@code x3} and {@code y3}</li>
+     * </ol></p>
+     *
      * {@inheritDoc}
      */
     @Override

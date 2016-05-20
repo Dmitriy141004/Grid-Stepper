@@ -10,7 +10,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Region;
 import javafx.scene.text.Font;
 import levels.cells.LevelCell;
-import mvc.util.ExternalStorage;
+import mvc.help.ExternalStorage;
 import start.Main;
 
 import java.util.ArrayList;

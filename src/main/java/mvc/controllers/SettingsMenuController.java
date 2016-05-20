@@ -1,16 +1,20 @@
 package mvc.controllers;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.ComboBox;
-import mvc.util.FXController;
+import javafx.scene.paint.Color;
+import mvc.help.FXController;
 import start.Main;
 import util.collections.MapUtils;
-import util.objects.Wrapper;
+import util.javafx.ColorUtils;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -32,33 +36,56 @@ public class SettingsMenuController extends FXController {
             {"de", "Deutsch"},
             {"fr", "Fran\u00e7ais"}
     });
+
     @FXML
     private ComboBox<Language> langSelector;
+    @FXML
+    private ColorPicker gpColorPicker;
 
     /**
      * {@inheritDoc}
      */
     @Override
     public void init() {
-        Wrapper<Language> currentLang = new Wrapper<>(null);
+        setupLanguageSelector();
+        setupGPColorPicker();
+    }
 
-        ArrayList<Language> outputLocales = Main.getAvailableLocales().stream()
-                // Mapping stream to collection of Language objects...
-                .map(tag -> {
-                    Language lang = new Language(tag);
-                    // ...And searching current language between them
-                    if (tag.equals(Main.getAppSettings().getSetting("lang")))
-                        currentLang.set(lang);
-                    return lang;
-                })
-                .collect(Collectors.toCollection(ArrayList<Language>::new));
+    private void setupLanguageSelector() {
+        Language currentLang = null;
+        ArrayList<Language> outputLocales = new ArrayList<>();
+
+        for (String tag : Main.getAvailableLocales()) {
+            Language language = new Language(tag);
+            if (tag.equals(Main.getAppSettings().getSetting("lang")))
+                currentLang = language;
+        }
 
         langSelector.setItems(FXCollections.observableArrayList(outputLocales));
+        langSelector.getSelectionModel().select(currentLang);
         langSelector.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null)
-                Main.getAppSettings().setSetting("lang", newValue.tag);
+            Main.getAppSettings().setSetting("lang", newValue.tag);
         });
-        langSelector.getSelectionModel().select(currentLang.get());
+    }
+
+    private void setupGPColorPicker() {
+        gpColorPicker.getCustomColors().addAll(Main.getCustomColorPickerColors());
+        gpColorPicker.setValue(Color.web(Main.getAppSettings().getSettingOrElse("gp-color", "#439D1C")));
+        gpColorPicker.valueProperty().addListener((observable, oldValue, newValue) -> {
+            Main.getAppSettings().setSetting("gp-color", ColorUtils.toWebString(newValue));
+        });
+        gpColorPicker.getCustomColors().addListener((ListChangeListener<Color>) change -> {
+            List<Color> customColors = Main.getCustomColorPickerColors();
+            if (change.wasAdded())
+                customColors.addAll(change.getAddedSubList());
+            else if (change.wasRemoved())
+                customColors.addAll(change.getRemoved());
+
+            List<String> hexStringColors = customColors.stream()
+                    .map(ColorUtils::toWebString)
+                    .collect(Collectors.toList());
+            Main.getAppSettings().setSetting("custom-color-picker-color", String.join(", ", hexStringColors));
+        });
     }
 
     /**

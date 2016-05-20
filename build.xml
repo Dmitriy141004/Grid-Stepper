@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<project name="Grid-Stepper-Game" default="build"
-         xmlns:unless="ant:unless">
-
+<project name="Grid-Stepper-Game" default="build">
     <property name="dir.build-root" value="build"/>
     <property name="dir.build.last" value="${dir.build-root}/last"/>
     <property name="dir.src.java" value="./src/main/java"/>
@@ -16,10 +14,8 @@
     <property name="dir.deploy" value="./deploy"/>
     <property name="manifest-file" value="src/main/java/META-INF/MANIFEST.MF"/>
     <property name="product.vendor" value="Dmitriy Meleshko"/>
+    <loadfile property="product.version" srcfile="${dir.build-info}/.build_version"/>
 
-    <condition property="resourcesInLocalBuild">
-        <available file="${dir.build.local}/.project_root" type="file"/>
-    </condition>
     <tstamp>
         <format property="build.date" pattern="dd/MMMM/yyyy hh:mm:ss"/>
     </tstamp>
@@ -44,8 +40,7 @@
     </target>
 
     <target name="put-resources">
-        <copydir unless:set="resourcesInLocalBuild" src="src/main/resources" dest="${dir.build.local}/resources"/>
-        <copyfile src="${dir.src.java}/.project_root" dest="${dir.build.local}"/>
+        <copydir src="src/main/resources" dest="${dir.build.local}/resources"/>
         <copyfile src="${dir.build-info}/.build_version" dest="${dir.build.local}/resources/.build_version"/>
 
         <copydir src="src/main/resources" dest="${dir.build.last}/resources"/>
@@ -123,24 +118,18 @@
 
     <target name="javadoc" depends="clean-javadoc">
         <javadoc sourcepath="${dir.src.java}" destdir="${dir.javadoc}" access="private" additionalparam="-Xdoclint:none
-                -splitindex" />
+                -splitindex"/>
     </target>
 
-    <target name="build">
+    <target name="version-increment">
         <exec executable="${dir.build-info}/version-util.py">
             <arg value="build"/>
             <arg value="update"/>
         </exec>
-        <loadfile property="product.version" srcfile="${dir.build-info}/.build_version"/>
-
-        <antcall target="clean"/>
-        <antcall target="mkdirs"/>
-        <antcall target="put-resources"/>
-        <antcall target="compile"/>
-        <antcall target="make-scripts"/>
-        <antcall target="editions"/>
-        <antcall target="jars"/>
     </target>
+
+    <target name="build"
+            depends="version-increment, clean, mkdirs, put-resources, compile, make-scripts, editions, jars"/>
 
     <target name="deploy">
         <exec executable="./deploy.sh"/>

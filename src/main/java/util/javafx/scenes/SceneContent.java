@@ -3,7 +3,7 @@ package util.javafx.scenes;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import mvc.util.FXController;
+import mvc.help.FXController;
 
 /**
  * Struct-class for storing data about scenes.

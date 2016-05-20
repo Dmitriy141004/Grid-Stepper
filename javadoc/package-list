@@ -1,12 +1,14 @@
 levels
 levels.cells
 mvc.controllers
-mvc.util
+mvc.controllers.gameplay
+mvc.help
 settings
 start
 util.collections
 util.future
 util.io
+util.javafx
 util.javafx.animation
 util.javafx.nodes
 util.javafx.scenes

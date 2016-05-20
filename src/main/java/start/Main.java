@@ -1,7 +1,9 @@
 package start;
 
 import javafx.application.Application;
-import javafx.scene.control.*;
+import javafx.scene.control.ColorPicker;
+import javafx.scene.control.Labeled;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import levels.LevelPack;
@@ -56,9 +58,8 @@ public class Main extends Application {
     }
 
     private static ArrayList<String> availableLocales;
-    @SuppressWarnings("unchecked")
-    public static ArrayList<String> getAvailableLocales() {
-        return (ArrayList<String>) availableLocales.clone();
+    public static List<String> getAvailableLocales() {
+        return availableLocales;
     }
 
     public static LevelPack classicCampaign;
@@ -91,6 +92,12 @@ public class Main extends Application {
     private static Settings appSettings;
     public static Settings getAppSettings() {
         return appSettings;
+    }
+
+    /** Custom colors for <b>ALL</b> {@link ColorPicker color pickers}. */
+    private static List<Color> customColorPickerColors;
+    public static List<Color> getCustomColorPickerColors() {
+        return customColorPickerColors;
     }
 
     /**
@@ -178,6 +185,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         setupResourcesRoot();
         loadAppSettings();
+        setupCustomColorPickerColors();
         loadCampaigns();
         loadProductVersion();
         registerShutdownHooks();
@@ -199,6 +207,21 @@ public class Main extends Application {
 
     private void loadAppSettings() {
         appSettings = Settings.fromXML(Main.getResourcePath("settings/settings.xml"));
+    }
+
+    private void setupCustomColorPickerColors() {
+        customColorPickerColors = new ArrayList<>();
+        String customColorsString = Main.getAppSettings().getSetting("custom-color-picker-colors");
+
+        if (!customColorsString.isEmpty()) {
+            String[] customColorHexStrings =
+                    Main.getAppSettings().getSetting("custom-color-picker-colors").split("\\s*,\\s*");
+
+
+            for (String hexColor : customColorHexStrings)
+                customColorPickerColors.add(Color.web(hexColor));
+        } else
+            customColorPickerColors.add(Color.web("#439D1C"));
     }
 
     private void loadCampaigns() {

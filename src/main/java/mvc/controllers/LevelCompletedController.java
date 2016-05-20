@@ -6,8 +6,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.Region;
 import levels.Level;
 import levels.LevelPack;
-import mvc.util.ExternalStorage;
-import mvc.util.FXController;
+import mvc.help.ExternalStorage;
+import mvc.help.FXController;
 import start.Main;
 import util.future.FutureTasks;
 
@@ -18,9 +18,9 @@ import java.util.Optional;
  */
 public class LevelCompletedController extends FXController {
     @FXML
-    Label passingTimeLabel;
+    public Label passingTimeLabel;
     @FXML
-    Label moveCountLabel;
+    public Label moveCountLabel;
     private Alert campaignCompletedDialog;
 
     /**
