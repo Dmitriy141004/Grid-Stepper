@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed0051cc-6d42-4920-94de-af679a53e7f3" name="Default" comment="Added pictures">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deploy/output/grid-stepper-game_1.42.63-15_all.deb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/jar/resources/fxml/turorial/welcome.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/last/resources/fxml/turorial/welcome.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deploy/output/grid-stepper-game_1.42.61-14_all.deb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/fxml/turorial/welcome.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-last-build.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-last-build.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-sources.zip" afterPath="$PROJECT_DIR$/build/editions/Grid-Stepper-Game-sources.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/app/Grid-Stepper-Game.jar" afterPath="$PROJECT_DIR$/build/jar/app/Grid-Stepper-Game.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/start/Main.class" afterPath="$PROJECT_DIR$/build/last/app/start/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/app/util/io/PathsUtil.class" afterPath="$PROJECT_DIR$/build/last/app/util/io/PathsUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/app/Grid-Stepper-Game.jar" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/app/Grid-Stepper-Game.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-info/.build_version" afterPath="$PROJECT_DIR$/build-info/.build_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/.build_version" afterPath="$PROJECT_DIR$/build/jar/resources/.build_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/settings/settings-schema.xsd" afterPath="$PROJECT_DIR$/build/jar/resources/settings/settings-schema.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jar/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/build/jar/resources/settings/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/.build_version" afterPath="$PROJECT_DIR$/build/last/resources/.build_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/settings/settings-schema.xsd" afterPath="$PROJECT_DIR$/build/last/resources/settings/settings-schema.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/last/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/build/last/resources/settings/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/.package_version" afterPath="$PROJECT_DIR$/deploy/.package_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/DEBIAN/md5sums" afterPath="$PROJECT_DIR$/deploy/input/DEBIAN/md5sums" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/.build_version" afterPath="$PROJECT_DIR$/deploy/input/opt/Grid-Stepper-Game/resources/.build_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/start/Main.java" afterPath="$PROJECT_DIR$/src/main/java/start/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/settings/settings-schema.xsd" afterPath="$PROJECT_DIR$/src/main/resources/settings/settings-schema.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/settings/settings.xml" afterPath="$PROJECT_DIR$/src/main/resources/settings/settings.xml" />
-    </list>
+    <list default="true" id="ed0051cc-6d42-4920-94de-af679a53e7f3" name="Default" comment="Added pictures" />
     <ignored path="Grid-Stepper.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
