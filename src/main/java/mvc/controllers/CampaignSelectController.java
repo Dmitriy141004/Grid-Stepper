@@ -22,7 +22,7 @@ public class CampaignSelectController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void run() {
+    public void wakeUp() {
 
     }
 
@@ -30,7 +30,7 @@ public class CampaignSelectController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void reset() {
+    public void shutdown() {
 
     }
 

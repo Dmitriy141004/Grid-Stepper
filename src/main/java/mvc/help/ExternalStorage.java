@@ -2,7 +2,7 @@ package mvc.help;
 
 import levels.Level;
 import levels.LevelPack;
-import mvc.controllers.GamePlayController;
+import mvc.controllers.gameplay.GamePlayController;
 
 /**
  * This class is storage for really global values, and values that unstably (I don't know why) work in

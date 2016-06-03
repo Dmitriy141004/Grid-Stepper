@@ -1,4 +1,4 @@
-package mvc.controllers;
+package mvc.controllers.gameplay;
 
 import com.sun.javafx.geom.Line2D;
 import javafx.event.ActionEvent;
@@ -21,7 +21,7 @@ import levels.Level;
 import levels.cells.CellType;
 import levels.cells.LevelCell;
 import levels.cells.StartCell;
-import mvc.controllers.gameplay.Move;
+import mvc.controllers.LevelCompletedController;
 import mvc.help.ExternalStorage;
 import mvc.help.FXController;
 import start.Main;
@@ -247,8 +247,8 @@ public class GamePlayController extends FXController {
 
                         // Initializing controller
                         LevelCompletedController controller = (LevelCompletedController) sceneContent.controller;
-                        controller.reset();
-                        controller.run();
+                        controller.shutdown();
+                        controller.wakeUp();
                         // Setting count of moves and time used to complete level
                         controller.moveCountLabel.setText(String.valueOf(stepLines.size()));
                         controller.passingTimeLabel.setText((new BigDecimal(
@@ -358,7 +358,8 @@ public class GamePlayController extends FXController {
      * Safe wrapper for {@link Thread#sleep(long)}.
      *
      * @param howLong delay time in milliseconds
-     * @throws RuntimeException if catches {@link InterruptedException}, and sets cause to caught {@link InterruptedException}.
+     * @throws RuntimeException if catches {@link InterruptedException}, and sets cause to caught
+     *                          {@link InterruptedException}.
      */
     private void delay(long howLong) {
         try {
@@ -625,7 +626,7 @@ public class GamePlayController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void run() {
+    public void wakeUp() {
         currentLevel().getGrid().forEach(column -> column.forEach(levelCell -> levelCell.setVisited(false)));
         levelGridWidth = currentLevel().getGrid().size();
         levelGridHeight = currentLevel().getGrid().get(0).size();
@@ -649,7 +650,7 @@ public class GamePlayController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void reset() {
+    public void shutdown() {
         removeGPMovement();
         graphics.clearRect(0, 0, gameCanvas.getWidth(), gameCanvas.getHeight());
 
@@ -727,8 +728,8 @@ public class GamePlayController extends FXController {
 
             case "restartButton":
                 removeGPMovement();
-                this.reset();
-                this.run();
+                this.shutdown();
+                this.wakeUp();
                 break;
         }
     }

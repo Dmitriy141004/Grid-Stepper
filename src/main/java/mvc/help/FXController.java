@@ -26,13 +26,13 @@ public abstract class FXController implements Cloneable {
     /**
      * This method is called after {@link Main#changeScene(String, String)} have been used. Runs controller.
      */
-    public abstract void run();
+    public abstract void wakeUp();
 
     /**
      * This method is called after {@link Main#changeScene(String, String)} have been used. Is used to reset controller's
      * old data.
      */
-    public abstract void reset();
+    public abstract void shutdown();
 
     /**
      * {@inheritDoc}

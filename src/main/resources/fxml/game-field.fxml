@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<VBox minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controllers.GamePlayController">
+<VBox minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controllers.gameplay.GamePlayController">
    <children>
       <HBox prefHeight="43.0" prefWidth="640.0" fx:id="ctrlButtonsBox">
          <children>

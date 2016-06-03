@@ -1,7 +1,7 @@
 package levels.cells;
 
 import javafx.scene.canvas.GraphicsContext;
-import mvc.controllers.GamePlayController;
+import mvc.controllers.gameplay.GamePlayController;
 
 /**
  * Class for storing data about <b>one</b> cell in level.

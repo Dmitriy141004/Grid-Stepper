@@ -42,7 +42,7 @@ public class MainMenuController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void run() {
+    public void wakeUp() {
 
     }
 
@@ -50,7 +50,7 @@ public class MainMenuController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void reset() {
+    public void shutdown() {
 
     }
 

@@ -35,7 +35,7 @@ public class LevelCompletedController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void run() {
+    public void wakeUp() {
         passingTimeLabel.getScene().getWindow().setOnCloseRequest(event ->
                 Main.changeScene("main.fxml"));
     }
@@ -44,7 +44,7 @@ public class LevelCompletedController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void reset() {
+    public void shutdown() {
 
     }
 

@@ -100,6 +100,8 @@ public class Main extends Application {
         return customColorPickerColors;
     }
 
+    private static SceneContent previousSceneContent;
+
     /**
      * Returns relative path to resource. At start adds constant {@link #resourcesRoot}, and at the end - resource name.
      *
@@ -149,7 +151,9 @@ public class Main extends Application {
      */
     public static void changeScene(String sceneIdentifier, String windowTitle) {
         try {
+            previousSceneContent.controller.shutdown();
             SceneContent sceneContent = loadedScenes.get(sceneIdentifier);
+            previousSceneContent = sceneContent;
 
             primaryStage.setTitle(getLocaleStr("header.base") + windowTitle);
             primaryStage.setMinWidth(Main.MIN_WINDOW_WIDTH);
@@ -157,8 +161,7 @@ public class Main extends Application {
             primaryStage.setScene(sceneContent.scene);
 
             if (sceneContent.controller != null) {
-                sceneContent.controller.reset();
-                sceneContent.controller.run();
+                sceneContent.controller.wakeUp();
             }
 
             if (!primaryStage.isShowing())

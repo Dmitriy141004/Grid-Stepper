@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="settings-schema.xsd">
+    <first-launch value="false" />
     <storage>
         <setting key="lang" value="en" />
-        <setting key="custom-color-picker-colors" value="" />
+        <setting key="custom-color-picker-colors" value=""/>
     </storage>
 </settings>

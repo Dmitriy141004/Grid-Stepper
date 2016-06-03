@@ -92,7 +92,7 @@ public class SettingsMenuController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void run() {
+    public void wakeUp() {
 
     }
 
@@ -100,7 +100,7 @@ public class SettingsMenuController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void reset() {
+    public void shutdown() {
 
     }
 

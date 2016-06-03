@@ -2,10 +2,10 @@ package levels.cells;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import mvc.controllers.GamePlayController;
+import mvc.controllers.gameplay.GamePlayController;
 import util.math.ExtendedMath;
 
-import static mvc.controllers.GamePlayController.CELL_SIZE;
+import static mvc.controllers.gameplay.GamePlayController.CELL_SIZE;
 
 /**
  * Class for start cells.
@@ -54,7 +54,7 @@ public class StartCell extends LevelCell {
      * on the start in use this scheme:
      * <ol>
      *     <li>Using some value in range 0.0 - 100.0 for current point (start - {@code x1})</li>
-     *     <li>Mapping this value to range 0.0 - {@value mvc.controllers.GamePlayController#CELL_SIZE}.0</li>
+     *     <li>Mapping this value to range 0.0 - {@value GamePlayController#CELL_SIZE}.0</li>
      *     <li>Giving received value to method that draws triangle</li>
      *     <li>Repeating with {@code y1}, {@code x2}, {@code y2}, {@code x3} and {@code y3}</li>
      * </ol></p>

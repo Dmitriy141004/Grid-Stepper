@@ -2,9 +2,9 @@ package levels.cells;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import mvc.controllers.GamePlayController;
+import mvc.controllers.gameplay.GamePlayController;
 
-import static mvc.controllers.GamePlayController.CELL_SIZE;
+import static mvc.controllers.gameplay.GamePlayController.CELL_SIZE;
 
 /**
  * Class for finish cells.

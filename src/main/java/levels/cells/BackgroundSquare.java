@@ -1,9 +1,9 @@
 package levels.cells;
 
 import javafx.scene.canvas.GraphicsContext;
-import mvc.controllers.GamePlayController;
+import mvc.controllers.gameplay.GamePlayController;
 
-import static mvc.controllers.GamePlayController.CELL_SIZE;
+import static mvc.controllers.gameplay.GamePlayController.CELL_SIZE;
 
 /**
  * Cell type for background squares. This cells are fully equal to walls, but method

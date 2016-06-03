@@ -32,7 +32,7 @@ public class LevelSelectController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void run() {
+    public void wakeUp() {
         final LevelPack selectedCampaign = ExternalStorage.getInstance().selectedCampaign;
 
         if (!selectedCampaign.isEmpty()) {
@@ -56,7 +56,7 @@ public class LevelSelectController extends FXController {
      * {@inheritDoc}
      */
     @Override
-    public void reset() {
+    public void shutdown() {
 
     }
 
