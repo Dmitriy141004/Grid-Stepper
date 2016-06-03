@@ -151,7 +151,8 @@ public class Main extends Application {
      */
     public static void changeScene(String sceneIdentifier, String windowTitle) {
         try {
-            previousSceneContent.controller.shutdown();
+            if (previousSceneContent != null)
+                previousSceneContent.controller.shutdown();
             SceneContent sceneContent = loadedScenes.get(sceneIdentifier);
             previousSceneContent = sceneContent;
 

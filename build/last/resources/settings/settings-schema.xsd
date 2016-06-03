@@ -3,7 +3,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="settings">
         <xs:complexType>
-            <xs:all>
+            <xs:sequence>
                 <xs:element name="storage" minOccurs="1" maxOccurs="1">
                     <xs:complexType>
                         <xs:sequence>
@@ -23,14 +23,14 @@
 
                 <xs:element name="first-launch" maxOccurs="1" minOccurs="1">
                     <xs:complexType>
-                        <xs:complexContent>
+                        <xs:simpleContent>
                             <xs:extension base="xs:string">
                                 <xs:attribute type="xs:boolean" name="value" use="required" />
                             </xs:extension>
-                        </xs:complexContent>
+                        </xs:simpleContent>
                     </xs:complexType>
                 </xs:element>
-            </xs:all>
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 </xs:schema>
