@@ -1,6 +1,5 @@
 package util.io;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,14 +44,12 @@ public class PathsUtil {
     /**
      * Makes real path from relative. To read more description - see {@link PathsUtil documentation for class}.
      *
-     * @param relative relative path to convert
+     * @param relative relative path to convert. But,
+     *                 <span color="#A52500"><b>YOU HAVE TO USE SLASHES AS FILE SEPARATORS!</b></span>
      * @return real path from relative.
      */
     public static String realPath(String relative) {
         try {
-            // Replacing used separators to '/' just for easy processing
-            relative = relative.replaceAll("(/{2}|\\\\|\\\\{2})", "/");
-
             ArrayList<String> relativePathParts = (ArrayList<String>) splitPath(relative);
 
             // Caller class is on third stack trace element, on second is this function, and on first -
@@ -97,8 +94,7 @@ public class PathsUtil {
 
             StringBuilder madeRealPath = new StringBuilder(0);
             out.forEach(madeRealPath::append);
-
-            return madeRealPath.toString().replaceAll("/", File.separator);
+            return madeRealPath.toString();
         } catch (ClassNotFoundException e) {
             // Isn't reachable in this case
             throw new RuntimeException(e);
