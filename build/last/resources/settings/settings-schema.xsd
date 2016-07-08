@@ -20,16 +20,6 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
-                <xs:element name="first-launch" maxOccurs="1" minOccurs="1">
-                    <xs:complexType>
-                        <xs:simpleContent>
-                            <xs:extension base="xs:string">
-                                <xs:attribute type="xs:boolean" name="value" use="required" />
-                            </xs:extension>
-                        </xs:simpleContent>
-                    </xs:complexType>
-                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

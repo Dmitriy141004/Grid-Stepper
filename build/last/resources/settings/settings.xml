@@ -3,7 +3,7 @@
 <settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="settings-schema.xsd">
     <storage>
         <setting key="lang" value="en" />
-        <setting key="custom-color-picker-colors" value=""/>
+        <setting key="custom-color-picker-colors" value="" />
+        <setting key="first-launch" value="false" />
     </storage>
-    <first-launch value="false" />
 </settings>
