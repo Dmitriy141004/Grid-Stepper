@@ -2,7 +2,7 @@
 
 <level-pack name="classic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="level-pack-schema.xsd">
-    <level number="1" completed="true">
+    <level number="1" completed="false">
         <game-field>
             <column>
                 <empty       />
@@ -14,7 +14,7 @@
             </column>
         </game-field>
     </level>
-    <level number="2" completed="true">
+    <level number="2" completed="false">
         <game-field>
             <column>
                 <empty       />
@@ -33,7 +33,7 @@
             </column>
         </game-field>
     </level>
-    <level number="3" completed="true">
+    <level number="3" completed="false">
         <game-field>
             <column>
                 <wall        />
@@ -52,7 +52,7 @@
             </column>
         </game-field>
     </level>
-    <level number="4" completed="true">
+    <level number="4" completed="false">
         <game-field>
             <column>
                 <empty       />
@@ -80,7 +80,7 @@
             </column>
         </game-field>
     </level>
-    <level number="5" completed="true">
+    <level number="5" completed="false">
         <game-field>
             <column>
                 <wall        />

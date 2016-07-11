@@ -6,3 +6,4 @@
 *.pyc
 /level-utils/tmp-level-file
 /level-utils/out-file.txt
+.DS_Store
